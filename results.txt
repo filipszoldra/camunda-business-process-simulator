@@ -1,0 +1,197 @@
+
+Instancja 1
+
+Turn on computer 1
+Send Message 1
+Try Again 22
+Turn on Internet 1
+New Task 1 1
+New Task 2 21
+
+time 275
+
+
+Instancja 2
+
+Turn on computer 1
+Send Message 1
+Try Again 4
+Turn on Internet 1
+New Task 1 1
+New Task 2 3
+
+time 61
+
+
+Instancja 3
+
+Turn on computer 1
+Send Message 1
+Try Again 1
+Turn on Internet 1
+New Task 1 1
+New Task 2 0
+
+time 12
+
+
+Instancja 4
+
+Turn on computer 1
+Send Message 1
+Try Again 19
+Turn on Internet 1
+New Task 1 1
+New Task 2 18
+
+time 248
+
+
+Instancja 5
+
+Turn on computer 1
+Send Message 1
+Try Again 5
+Turn on Internet 1
+New Task 1 1
+New Task 2 4
+
+time 76
+
+
+Instancja 6
+
+Turn on computer 1
+Send Message 1
+Try Again 1
+Turn on Internet 1
+New Task 1 1
+New Task 2 0
+
+time 19
+
+
+Instancja 7
+
+Turn on computer 1
+Send Message 1
+Try Again 5
+Turn on Internet 1
+New Task 1 1
+New Task 2 4
+
+time 89
+
+
+Instancja 8
+
+Turn on computer 1
+Send Message 1
+Try Again 9
+Turn on Internet 1
+New Task 1 1
+New Task 2 8
+
+time 117
+
+
+Instancja 9
+
+Turn on computer 1
+Send Message 1
+Try Again 6
+Turn on Internet 1
+New Task 1 1
+New Task 2 5
+
+time 79
+
+
+Instancja 10
+
+Turn on computer 1
+Send Message 1
+Try Again 2
+Turn on Internet 1
+New Task 1 1
+New Task 2 1
+
+time 34
+
+
+
+Paths
+
+(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
+20.0% 2
+
+Variables
+time: min 12 average 16 max 19
+
+(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (noneEndEvent Message is sended) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2)
+10.0% 1
+
+Variables
+time: min 275 average 275 max 275
+
+(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
+10.0% 1
+
+Variables
+time: min 61 average 61 max 61
+
+(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Try Again) -----> (userTask Send Message) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
+10.0% 1
+
+Variables
+time: min 248 average 248 max 248
+
+(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
+10.0% 1
+
+Variables
+time: min 76 average 76 max 76
+
+(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Try Again) -----> (userTask Send Message) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
+10.0% 1
+
+Variables
+time: min 89 average 89 max 89
+
+(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Try Again) -----> (userTask Send Message) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
+10.0% 1
+
+Variables
+time: min 117 average 117 max 117
+
+(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
+10.0% 1
+
+Variables
+time: min 79 average 79 max 79
+
+(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Try Again) -----> (userTask Send Message) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
+10.0% 1
+
+Variables
+time: min 34 average 34 max 34
+
+
+
+Task counts
+
+Turn on computer 10
+Send Message 10
+Try Again 74
+Turn on Internet 10
+New Task 1 10
+New Task 2 64
+
+
+Variables
+
+time
+sum: 965
+min: 12
+average: 96
+max: 275
