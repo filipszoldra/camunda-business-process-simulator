@@ -1,197 +1,11093 @@
 
 Instancja 1
 
-Turn on computer 1
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
 Send Message 1
-Try Again 22
-Turn on Internet 1
-New Task 1 1
-New Task 2 21
 
-time 275
+time 13
+energy 14
 
 
 Instancja 2
 
-Turn on computer 1
-Send Message 1
-Try Again 4
+Turn On Computer 1
+Try Again 0
 Turn on Internet 1
-New Task 1 1
-New Task 2 3
+Send Message 1
 
-time 61
+time 7
+energy 10
 
 
 Instancja 3
 
-Turn on computer 1
-Send Message 1
-Try Again 1
+Turn On Computer 1
+Try Again 0
 Turn on Internet 1
-New Task 1 1
-New Task 2 0
+Send Message 1
 
-time 12
+time 10
+energy 9
 
 
 Instancja 4
 
-Turn on computer 1
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
 Send Message 1
-Try Again 19
-Turn on Internet 1
-New Task 1 1
-New Task 2 18
 
-time 248
+time 36
+energy 34
 
 
 Instancja 5
 
-Turn on computer 1
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
 Send Message 1
-Try Again 5
-Turn on Internet 1
-New Task 1 1
-New Task 2 4
 
-time 76
+time 15
+energy 7
 
 
 Instancja 6
 
-Turn on computer 1
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
 Send Message 1
-Try Again 1
-Turn on Internet 1
-New Task 1 1
-New Task 2 0
 
-time 19
+time 28
+energy 31
 
 
 Instancja 7
 
-Turn on computer 1
-Send Message 1
-Try Again 5
+Turn On Computer 1
+Try Again 0
 Turn on Internet 1
-New Task 1 1
-New Task 2 4
+Send Message 1
 
-time 89
+time 9
+energy 13
 
 
 Instancja 8
 
-Turn on computer 1
-Send Message 1
-Try Again 9
+Turn On Computer 1
+Try Again 0
 Turn on Internet 1
-New Task 1 1
-New Task 2 8
+Send Message 1
 
-time 117
+time 11
+energy 12
 
 
 Instancja 9
 
-Turn on computer 1
-Send Message 1
-Try Again 6
+Turn On Computer 1
+Try Again 0
 Turn on Internet 1
-New Task 1 1
-New Task 2 5
+Send Message 1
 
-time 79
+time 8
+energy 8
 
 
 Instancja 10
 
-Turn on computer 1
-Send Message 1
-Try Again 2
+Turn On Computer 1
+Try Again 0
 Turn on Internet 1
-New Task 1 1
-New Task 2 1
+Send Message 1
+
+time 6
+energy 10
+
+
+Instancja 11
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 12
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 16
+
+
+Instancja 13
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 30
+energy 37
+
+
+Instancja 14
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 15
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 13
+
+
+Instancja 16
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 13
+
+
+Instancja 17
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 12
+
+
+Instancja 18
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 25
+energy 19
+
+
+Instancja 19
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 12
+
+
+Instancja 20
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 9
+
+
+Instancja 21
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 5
+
+
+Instancja 22
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 25
+energy 19
+
+
+Instancja 23
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 10
+
+
+Instancja 24
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 9
+
+
+Instancja 25
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 26
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 10
+
+
+Instancja 27
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 7
+
+
+Instancja 28
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 7
+
+
+Instancja 29
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 14
+
+
+Instancja 30
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 9
+
+
+Instancja 31
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 32
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 42
+energy 36
+
+
+Instancja 33
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 11
+
+
+Instancja 34
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 35
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 6
+
+
+Instancja 36
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 8
+
+
+Instancja 37
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 10
+
+
+Instancja 38
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 6
+
+
+Instancja 39
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 40
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 15
+
+
+Instancja 41
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 12
+
+
+Instancja 42
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 11
+
+
+Instancja 43
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 21
+
+
+Instancja 44
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 9
+
+
+Instancja 45
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 22
+energy 26
+
+
+Instancja 46
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 8
+energy 13
+
+
+Instancja 47
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 8
+
+
+Instancja 48
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
 
 time 34
+energy 32
+
+
+Instancja 49
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 13
+
+
+Instancja 50
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 40
+energy 34
+
+
+Instancja 51
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 13
+
+
+Instancja 52
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 10
+
+
+Instancja 53
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 54
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 55
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 10
+
+
+Instancja 56
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 16
+
+
+Instancja 57
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 18
+energy 24
+
+
+Instancja 58
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 8
+
+
+Instancja 59
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 19
+
+
+Instancja 60
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 25
+energy 27
+
+
+Instancja 61
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 16
+
+
+Instancja 62
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 9
+
+
+Instancja 63
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 12
+
+
+Instancja 64
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 13
+
+
+Instancja 65
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 66
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 12
+
+
+Instancja 67
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 28
+energy 24
+
+
+Instancja 68
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 27
+energy 20
+
+
+Instancja 69
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 8
+
+
+Instancja 70
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 18
+
+
+Instancja 71
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 18
+energy 24
+
+
+Instancja 72
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 10
+
+
+Instancja 73
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 10
+
+
+Instancja 74
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 11
+
+
+Instancja 75
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 76
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 16
+
+
+Instancja 77
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
+
+
+Instancja 78
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 12
+
+
+Instancja 79
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 34
+energy 22
+
+
+Instancja 80
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 81
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 28
+energy 19
+
+
+Instancja 82
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 16
+energy 16
+
+
+Instancja 83
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 24
+
+
+Instancja 84
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 14
+
+
+Instancja 85
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 11
+
+
+Instancja 86
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 12
+
+
+Instancja 87
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 20
+
+
+Instancja 88
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 7
+
+
+Instancja 89
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 40
+energy 32
+
+
+Instancja 90
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 91
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 92
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 18
+energy 15
+
+
+Instancja 93
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 14
+
+
+Instancja 94
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 46
+energy 36
+
+
+Instancja 95
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 10
+
+
+Instancja 96
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 14
+
+
+Instancja 97
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 15
+energy 10
+
+
+Instancja 98
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 42
+energy 43
+
+
+Instancja 99
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 39
+energy 36
+
+
+Instancja 100
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 15
+
+
+Instancja 101
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 21
+energy 14
+
+
+Instancja 102
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 103
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 14
+
+
+Instancja 104
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 3
+energy 9
+
+
+Instancja 105
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 18
+
+
+Instancja 106
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 107
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 8
+
+
+Instancja 108
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 11
+
+
+Instancja 109
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 6
+
+
+Instancja 110
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 8
+
+
+Instancja 111
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 6
+
+
+Instancja 112
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 18
+
+
+Instancja 113
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 21
+
+
+Instancja 114
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 12
+
+
+Instancja 115
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 12
+
+
+Instancja 116
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 8
+
+
+Instancja 117
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 17
+
+
+Instancja 118
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 119
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 9
+
+
+Instancja 120
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 16
+
+
+Instancja 121
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
+
+
+Instancja 122
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 26
+energy 17
+
+
+Instancja 123
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 16
+
+
+Instancja 124
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 21
+
+
+Instancja 125
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 126
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 127
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 13
+
+
+Instancja 128
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 21
+energy 20
+
+
+Instancja 129
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 11
+
+
+Instancja 130
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 4
+
+
+Instancja 131
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 9
+
+
+Instancja 132
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 16
+
+
+Instancja 133
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 26
+energy 39
+
+
+Instancja 134
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 5
+
+
+Instancja 135
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 26
+energy 26
+
+
+Instancja 136
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 22
+
+
+Instancja 137
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 9
+
+
+Instancja 138
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 17
+
+
+Instancja 139
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 13
+
+
+Instancja 140
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 141
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 14
+
+
+Instancja 142
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 13
+
+
+Instancja 143
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 25
+energy 27
+
+
+Instancja 144
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 17
+
+
+Instancja 145
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 11
+
+
+Instancja 146
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 23
+
+
+Instancja 147
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 11
+
+
+Instancja 148
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 7
+energy 10
+
+
+Instancja 149
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 8
+
+
+Instancja 150
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 9
+
+
+Instancja 151
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 152
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 20
+
+
+Instancja 153
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 35
+energy 25
+
+
+Instancja 154
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 10
+
+
+Instancja 155
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 21
+
+
+Instancja 156
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 25
+energy 15
+
+
+Instancja 157
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 26
+energy 23
+
+
+Instancja 158
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 159
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 5
+
+
+Instancja 160
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 51
+energy 48
+
+
+Instancja 161
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 15
+
+
+Instancja 162
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 46
+energy 44
+
+
+Instancja 163
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 26
+
+
+Instancja 164
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 9
+
+
+Instancja 165
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 166
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 16
+energy 27
+
+
+Instancja 167
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 8
+
+
+Instancja 168
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 29
+energy 31
+
+
+Instancja 169
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 170
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 12
+
+
+Instancja 171
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 17
+energy 14
+
+
+Instancja 172
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 6
+
+
+Instancja 173
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 174
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 27
+energy 20
+
+
+Instancja 175
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 11
+
+
+Instancja 176
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 177
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 18
+
+
+Instancja 178
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 8
+
+
+Instancja 179
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 15
+energy 10
+
+
+Instancja 180
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 8
+
+
+Instancja 181
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 10
+
+
+Instancja 182
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 3
+energy 7
+
+
+Instancja 183
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 7
+
+
+Instancja 184
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 7
+
+
+Instancja 185
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 19
+
+
+Instancja 186
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 18
+energy 15
+
+
+Instancja 187
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 22
+energy 23
+
+
+Instancja 188
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
+
+
+Instancja 189
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 21
+energy 23
+
+
+Instancja 190
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 17
+energy 21
+
+
+Instancja 191
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 14
+
+
+Instancja 192
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 35
+energy 30
+
+
+Instancja 193
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 10
+
+
+Instancja 194
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 14
+
+
+Instancja 195
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 196
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 197
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 198
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 17
+energy 24
+
+
+Instancja 199
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 15
+
+
+Instancja 200
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 14
+
+
+Instancja 201
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 11
+
+
+Instancja 202
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 22
+energy 15
+
+
+Instancja 203
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 5
+
+
+Instancja 204
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 9
+
+
+Instancja 205
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 10
+
+
+Instancja 206
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 7
+
+
+Instancja 207
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 11
+
+
+Instancja 208
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 209
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 7
+
+
+Instancja 210
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 18
+
+
+Instancja 211
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 18
+
+
+Instancja 212
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 12
+
+
+Instancja 213
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 8
+
+
+Instancja 214
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 8
+
+
+Instancja 215
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 25
+
+
+Instancja 216
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 15
+
+
+Instancja 217
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 11
+energy 22
+
+
+Instancja 218
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 46
+energy 52
+
+
+Instancja 219
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 29
+
+
+Instancja 220
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 9
+
+
+Instancja 221
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 17
+
+
+Instancja 222
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 9
+
+
+Instancja 223
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 11
+
+
+Instancja 224
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 19
+
+
+Instancja 225
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 18
+
+
+Instancja 226
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 227
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 16
+
+
+Instancja 228
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 10
+
+
+Instancja 229
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 25
+
+
+Instancja 230
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 231
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 7
+
+
+Instancja 232
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 3
+energy 9
+
+
+Instancja 233
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 58
+energy 44
+
+
+Instancja 234
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 22
+
+
+Instancja 235
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 6
+
+
+Instancja 236
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 39
+energy 42
+
+
+Instancja 237
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 13
+
+
+Instancja 238
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 7
+
+
+Instancja 239
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 17
+
+
+Instancja 240
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 241
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 242
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 243
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 16
+
+
+Instancja 244
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 11
+
+
+Instancja 245
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 15
+
+
+Instancja 246
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 23
+
+
+Instancja 247
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 7
+
+
+Instancja 248
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 19
+
+
+Instancja 249
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 6
+
+
+Instancja 250
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 251
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 11
+
+
+Instancja 252
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 13
+
+
+Instancja 253
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 14
+
+
+Instancja 254
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 255
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 17
+
+
+Instancja 256
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 26
+energy 29
+
+
+Instancja 257
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 9
+
+
+Instancja 258
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 19
+
+
+Instancja 259
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 12
+
+
+Instancja 260
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 34
+energy 34
+
+
+Instancja 261
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 14
+
+
+Instancja 262
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 13
+
+
+Instancja 263
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 7
+
+
+Instancja 264
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 11
+
+
+Instancja 265
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 13
+
+
+Instancja 266
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 9
+
+
+Instancja 267
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 268
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 4
+
+
+Instancja 269
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 37
+energy 37
+
+
+Instancja 270
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 11
+
+
+Instancja 271
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 14
+
+
+Instancja 272
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 273
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 274
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 21
+
+
+Instancja 275
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 10
+
+
+Instancja 276
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 15
+energy 22
+
+
+Instancja 277
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 278
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 7
+energy 17
+
+
+Instancja 279
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 9
+
+
+Instancja 280
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 13
+
+
+Instancja 281
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 14
+
+
+Instancja 282
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 31
+energy 30
+
+
+Instancja 283
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 22
+energy 23
+
+
+Instancja 284
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 8
+
+
+Instancja 285
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 10
+
+
+Instancja 286
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 27
+energy 20
+
+
+Instancja 287
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 17
+
+
+Instancja 288
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 11
+
+
+Instancja 289
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 14
+
+
+Instancja 290
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 6
+
+
+Instancja 291
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 29
+energy 22
+
+
+Instancja 292
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 12
+
+
+Instancja 293
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 16
+
+
+Instancja 294
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 17
+
+
+Instancja 295
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 296
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 6
+
+
+Instancja 297
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 22
+
+
+Instancja 298
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 18
+
+
+Instancja 299
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 300
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 24
+
+
+Instancja 301
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 8
+
+
+Instancja 302
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 19
+
+
+Instancja 303
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 15
+
+
+Instancja 304
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 12
+
+
+Instancja 305
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 306
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 17
+
+
+Instancja 307
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 38
+energy 36
+
+
+Instancja 308
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 17
+
+
+Instancja 309
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 18
+
+
+Instancja 310
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 4
+
+
+Instancja 311
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 29
+energy 38
+
+
+Instancja 312
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 10
+
+
+Instancja 313
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 314
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 21
+
+
+Instancja 315
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 21
+energy 15
+
+
+Instancja 316
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 21
+
+
+Instancja 317
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 318
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 22
+
+
+Instancja 319
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 28
+
+
+Instancja 320
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 26
+energy 30
+
+
+Instancja 321
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 8
+
+
+Instancja 322
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 11
+
+
+Instancja 323
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 13
+
+
+Instancja 324
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 6
+
+
+Instancja 325
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 5
+
+
+Instancja 326
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 24
+energy 13
+
+
+Instancja 327
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 8
+
+
+Instancja 328
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 329
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 13
+
+
+Instancja 330
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 331
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 12
+
+
+Instancja 332
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 14
+
+
+Instancja 333
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 18
+energy 28
+
+
+Instancja 334
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 13
+
+
+Instancja 335
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 29
+energy 18
+
+
+Instancja 336
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 7
+
+
+Instancja 337
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 10
+
+
+Instancja 338
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 11
+
+
+Instancja 339
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 22
+
+
+Instancja 340
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 14
+
+
+Instancja 341
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 7
+
+
+Instancja 342
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 343
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 15
+
+
+Instancja 344
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 14
+
+
+Instancja 345
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 23
+
+
+Instancja 346
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 18
+
+
+Instancja 347
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 22
+energy 16
+
+
+Instancja 348
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 349
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 13
+
+
+Instancja 350
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 5
+
+
+Instancja 351
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 12
+
+
+Instancja 352
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 8
+
+
+Instancja 353
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 6
+
+
+Instancja 354
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 18
+
+
+Instancja 355
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 17
+
+
+Instancja 356
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 13
+
+
+Instancja 357
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 13
+energy 28
+
+
+Instancja 358
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 5
+
+
+Instancja 359
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 17
+energy 26
+
+
+Instancja 360
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 17
+
+
+Instancja 361
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 362
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 10
+
+
+Instancja 363
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 8
+
+
+Instancja 364
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 36
+energy 37
+
+
+Instancja 365
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 9
+
+
+Instancja 366
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
+
+
+Instancja 367
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 8
+
+
+Instancja 368
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 369
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 15
+energy 8
+
+
+Instancja 370
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 22
+energy 27
+
+
+Instancja 371
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 15
+
+
+Instancja 372
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 373
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 15
+
+
+Instancja 374
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 11
+
+
+Instancja 375
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 22
+energy 25
+
+
+Instancja 376
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 18
+
+
+Instancja 377
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 8
+
+
+Instancja 378
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 7
+
+
+Instancja 379
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 9
+
+
+Instancja 380
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 8
+
+
+Instancja 381
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 16
+
+
+Instancja 382
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 12
+
+
+Instancja 383
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 16
+
+
+Instancja 384
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 10
+
+
+Instancja 385
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 386
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 13
+
+
+Instancja 387
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 15
+
+
+Instancja 388
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 8
+
+
+Instancja 389
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 19
+
+
+Instancja 390
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 11
+
+
+Instancja 391
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 14
+
+
+Instancja 392
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 28
+energy 18
+
+
+Instancja 393
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 23
+
+
+Instancja 394
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 23
+energy 9
+
+
+Instancja 395
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 19
+
+
+Instancja 396
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 18
+
+
+Instancja 397
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 398
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 19
+
+
+Instancja 399
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 15
+
+
+Instancja 400
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 8
+
+
+Instancja 401
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 402
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 403
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 11
+
+
+Instancja 404
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 4
+
+
+Instancja 405
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 33
+energy 29
+
+
+Instancja 406
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 10
+
+
+Instancja 407
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 8
+
+
+Instancja 408
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 13
+
+
+Instancja 409
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 8
+
+
+Instancja 410
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 11
+
+
+Instancja 411
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 412
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 22
+energy 27
+
+
+Instancja 413
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 12
+
+
+Instancja 414
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 17
+
+
+Instancja 415
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 18
+
+
+Instancja 416
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 28
+energy 39
+
+
+Instancja 417
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 29
+energy 36
+
+
+Instancja 418
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 17
+
+
+Instancja 419
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 420
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 22
+energy 28
+
+
+Instancja 421
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 12
+
+
+Instancja 422
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 15
+
+
+Instancja 423
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 21
+energy 16
+
+
+Instancja 424
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 11
+
+
+Instancja 425
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 9
+
+
+Instancja 426
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 35
+energy 28
+
+
+Instancja 427
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 11
+
+
+Instancja 428
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 6
+
+
+Instancja 429
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 22
+
+
+Instancja 430
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 17
+
+
+Instancja 431
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 15
+energy 20
+
+
+Instancja 432
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 29
+energy 29
+
+
+Instancja 433
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 8
+
+
+Instancja 434
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 7
+
+
+Instancja 435
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 22
+
+
+Instancja 436
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 6
+
+
+Instancja 437
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 9
+
+
+Instancja 438
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 15
+
+
+Instancja 439
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 5
+
+
+Instancja 440
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 7
+
+
+Instancja 441
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 20
+
+
+Instancja 442
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 24
+
+
+Instancja 443
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 14
+
+
+Instancja 444
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 27
+energy 13
+
+
+Instancja 445
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 32
+energy 41
+
+
+Instancja 446
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 19
+
+
+Instancja 447
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 15
+
+
+Instancja 448
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 9
+
+
+Instancja 449
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 4
+
+
+Instancja 450
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 15
+
+
+Instancja 451
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 16
+
+
+Instancja 452
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 21
+energy 33
+
+
+Instancja 453
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 9
+
+
+Instancja 454
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
+
+
+Instancja 455
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 30
+energy 27
+
+
+Instancja 456
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 457
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 458
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 19
+
+
+Instancja 459
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 17
+energy 22
+
+
+Instancja 460
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 33
+energy 36
+
+
+Instancja 461
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 462
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 31
+energy 26
+
+
+Instancja 463
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 5
+
+
+Instancja 464
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 8
+
+
+Instancja 465
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 16
+
+
+Instancja 466
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 10
+
+
+Instancja 467
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 5
+
+
+Instancja 468
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 8
+
+
+Instancja 469
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 14
+
+
+Instancja 470
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 12
+
+
+Instancja 471
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 37
+energy 35
+
+
+Instancja 472
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 12
+
+
+Instancja 473
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 11
+
+
+Instancja 474
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 5
+
+
+Instancja 475
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 18
+
+
+Instancja 476
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 477
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 10
+
+
+Instancja 478
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 31
+energy 37
+
+
+Instancja 479
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 15
+
+
+Instancja 480
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 13
+
+
+Instancja 481
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 27
+energy 20
+
+
+Instancja 482
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 15
+
+
+Instancja 483
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 13
+
+
+Instancja 484
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 14
+
+
+Instancja 485
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 15
+
+
+Instancja 486
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 12
+
+
+Instancja 487
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 47
+energy 41
+
+
+Instancja 488
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 13
+
+
+Instancja 489
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 8
+
+
+Instancja 490
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 12
+
+
+Instancja 491
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 22
+
+
+Instancja 492
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 493
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 13
+
+
+Instancja 494
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 29
+energy 33
+
+
+Instancja 495
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 9
+
+
+Instancja 496
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 14
+
+
+Instancja 497
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 14
+
+
+Instancja 498
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 499
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 22
+energy 15
+
+
+Instancja 500
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 36
+energy 40
+
+
+Instancja 501
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 8
+
+
+Instancja 502
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 17
+
+
+Instancja 503
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 8
+
+
+Instancja 504
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 19
+
+
+Instancja 505
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 10
+
+
+Instancja 506
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 4
+
+
+Instancja 507
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 7
+
+
+Instancja 508
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 509
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 6
+
+
+Instancja 510
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 10
+
+
+Instancja 511
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 15
+
+
+Instancja 512
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 16
+
+
+Instancja 513
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 12
+
+
+Instancja 514
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 515
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 26
+energy 27
+
+
+Instancja 516
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 10
+
+
+Instancja 517
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 18
+
+
+Instancja 518
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 10
+
+
+Instancja 519
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 11
+
+
+Instancja 520
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 521
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 522
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 15
+
+
+Instancja 523
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 524
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 36
+energy 28
+
+
+Instancja 525
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 23
+energy 31
+
+
+Instancja 526
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 41
+energy 43
+
+
+Instancja 527
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 528
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 36
+energy 27
+
+
+Instancja 529
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 11
+
+
+Instancja 530
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 13
+
+
+Instancja 531
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 532
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 39
+energy 34
+
+
+Instancja 533
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 36
+energy 49
+
+
+Instancja 534
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 35
+energy 37
+
+
+Instancja 535
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 22
+energy 24
+
+
+Instancja 536
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 22
+
+
+Instancja 537
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 13
+
+
+Instancja 538
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 8
+
+
+Instancja 539
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 12
+
+
+Instancja 540
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 18
+energy 21
+
+
+Instancja 541
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 6
+
+
+Instancja 542
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 543
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 4
+
+
+Instancja 544
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 545
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 42
+energy 41
+
+
+Instancja 546
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 22
+energy 16
+
+
+Instancja 547
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 548
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 16
+
+
+Instancja 549
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 21
+energy 12
+
+
+Instancja 550
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 551
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 8
+
+
+Instancja 552
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 13
+
+
+Instancja 553
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 28
+energy 27
+
+
+Instancja 554
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 22
+
+
+Instancja 555
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 19
+
+
+Instancja 556
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
+
+
+Instancja 557
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 7
+
+
+Instancja 558
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 22
+energy 16
+
+
+Instancja 559
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 560
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 21
+
+
+Instancja 561
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 24
+
+
+Instancja 562
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 32
+energy 37
+
+
+Instancja 563
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 15
+
+
+Instancja 564
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 48
+energy 42
+
+
+Instancja 565
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 8
+
+
+Instancja 566
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 7
+
+
+Instancja 567
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 10
+
+
+Instancja 568
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 569
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 11
+
+
+Instancja 570
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 571
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 25
+energy 29
+
+
+Instancja 572
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 7
+
+
+Instancja 573
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 31
+energy 25
+
+
+Instancja 574
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 7
+
+
+Instancja 575
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 12
+
+
+Instancja 576
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 18
+
+
+Instancja 577
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 28
+
+
+Instancja 578
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 579
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 18
+
+
+Instancja 580
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 10
+
+
+Instancja 581
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 6
+
+
+Instancja 582
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 5
+
+
+Instancja 583
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 12
+
+
+Instancja 584
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 12
+
+
+Instancja 585
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 32
+energy 24
+
+
+Instancja 586
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 11
+
+
+Instancja 587
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 27
+
+
+Instancja 588
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 11
+
+
+Instancja 589
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 13
+
+
+Instancja 590
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 27
+energy 19
+
+
+Instancja 591
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 15
+
+
+Instancja 592
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 9
+
+
+Instancja 593
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 594
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 13
+
+
+Instancja 595
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 5
+
+
+Instancja 596
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 12
+
+
+Instancja 597
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 598
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 8
+
+
+Instancja 599
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 16
+
+
+Instancja 600
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 30
+energy 29
+
+
+Instancja 601
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 19
+
+
+Instancja 602
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 603
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 28
+energy 31
+
+
+Instancja 604
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 25
+energy 29
+
+
+Instancja 605
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 9
+
+
+Instancja 606
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 5
+
+
+Instancja 607
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 15
+
+
+Instancja 608
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 8
+energy 18
+
+
+Instancja 609
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 23
+
+
+Instancja 610
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 611
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 612
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 8
+
+
+Instancja 613
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 47
+energy 51
+
+
+Instancja 614
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 26
+energy 17
+
+
+Instancja 615
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 29
+energy 27
+
+
+Instancja 616
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 57
+energy 40
+
+
+Instancja 617
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 9
+
+
+Instancja 618
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 7
+
+
+Instancja 619
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 24
+energy 10
+
+
+Instancja 620
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 17
+
+
+Instancja 621
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 43
+energy 41
+
+
+Instancja 622
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 26
+energy 29
+
+
+Instancja 623
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 8
+
+
+Instancja 624
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 17
+
+
+Instancja 625
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 626
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 627
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 17
+
+
+Instancja 628
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 15
+energy 19
+
+
+Instancja 629
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 9
+
+
+Instancja 630
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 18
+
+
+Instancja 631
+
+Turn On Computer 1
+Try Again 12
+Turn on Internet 13
+Send Message 1
+
+time 75
+energy 72
+
+
+Instancja 632
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 633
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 9
+
+
+Instancja 634
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 26
+energy 15
+
+
+Instancja 635
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 6
+
+
+Instancja 636
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 637
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 638
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 7
+
+
+Instancja 639
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 23
+
+
+Instancja 640
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 12
+
+
+Instancja 641
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 10
+
+
+Instancja 642
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 36
+energy 34
+
+
+Instancja 643
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 22
+
+
+Instancja 644
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 13
+
+
+Instancja 645
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 28
+energy 32
+
+
+Instancja 646
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 12
+
+
+Instancja 647
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 14
+
+
+Instancja 648
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 8
+
+
+Instancja 649
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 6
+
+
+Instancja 650
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 13
+
+
+Instancja 651
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 652
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 653
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 17
+
+
+Instancja 654
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 22
+energy 9
+
+
+Instancja 655
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 9
+
+
+Instancja 656
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
+
+
+Instancja 657
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 17
+
+
+Instancja 658
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 9
+
+
+Instancja 659
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 14
+
+
+Instancja 660
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 6
+
+
+Instancja 661
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 8
+
+
+Instancja 662
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 29
+energy 25
+
+
+Instancja 663
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 8
+
+
+Instancja 664
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 4
+
+
+Instancja 665
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 8
+
+
+Instancja 666
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 16
+
+
+Instancja 667
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 8
+energy 17
+
+
+Instancja 668
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 6
+
+
+Instancja 669
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 25
+energy 27
+
+
+Instancja 670
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 671
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 672
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 17
+
+
+Instancja 673
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 14
+
+
+Instancja 674
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 13
+
+
+Instancja 675
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 13
+energy 22
+
+
+Instancja 676
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 20
+
+
+Instancja 677
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 10
+
+
+Instancja 678
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 14
+
+
+Instancja 679
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 17
+
+
+Instancja 680
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 7
+
+
+Instancja 681
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 16
+energy 24
+
+
+Instancja 682
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 15
+
+
+Instancja 683
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 15
+energy 11
+
+
+Instancja 684
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 5
+
+
+Instancja 685
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 20
+
+
+Instancja 686
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 11
+
+
+Instancja 687
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 8
+
+
+Instancja 688
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 13
+
+
+Instancja 689
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 16
+
+
+Instancja 690
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 10
+
+
+Instancja 691
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 19
+
+
+Instancja 692
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 15
+
+
+Instancja 693
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 694
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 32
+energy 42
+
+
+Instancja 695
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 27
+energy 41
+
+
+Instancja 696
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 26
+energy 26
+
+
+Instancja 697
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 698
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 30
+energy 20
+
+
+Instancja 699
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 26
+energy 20
+
+
+Instancja 700
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 24
+energy 26
+
+
+Instancja 701
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 7
+
+
+Instancja 702
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 17
+
+
+Instancja 703
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 12
+
+
+Instancja 704
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 6
+
+
+Instancja 705
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 16
+
+
+Instancja 706
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 8
+
+
+Instancja 707
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 12
+
+
+Instancja 708
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 4
+
+
+Instancja 709
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 12
+
+
+Instancja 710
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 10
+
+
+Instancja 711
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 11
+
+
+Instancja 712
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 12
+
+
+Instancja 713
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 6
+
+
+Instancja 714
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 17
+
+
+Instancja 715
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 22
+energy 15
+
+
+Instancja 716
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 4
+
+
+Instancja 717
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 23
+
+
+Instancja 718
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 719
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 13
+
+
+Instancja 720
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 11
+
+
+Instancja 721
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 6
+
+
+Instancja 722
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 10
+
+
+Instancja 723
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 19
+
+
+Instancja 724
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 18
+energy 25
+
+
+Instancja 725
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 16
+
+
+Instancja 726
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 11
+
+
+Instancja 727
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 6
+
+
+Instancja 728
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 9
+
+
+Instancja 729
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 13
+
+
+Instancja 730
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 16
+
+
+Instancja 731
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 4
+
+
+Instancja 732
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 19
+
+
+Instancja 733
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 11
+
+
+Instancja 734
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 17
+
+
+Instancja 735
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 39
+energy 31
+
+
+Instancja 736
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 27
+energy 25
+
+
+Instancja 737
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 11
+
+
+Instancja 738
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 14
+
+
+Instancja 739
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 35
+energy 29
+
+
+Instancja 740
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 8
+
+
+Instancja 741
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 17
+
+
+Instancja 742
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 10
+
+
+Instancja 743
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 7
+
+
+Instancja 744
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 15
+energy 25
+
+
+Instancja 745
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 746
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 15
+
+
+Instancja 747
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 8
+
+
+Instancja 748
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 3
+
+
+Instancja 749
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 15
+
+
+Instancja 750
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 15
+
+
+Instancja 751
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 3
+
+
+Instancja 752
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 18
+
+
+Instancja 753
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 17
+energy 22
+
+
+Instancja 754
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 21
+energy 13
+
+
+Instancja 755
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 11
+
+
+Instancja 756
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 13
+
+
+Instancja 757
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 15
+
+
+Instancja 758
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 16
+energy 27
+
+
+Instancja 759
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 14
+
+
+Instancja 760
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 7
+
+
+Instancja 761
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 26
+
+
+Instancja 762
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 11
+
+
+Instancja 763
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 11
+
+
+Instancja 764
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 14
+
+
+Instancja 765
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 6
+
+
+Instancja 766
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 20
+
+
+Instancja 767
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 13
+
+
+Instancja 768
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 9
+
+
+Instancja 769
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 40
+energy 30
+
+
+Instancja 770
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 12
+
+
+Instancja 771
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 15
+
+
+Instancja 772
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 14
+
+
+Instancja 773
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 13
+
+
+Instancja 774
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 12
+
+
+Instancja 775
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 9
+
+
+Instancja 776
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 777
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 22
+
+
+Instancja 778
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 17
+
+
+Instancja 779
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 17
+energy 21
+
+
+Instancja 780
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 8
+
+
+Instancja 781
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 23
+energy 20
+
+
+Instancja 782
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 8
+
+
+Instancja 783
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 14
+
+
+Instancja 784
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 23
+
+
+Instancja 785
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 18
+
+
+Instancja 786
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 11
+energy 14
+
+
+Instancja 787
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 13
+
+
+Instancja 788
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 19
+energy 15
+
+
+Instancja 789
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 13
+
+
+Instancja 790
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 791
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 22
+energy 23
+
+
+Instancja 792
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 13
+
+
+Instancja 793
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 13
+
+
+Instancja 794
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 8
+
+
+Instancja 795
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 26
+energy 30
+
+
+Instancja 796
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 13
+
+
+Instancja 797
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 3
+energy 6
+
+
+Instancja 798
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 17
+
+
+Instancja 799
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 21
+
+
+Instancja 800
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 801
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 7
+
+
+Instancja 802
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 23
+
+
+Instancja 803
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 20
+
+
+Instancja 804
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 38
+energy 26
+
+
+Instancja 805
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 16
+
+
+Instancja 806
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 11
+
+
+Instancja 807
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 808
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 11
+
+
+Instancja 809
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 810
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 16
+
+
+Instancja 811
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 26
+
+
+Instancja 812
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 13
+
+
+Instancja 813
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 8
+
+
+Instancja 814
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 24
+
+
+Instancja 815
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 12
+
+
+Instancja 816
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 817
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 18
+
+
+Instancja 818
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 12
+
+
+Instancja 819
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 820
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 18
+
+
+Instancja 821
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 24
+
+
+Instancja 822
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 24
+
+
+Instancja 823
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 8
+
+
+Instancja 824
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 18
+
+
+Instancja 825
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 7
+
+
+Instancja 826
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 10
+
+
+Instancja 827
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 16
+
+
+Instancja 828
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 40
+energy 40
+
+
+Instancja 829
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 11
+
+
+Instancja 830
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 10
+
+
+Instancja 831
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 34
+energy 27
+
+
+Instancja 832
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 19
+
+
+Instancja 833
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 834
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 835
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 12
+
+
+Instancja 836
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 837
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 10
+
+
+Instancja 838
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 9
+
+
+Instancja 839
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 6
+
+
+Instancja 840
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
+
+
+Instancja 841
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 7
+
+
+Instancja 842
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 13
+
+
+Instancja 843
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 844
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 15
+energy 16
+
+
+Instancja 845
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 19
+
+
+Instancja 846
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 7
+
+
+Instancja 847
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 23
+energy 28
+
+
+Instancja 848
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 10
+
+
+Instancja 849
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 34
+energy 31
+
+
+Instancja 850
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 24
+
+
+Instancja 851
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 12
+
+
+Instancja 852
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 7
+
+
+Instancja 853
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 11
+
+
+Instancja 854
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 10
+
+
+Instancja 855
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 856
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 34
+
+
+Instancja 857
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 23
+
+
+Instancja 858
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 8
+
+
+Instancja 859
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 19
+
+
+Instancja 860
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 19
+
+
+Instancja 861
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 23
+energy 12
+
+
+Instancja 862
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 26
+energy 13
+
+
+Instancja 863
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 9
+
+
+Instancja 864
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 23
+
+
+Instancja 865
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 866
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 8
+
+
+Instancja 867
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 15
+
+
+Instancja 868
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 30
+energy 28
+
+
+Instancja 869
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 24
+energy 31
+
+
+Instancja 870
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 12
+
+
+Instancja 871
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 872
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 23
+energy 17
+
+
+Instancja 873
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 14
+
+
+Instancja 874
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 14
+energy 7
+
+
+Instancja 875
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 6
+
+
+Instancja 876
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 9
+
+
+Instancja 877
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 7
+
+
+Instancja 878
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 27
+energy 20
+
+
+Instancja 879
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 12
+
+
+Instancja 880
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 40
+energy 31
+
+
+Instancja 881
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 12
+
+
+Instancja 882
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 5
+
+
+Instancja 883
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 884
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 16
+
+
+Instancja 885
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 15
+
+
+Instancja 886
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 19
+
+
+Instancja 887
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 15
+
+
+Instancja 888
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 32
+energy 28
+
+
+Instancja 889
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 5
+
+
+Instancja 890
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 15
+
+
+Instancja 891
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 9
+
+
+Instancja 892
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 6
+
+
+Instancja 893
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 894
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 9
+
+
+Instancja 895
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 896
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 16
+
+
+Instancja 897
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 5
+energy 10
+
+
+Instancja 898
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 20
+
+
+Instancja 899
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 900
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 901
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 8
+
+
+Instancja 902
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 6
+
+
+Instancja 903
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 21
+
+
+Instancja 904
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 905
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 906
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 11
+
+
+Instancja 907
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 5
+
+
+Instancja 908
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 44
+energy 41
+
+
+Instancja 909
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 12
+
+
+Instancja 910
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 12
+
+
+Instancja 911
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 7
+
+
+Instancja 912
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 9
+
+
+Instancja 913
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 7
+
+
+Instancja 914
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 23
+energy 33
+
+
+Instancja 915
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
+
+
+Instancja 916
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 11
+
+
+Instancja 917
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 19
+
+
+Instancja 918
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 13
+
+
+Instancja 919
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 12
+
+
+Instancja 920
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 16
+
+
+Instancja 921
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 10
+
+
+Instancja 922
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 18
+
+
+Instancja 923
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 13
+energy 16
+
+
+Instancja 924
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 925
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 12
+
+
+Instancja 926
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 927
+
+Turn On Computer 1
+Try Again 4
+Turn on Internet 5
+Send Message 1
+
+time 32
+energy 33
+
+
+Instancja 928
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 4
+
+
+Instancja 929
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 5
+
+
+Instancja 930
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 22
+energy 18
+
+
+Instancja 931
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 15
+
+
+Instancja 932
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 10
+
+
+Instancja 933
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 7
+
+
+Instancja 934
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 15
+
+
+Instancja 935
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 4
+energy 13
+
+
+Instancja 936
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 21
+energy 20
+
+
+Instancja 937
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 19
+
+
+Instancja 938
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 5
+
+
+Instancja 939
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 28
+energy 25
+
+
+Instancja 940
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 25
+energy 28
+
+
+Instancja 941
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 5
+
+
+Instancja 942
+
+Turn On Computer 1
+Try Again 3
+Turn on Internet 4
+Send Message 1
+
+time 29
+energy 33
+
+
+Instancja 943
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 15
+
+
+Instancja 944
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 16
+
+
+Instancja 945
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 946
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 20
+
+
+Instancja 947
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 14
+
+
+Instancja 948
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 11
+energy 20
+
+
+Instancja 949
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 15
+energy 10
+
+
+Instancja 950
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 951
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 952
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 11
+
+
+Instancja 953
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 11
+
+
+Instancja 954
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 955
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 17
+
+
+Instancja 956
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 11
+
+
+Instancja 957
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 6
+energy 9
+
+
+Instancja 958
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 4
+
+
+Instancja 959
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 8
+
+
+Instancja 960
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 961
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 9
+energy 11
+
+
+Instancja 962
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 14
+
+
+Instancja 963
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 964
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 24
+energy 21
+
+
+Instancja 965
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 10
+
+
+Instancja 966
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 10
+
+
+Instancja 967
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 16
+
+
+Instancja 968
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 19
+energy 19
+
+
+Instancja 969
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 10
+
+
+Instancja 970
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 6
+
+
+Instancja 971
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 9
+
+
+Instancja 972
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 13
+
+
+Instancja 973
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 9
+
+
+Instancja 974
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 7
+
+
+Instancja 975
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 20
+energy 20
+
+
+Instancja 976
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 17
+
+
+Instancja 977
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 46
+energy 41
+
+
+Instancja 978
+
+Turn On Computer 1
+Try Again 5
+Turn on Internet 6
+Send Message 1
+
+time 33
+energy 35
+
+
+Instancja 979
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 11
+
+
+Instancja 980
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 6
+
+
+Instancja 981
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 26
+energy 21
+
+
+Instancja 982
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 14
+
+
+Instancja 983
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 11
+
+
+Instancja 984
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 10
+energy 9
+
+
+Instancja 985
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 13
+energy 5
+
+
+Instancja 986
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 16
+energy 16
+
+
+Instancja 987
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 9
+
+
+Instancja 988
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 4
+
+
+Instancja 989
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 9
+energy 9
+
+
+Instancja 990
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 10
+energy 16
+
+
+Instancja 991
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 12
+energy 12
+
+
+Instancja 992
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 17
+energy 17
+
+
+Instancja 993
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 8
+energy 4
+
+
+Instancja 994
+
+Turn On Computer 1
+Try Again 6
+Turn on Internet 7
+Send Message 1
+
+time 42
+energy 49
+
+
+Instancja 995
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 18
+energy 17
+
+
+Instancja 996
+
+Turn On Computer 1
+Try Again 2
+Turn on Internet 3
+Send Message 1
+
+time 20
+energy 26
+
+
+Instancja 997
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 7
+energy 9
+
+
+Instancja 998
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 11
+energy 4
+
+
+Instancja 999
+
+Turn On Computer 1
+Try Again 1
+Turn on Internet 2
+Send Message 1
+
+time 14
+energy 20
+
+
+Instancja 1000
+
+Turn On Computer 1
+Try Again 0
+Turn on Internet 1
+Send Message 1
+
+time 12
+energy 11
 
 
 
 Paths
 
-(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
-20.0% 2
+(startEvent Send Message Task) -----> (userTask Turn On Computer) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Send Message) -----> (noneEndEvent Message is sended)
+49.0% 490
 
 Variables
-time: min 12 average 16 max 19
+time: min 3 average 9 max 15
+energy: min 3 average 9 max 15
 
-(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (noneEndEvent Message is sended) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2)
-10.0% 1
-
-Variables
-time: min 275 average 275 max 275
-
-(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
-10.0% 1
+(startEvent Send Message Task) -----> (userTask Turn On Computer) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Send Message) -----> (noneEndEvent Message is sended)
+27.8% 278
 
 Variables
-time: min 61 average 61 max 61
+time: min 7 average 15 max 24
+energy: min 7 average 15 max 23
 
-(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Try Again) -----> (userTask Send Message) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
-10.0% 1
-
-Variables
-time: min 248 average 248 max 248
-
-(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
-10.0% 1
+(startEvent Send Message Task) -----> (userTask Turn On Computer) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Send Message) -----> (noneEndEvent Message is sended)
+11.8% 118
 
 Variables
-time: min 76 average 76 max 76
+time: min 11 average 21 max 29
+energy: min 12 average 21 max 34
 
-(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Try Again) -----> (userTask Send Message) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
-10.0% 1
-
-Variables
-time: min 89 average 89 max 89
-
-(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Try Again) -----> (userTask Send Message) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
-10.0% 1
+(startEvent Send Message Task) -----> (userTask Turn On Computer) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Send Message) -----> (noneEndEvent Message is sended)
+4.7% 47
 
 Variables
-time: min 117 average 117 max 117
+time: min 18 average 26 max 40
+energy: min 18 average 27 max 38
 
-(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Send Message) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
-10.0% 1
-
-Variables
-time: min 79 average 79 max 79
-
-(startEvent Send Message Task) -----> (userTask Turn on computer) -----> (userTask Turn on Internet) -----> (parallelGateway Gateway_1fq1vfo) -----> (userTask Try Again) -----> (userTask Send Message) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 2) -----> (userTask Try Again) -----> (exclusiveGateway Gateway2) -----> (userTask New Task 1) -----> (noneEndEvent End2) -----> (noneEndEvent Message is sended)
-10.0% 1
+(startEvent Send Message Task) -----> (userTask Turn On Computer) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Send Message) -----> (noneEndEvent Message is sended)
+3.6% 36
 
 Variables
-time: min 34 average 34 max 34
+time: min 26 average 33 max 42
+energy: min 22 average 32 max 42
+
+(startEvent Send Message Task) -----> (userTask Turn On Computer) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Send Message) -----> (noneEndEvent Message is sended)
+1.9% 19
+
+Variables
+time: min 31 average 39 max 51
+energy: min 30 average 39 max 49
+
+(startEvent Send Message Task) -----> (userTask Turn On Computer) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Send Message) -----> (noneEndEvent Message is sended)
+1.1% 11
+
+Variables
+time: min 41 average 47 max 58
+energy: min 40 average 44 max 52
+
+(startEvent Send Message Task) -----> (userTask Turn On Computer) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Try Again) -----> (exclusiveGateway Gateway Before Internet) -----> (userTask Turn on Internet) -----> (exclusiveGateway Is Internet turned on?) -----> (userTask Send Message) -----> (noneEndEvent Message is sended)
+0.1% 1
+
+Variables
+time: min 75 average 75 max 75
+energy: min 72 average 72 max 72
 
 
 
 Task counts
 
-Turn on computer 10
-Send Message 10
-Try Again 74
-Turn on Internet 10
-New Task 1 10
-New Task 2 64
+Turn On Computer 1000
+Try Again 972
+Turn on Internet 1972
+Send Message 1000
 
+
+Assignees
+
+Filip
+time 11957
+energy 11804
+
+Filemon
+time 2911
+energy 2994
 
 Variables
 
 time
-sum: 965
-min: 12
-average: 96
-max: 275
+sum: 14868
+min: 3
+average: 14
+max: 75
+
+energy
+sum: 14798
+min: 3
+average: 14
+max: 72

@@ -1,5 +1,6 @@
 package simulation;
 
+import simdata.AssigneeList;
 import simdata.VariableCollection;
 
 import java.io.PrintWriter;
@@ -7,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 
 public abstract class ResultsSummary {
-    public static void results(int instNumber, PrintWriter writer, PathCollection pathCollection, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords){
+    public static void results(int instNumber, PrintWriter writer, PathCollection pathCollection, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, AssigneeList assigneeList){
         writer.println();
         writer.println();
         List<PathRecord> pathList = pathCollection.getPathList();
@@ -36,9 +37,20 @@ public abstract class ResultsSummary {
         }
         writer.println();
         writer.println();
+        writer.println("Assignees");
+        writer.println();
+        for( var assignee : assigneeList.getAssigneeList()){
+            writer.println(assignee.assignee);
+            for (var variable : assignee.getVarValueRecords().getVariableValueRecordList()){
+                writer.println(variable.variableName + " " + variable.value);
+            }
+            writer.println();
+        }
+
         writer.println("Variables");
         VariableValueRecords varAllMinValueRecords = pathCollection.getAllMinVarValueRecords();
         VariableValueRecords varAllMaxValueRecords = pathCollection.getAllMaxVarValueRecords();
+
         for (var variable : varCollection.getVariableNameList()) {
             int average = variableValueRecords.getVarValue(variable) / instNumber;
             writer.println();

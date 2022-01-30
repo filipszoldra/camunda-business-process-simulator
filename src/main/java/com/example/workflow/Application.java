@@ -1,8 +1,10 @@
 package com.example.workflow;
 
 import client.AddTasksPriority;
+import client.CreateAssigneeList;
 import client.CreateTaskList;
 import client.GetVariables;
+import modeleditor.Assignees;
 import modeleditor.ReplaceNotUserTasks;
 import modeleditor.SetExclusiveGatewayConditions;
 import org.camunda.bpm.engine.*;
@@ -12,10 +14,7 @@ import org.camunda.bpm.engine.repository.DeploymentBuilder;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.model.bpmn.Bpmn;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
-import simdata.GetRandomValue;
-import simdata.TaskList;
-import simdata.TaskVariable;
-import simdata.VariableCollection;
+import simdata.*;
 import simulation.*;
 
 import java.io.File;
@@ -30,7 +29,7 @@ import java.util.Scanner;
 public class Application {
 
     public static void main(String... args) throws IOException {
-        String modelpath = "C:\\Users\\Filip\\Desktop\\inzynierka\\main\\business process simulation\\business process simulation\\src\\main\\resources\\process2.bpmn";
+        String modelpath = "C:\\Users\\Filip\\Desktop\\inzynierka\\main\\business process simulation\\business process simulation\\src\\main\\resources\\process.bpmn";
 
         // read bpmn model from file
         BpmnModelInstance modelInstance = Bpmn.readModelFromFile(new File(modelpath));
@@ -38,7 +37,9 @@ public class Application {
         Scanner reader = new Scanner(System.in);
 
         VariableCollection varCollection = GetVariables.createVariables();
-        TaskList taskList = CreateTaskList.createTaskList(modelInstance, varCollection);
+        AssigneeList assigneeList = CreateAssigneeList.createAssigneeList(varCollection);
+        TaskList taskList = CreateTaskList.createTaskList(modelInstance, varCollection, assigneeList);
+        Assignees.addAssignees(modelInstance, assigneeList);
         SetExclusiveGatewayConditions.setExclusiveGatewayConditions(modelInstance, taskList, varCollection);
 //        AddTasksPriority.addPriority(taskList, modelInstance);
         Bpmn.validateModel(modelInstance);
@@ -55,8 +56,8 @@ public class Application {
         reader.close();
         int instNumber = instanceNumber;
         PrintWriter writer = new PrintWriter("results.txt", StandardCharsets.UTF_8);
-        Simulation.startSimulation(instanceNumber, writer, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection);
-        ResultsSummary.results(instNumber, writer, pathCollection, varCollection, taskCounter, variableValueRecords);
+        Simulation.startSimulation(instanceNumber, writer, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList);
+        ResultsSummary.results(instNumber, writer, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
         writer.close();
     }
 }

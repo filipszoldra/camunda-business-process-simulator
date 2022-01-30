@@ -7,16 +7,13 @@ import org.camunda.bpm.engine.repository.DeploymentBuilder;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.task.Task;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
-import simdata.GetRandomValue;
-import simdata.TaskList;
-import simdata.TaskVariable;
-import simdata.VariableCollection;
+import simdata.*;
 
 import java.io.PrintWriter;
 import java.util.List;
 
 public abstract class Simulation {
-    public static void startSimulation(int instanceNumber, PrintWriter writer, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection){
+    public static void startSimulation(int instanceNumber, PrintWriter writer, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList){
 
         int inst = 1;
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
@@ -58,10 +55,12 @@ public abstract class Simulation {
                 taskCounter.taskIncrement(taskKey);
                 instanceTaskCounter.taskIncrement(taskKey);
                 List<TaskVariable> taskVarList = taskList.getTaskVarList(taskKey);
-
+                String taskAssignee = actualTask.getAssignee();
                 for (var taskVar : taskVarList) {
-                    variableValueRecords.varAddValue(taskVar.getName(), taskVar.getValue());
-                    instanceVariableValueRecords.varAddValue(taskVar.getName(), taskVar.getValue());
+                    int value = taskVar.getValue();
+                    instanceVariableValueRecords.varAddValue(taskVar.getName(), value);
+                    assigneeList.addVarValue(taskAssignee, taskVar.getName(), value);
+                    variableValueRecords.varAddValue(taskVar.getName(), value);
                 }
                 for (var condVar : taskList.getConditionalVars()) {
                     String condVarVal = condVar.concat("Val");
