@@ -37,14 +37,16 @@ public abstract class ResultsSummary {
         }
         writer.println();
         writer.println();
-        writer.println("Assignees");
-        writer.println();
-        for( var assignee : assigneeList.getAssigneeList()){
-            writer.println(assignee.assignee);
-            for (var variable : assignee.getVarValueRecords().getVariableValueRecordList()){
-                writer.println(variable.variableName + " " + variable.value);
-            }
+        if(assigneeList.getAssigneeList().size()>0) {
+            writer.println("Assignees");
             writer.println();
+            for (var assignee : assigneeList.getAssigneeList()) {
+                writer.println(assignee.assignee);
+                for (var variable : assignee.getVarValueRecords().getVariableValueRecordList()) {
+                    writer.println(variable.variableName + " " + variable.value);
+                }
+                writer.println();
+            }
         }
 
         writer.println("Variables");

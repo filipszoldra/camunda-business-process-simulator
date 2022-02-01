@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VariableValueRecords {
-    private List<VariableRecord> variableValueRecordList = new ArrayList<>(); {
-    };
-    int instanceNumber;
+    private final List<VariableRecord> variableValueRecordList = new ArrayList<>(); {
+    }
 
+    int instanceNumber;
     public VariableValueRecords(){
     }
     public VariableValueRecords(VariableCollection varCollection){
@@ -17,11 +17,14 @@ public class VariableValueRecords {
             VariableRecord varRecord = new VariableRecord(varName);
             variableValueRecordList.add(varRecord);
         }
-    };
+    }
+
+
+
 
     public void varAddValue(String varName, Integer value){
         for (var variable : variableValueRecordList){
-            if(variable.variableName == varName){
+            if(variable.variableName.equals(varName)){
                 variable.value += value;
             }
         }
@@ -62,6 +65,18 @@ public class VariableValueRecords {
         return null;
     }
 
+    public void addProcessTime(int time){
+        varAddValue("process time", time);
+    }
+
+
+    public List<String> getVarNamesList(){
+        List<String> varNameList = new ArrayList<>();
+        for (var variable : variableValueRecordList){
+            varNameList.add(variable.variableName);
+        }
+        return varNameList;
+    }
 
     public void setInstanceNumber(int instanceNumber){
         this.instanceNumber = instanceNumber;
@@ -72,7 +87,18 @@ public class VariableValueRecords {
     }
 
     public List<VariableRecord> getVariableValueRecordList(){
+//        VariableRecord timeRecord = new VariableRecord("Process Time", this.processTime);
+//        variableValueRecordList.add(timeRecord);
         return variableValueRecordList;
+    }
+
+    public List<String> getVariableRecordNames(){
+        List<String> names = new ArrayList<>();
+        for(var record : variableValueRecordList){
+            names.add(record.variableName);
+        }
+        return names;
+
     }
 
 //    public VariableValueRecords getVariableAverageValueRecordList(VariableValueRecords allVariableValueRecords, int counter){

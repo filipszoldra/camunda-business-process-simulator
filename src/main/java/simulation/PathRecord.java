@@ -28,7 +28,7 @@ public class PathRecord {
     }
 
     public Integer getCounter() {
-        return (Integer) Math.round(this.counter);
+        return Math.round(this.counter);
     }
 
     public String getPathString(){

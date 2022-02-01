@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public abstract class Simulation {
-    public static void startSimulation(int instanceNumber, PrintWriter writer, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList){
+    public static void startSimulation(int instanceNumber, PrintWriter writer, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList, PararellOrderList pararellList){
 
         int inst = 1;
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
@@ -33,7 +33,7 @@ public abstract class Simulation {
             RuntimeService runtimeService = processEngine.getRuntimeService();
             TaskCounter instanceTaskCounter = new TaskCounter(taskList);
             VariableValueRecords instanceVariableValueRecords = new VariableValueRecords(varCollection);
-
+            ProcessTimer processTimer = new ProcessTimer(pararellList, taskList);
 
             ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(processId);
             String processInstanceId = processInstance.getId();
@@ -41,16 +41,14 @@ public abstract class Simulation {
 
 
             org.camunda.bpm.engine.task.TaskQuery taskQuery = taskService.createTaskQuery()
-                    .active()
-                    .orderByTaskPriority()
-                    .desc();
+                    .active();
             List<Task> activeTasks = taskQuery.unlimitedList();
 
 
             while (activeTasks.size() > 0) {
                 org.camunda.bpm.engine.task.Task actualTask = activeTasks.get(0);
                 activeTasks.remove(0);
-
+                String parent = actualTask.getParentTaskId();
                 String taskKey = actualTask.getTaskDefinitionKey();
                 taskCounter.taskIncrement(taskKey);
                 instanceTaskCounter.taskIncrement(taskKey);
@@ -61,6 +59,8 @@ public abstract class Simulation {
                     instanceVariableValueRecords.varAddValue(taskVar.getName(), value);
                     assigneeList.addVarValue(taskAssignee, taskVar.getName(), value);
                     variableValueRecords.varAddValue(taskVar.getName(), value);
+                    if(taskVar.getName().equals("time"))
+                        processTimer.addTaskTimeRecord(taskKey, value);
                 }
                 for (var condVar : taskList.getConditionalVars()) {
                     String condVarVal = condVar.concat("Val");
@@ -70,21 +70,19 @@ public abstract class Simulation {
                         taskService.setVariable(actualTask.getId(), condVarVal, instanceVariableValueRecords.getVarValue(condVar));
                     }
                 }
-
                 taskService.complete(actualTask.getId());
                 taskQuery = taskService.createTaskQuery()
-                        .active()
-                        .orderByTaskPriority()
-                        .desc();
+
+                        .active();
                 activeTasks = taskQuery.unlimitedList();
 
             }
+            processTimer.setProcessTime();
+            int processTime = processTimer.getProcessTime();
+            instanceVariableValueRecords.addProcessTime(processTime);
+            variableValueRecords.addProcessTime(processTime);
             for (var task : instanceTaskCounter.getTaskCounterList()) {
                 writer.println(task.taskName + " " + task.counter);
-            }
-            writer.println();
-            for (var variable : instanceVariableValueRecords.getVariableValueRecordList()) {
-                writer.println(variable.variableName + " " + variable.value);
             }
             instanceNumber--;
             inst++;
@@ -92,11 +90,10 @@ public abstract class Simulation {
             HistoricActivityInstanceQuery activityQuery = historyService.createHistoricActivityInstanceQuery()
                     .processInstanceId(processInstanceId)
                     .finished()
-                    .orderByHistoricActivityInstanceStartTime().asc()
+                    .orderByHistoricActivityInstanceEndTime().asc()
                     .orderPartiallyByOccurrence().asc();
             List<HistoricActivityInstance> activityList = activityQuery.unlimitedList();
             pathCollection.addPath(activityList, instanceVariableValueRecords);
-
         }
     }
 }

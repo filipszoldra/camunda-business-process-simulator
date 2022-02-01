@@ -1,6 +1,7 @@
 package simdata;
 
 
+import org.camunda.bpm.model.bpmn.BpmnModelInstance;
 import org.camunda.bpm.model.bpmn.instance.Task;
 import org.camunda.bpm.model.bpmn.instance.UserTask;
 
@@ -8,11 +9,13 @@ import java.util.List;
 
 public class SimTask {
 
-    private Task task;
+    private final Task task;
     public String taskId;
     public String taskName;
     public String assignee;
     public TaskVariableList taskVarList;
+    public int pararellOrder = 0;
+    public int pararellValue;
     public SimTask(UserTask task){
         this.task = task;
         this.taskId = task.getId();

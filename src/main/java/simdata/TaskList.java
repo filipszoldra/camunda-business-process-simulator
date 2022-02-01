@@ -6,71 +6,101 @@ import java.util.List;
 public class TaskList {
     List<SimTask> taskList = new ArrayList();
     List<String> conditionalVars = new ArrayList<>();
-    public TaskList(){
-    };
 
-    public void addTask(SimTask task){
+    public TaskList() {
+    }
+
+    public void addTask(SimTask task) {
         taskList.add(task);
     }
 
-    public SimTask getTask(String taskId){
-        for(var task: taskList){
-            if(task.taskId == taskId){
+    public SimTask getTask(String taskId) {
+        for (var task : taskList) {
+            if (task.taskId == taskId) {
                 return task;
             }
         }
         return null;
     }
-    public TaskVariable getTaskVariable(String taskId, String taskName){
-        for(var task: taskList){
-            if(task.taskId == taskId){
+
+    public TaskVariable getTaskVariable(String taskId, String taskName) {
+        for (var task : taskList) {
+            if (task.taskId == taskId) {
                 return task.taskVarList.getTaskVariable(taskName);
             }
         }
         return null;
     }
 
-    public Integer getTaskVariableValue(String taskId, String taskName){
-        for(var task: taskList){
-            if(task.taskId == taskId){
+    public Integer getTaskVariableValue(String taskId, String taskName) {
+        for (var task : taskList) {
+            if (task.taskId == taskId) {
                 return task.taskVarList.getValue(taskName);
             }
         }
         return null;
     }
 
-    public List<String> getTaskIdList(){
+    public List<String> getTaskIdList() {
         List<String> taskIdList = new ArrayList();
-        for(var task : taskList){
+        for (var task : taskList) {
             taskIdList.add(task.taskId);
         }
         return taskIdList;
     }
 
-    public String getTaskNameById(String taskId){
-        for(var task : taskList){
-            if(task.taskId.equals(taskId)){
+    public void setPararellOrder(String taskId, int pararellOrder) {
+        for (var task : taskList) {
+            if (task.taskId == taskId) {
+                task.pararellOrder = pararellOrder;
+            }
+        }
+    }
+
+    public void setPararellValue(String taskId, int pararellValue) {
+        for (var task : taskList) {
+            if (task.taskId == taskId) {
+                task.pararellValue = pararellValue;
+            }
+        }
+    }
+
+
+    public int getPararellOrder(String taskId) {
+        for (var task : taskList) {
+            if (task.taskId == taskId) {
+                return task.pararellOrder;
+            }
+
+        }
+        return 0;
+    }
+
+    public String getTaskNameById(String taskId) {
+        for (var task : taskList) {
+            if (task.taskId.equals(taskId)) {
                 return task.taskName;
             }
         }
         return null;
     }
 
-    public List<TaskVariable> getTaskVarList(String taskId){
-        for (var task : taskList){
-            if(task.taskId.equals(taskId)){
+    public List<TaskVariable> getTaskVarList(String taskId) {
+        for (var task : taskList) {
+            if (task.taskId.equals(taskId)) {
                 return task.getTaskVarList();
             }
         }
         return null;
     }
-    public void addConditionalVar(String conditionalVarName){
+
+    public void addConditionalVar(String conditionalVarName) {
 
         conditionalVars.add(conditionalVarName);
 
     }
 
-    public List<String> getConditionalVars(){
+    public List<String> getConditionalVars() {
         return conditionalVars;
     }
 

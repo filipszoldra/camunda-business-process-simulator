@@ -9,8 +9,9 @@ import java.util.Scanner;
 
 public abstract class GetVariables {
     public static VariableCollection createVariables(){
-        System.out.println("Ile zmiennych ma uwzględniać symulacja?");
         VariableCollection varCollection = new VariableCollection();
+        varCollection.createSimVariable("time");
+        System.out.println("Ile zmiennych oprócz czasu ma uwzględniać symulacja?");
         Scanner reader = new Scanner(System.in);
         int vars = reader.nextInt();
         for (int i=1; i<=vars; i++){

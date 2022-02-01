@@ -7,29 +7,31 @@ public class VariableCollection {
     public List<SimVariable> variablesList = new ArrayList<>();
     int ids = 1;
 
-    public void addSimVariable(SimVariable simVar){
+    public void addSimVariable(SimVariable simVar) {
         variablesList.add(simVar);
     }
-    public List<String> getAllVariableNames(){
+
+    public List<String> getAllVariableNames() {
         List<String> namesList = new ArrayList<>();
-        for(var variable : variablesList){
+        for (var variable : variablesList) {
             namesList.add(variable.getName());
         }
         return namesList;
     }
-    public void createSimVariable(String nameVar){
+
+    public void createSimVariable(String nameVar) {
         SimVariable newVar = new SimVariable(nameVar, ids);
         variablesList.add(newVar);
         ids++;
     }
 
-    public Integer countVariables(){
+    public Integer countVariables() {
         return variablesList.size();
     }
 
 
-    private Integer findVariableIndex(String name){
-        for(var variable : variablesList) {
+    private Integer findVariableIndex(String name) {
+        for (var variable : variablesList) {
             if (variable.getName() == name) {
                 return variablesList.indexOf(variable);
             }
@@ -38,30 +40,35 @@ public class VariableCollection {
     }
 
 
-    public Integer getDefaultVariableValue(String name){
+    public Integer getDefaultVariableValue(String name) {
         return variablesList.get(findVariableIndex(name)).getDefaultValue();
     }
 
-    public List<SimVariable> getVariableList(){
+    public List<SimVariable> getVariableList() {
         List<SimVariable> varList = this.variablesList;
         return varList;
     }
 
-    public List<String> getVariableNameList(){
+    public List<String> getVariableNameList() {
         List<String> nameList = new ArrayList<>();
-        for(var variable : variablesList){
+        for (var variable : variablesList) {
             nameList.add(variable.getName());
         }
-        return nameList ;
+        return nameList;
     }
 
-    public String getVarNameById(int id){
-        for(var variable : variablesList){
-            if(variable.getId() == id){
+    public String getVarNameById(int id) {
+        for (var variable : variablesList) {
+            if (variable.getId() == id) {
                 return variable.getName();
             }
         }
         return null;
+    }
+
+    public void addVarProcessTime() {
+        SimVariable processTimeVar = new SimVariable("process time", 0);
+        variablesList.add(0, processTimeVar);
     }
 
 

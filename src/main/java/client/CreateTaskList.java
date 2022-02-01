@@ -1,6 +1,8 @@
 package client;
 
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
+import org.camunda.bpm.model.bpmn.Query;
+import org.camunda.bpm.model.bpmn.instance.FlowNode;
 import org.camunda.bpm.model.bpmn.instance.Task;
 import org.camunda.bpm.model.bpmn.instance.UserTask;
 import org.camunda.bpm.model.xml.instance.ModelElementInstance;
@@ -21,29 +23,37 @@ public abstract class CreateTaskList {
         Collection<ModelElementInstance> taskInstances = modelInstance.getModelElementsByType(taskType);
 
         TaskList taskList = new TaskList();
-
-        System.out.println("W jaki sposób chcesz wprowadzać wartości zmiennych?");
-        System.out.println("1 - wartość wybierana dla każdej zmiennej wartość w każdym zadaniu");
-        System.out.println("2 - wartość wybierana z losowego przedziału podanego dla każdej zmiennej w każdym zadaniu");
-        System.out.println("3 - zawsze taka sama podana wartość");
-        System.out.println("4 - zawsze taki sam podany losowy przedział");
-        int varVals = reader.nextInt();
-        while(varVals!=1 && varVals!=2 && varVals!=3 && varVals!=4){
-            System.out.println("Wybierz opcję od 1 do 4");
-            varVals = reader.nextInt();
-        }
+        int varVals;
         int value = 0;
         int valMax = 0;
         int valMin = 0;
-        if (varVals == 3){
-            System.out.println("Podaj stałą wartość zmiennych");
-            value = reader.nextInt();
+        if(varCollection.getVariableNameList().size()==0){
+            varVals = 0;
         }
-        if (varVals == 4){
-            System.out.println("Podaj minimalną wartość zmiennych");
-            valMin = reader.nextInt();
-            System.out.println("Podaj maksymalną wartość zmiennych ");
-            valMax = reader.nextInt();
+        else {
+            System.out.println("W jaki sposób chcesz wprowadzać wartości zmiennych?");
+            System.out.println("1 - wartość wybierana dla każdej zmiennej wartość w każdym zadaniu");
+            System.out.println("2 - wartość wybierana z losowego przedziału podanego dla każdej zmiennej w każdym zadaniu");
+            System.out.println("3 - zawsze taka sama podana wartość");
+            System.out.println("4 - zawsze taki sam podany losowy przedział");
+            varVals = reader.nextInt();
+            while (varVals != 1 && varVals != 2 && varVals != 3 && varVals != 4) {
+                System.out.println("Wybierz opcję od 1 do 4");
+                varVals = reader.nextInt();
+            }
+            value = 0;
+            valMax = 0;
+            valMin = 0;
+            if (varVals == 3) {
+                System.out.println("Podaj stałą wartość zmiennych");
+                value = reader.nextInt();
+            }
+            if (varVals == 4) {
+                System.out.println("Podaj minimalną wartość zmiennych");
+                valMin = reader.nextInt();
+                System.out.println("Podaj maksymalną wartość zmiennych ");
+                valMax = reader.nextInt();
+            }
         }
         Boolean setAssignees = true;
 
@@ -51,7 +61,7 @@ public abstract class CreateTaskList {
         ) {
             UserTask task = modelInstance.getModelElementById(taskInstance.getAttributeValue("id"));
             SimTask taskData = new SimTask(task);
-            if(setAssignees == true){
+            if(assigneeList.getAssigneeList().size()>1){
                 List<AssigneeRecord> assigneeRecords = assigneeList.getAssigneeList();
                 System.out.println("Którego pracownika chcesz przydzielić do zadania " + taskData.taskName + "? Podaj id.");
                 for (var assignee : assigneeRecords) {
@@ -61,6 +71,12 @@ public abstract class CreateTaskList {
                 taskData.setAssignee(assigneeList.getAssigneeNameById(id));
                 addTasktoAssigneeTaskList(assigneeList, id, taskData.taskId);
             }
+            else if(assigneeList.getAssigneeList().size()==1){
+                taskData.setAssignee(assigneeList.getAssigneeNameById(1));
+                addTasktoAssigneeTaskList(assigneeList, 1, taskData.taskId);
+            }
+
+
 
 
             taskData.taskVarList.addDefaultVariables(varCollection);
@@ -86,7 +102,7 @@ public abstract class CreateTaskList {
                     taskData.taskVarList.setValue(variableName, value);
                 }
             }
-            else {
+            else if (varVals == 4){
                 for (var variableName : taskData.taskVarList.getAllVariableNames()) {
                     taskData.taskVarList.setValue(variableName, valMin, valMax);
                 }
