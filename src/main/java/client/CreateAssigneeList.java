@@ -3,6 +3,8 @@ package client;
 import simdata.AssigneeList;
 import simdata.VariableCollection;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class CreateAssigneeList {
@@ -18,6 +20,5 @@ public abstract class CreateAssigneeList {
         }
         assigneeList.createAssigneeVarValueRecords(variableCollection);
         return assigneeList;
-
     }
 }

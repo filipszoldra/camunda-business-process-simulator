@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="varForm">
+    <form action="/endpoint1" method="post">
+        <!--<tr th:each="val : ${formcount}">-->
+        <!--  <td>-->
+        <!--    <input type="text" th:name="${val}" th:value="${val}"/>-->
+        <!--  </td>-->
+        <!--</tr>-->
+        <input name="varNames" type="text" value="podaj zmienne po przecinku"/>
+        <input name="assignee" type="text" value="podaj pracowników po przecinku"/>
+        <button type="submit">Wyślij</button>
+    </form>
+
+<!--    <form action="/endpoint2" method="post">-->
+
+<!--        <input name="assignee" type="text" value="podaj pracowników po przecinku"/>-->
+<!--        <button type="submit">Wyślij</button>-->
+<!--    </form>-->
+    <form action="/count" method="get">
+        <button type="submit">idź dalej</button>
+    </form>
+
+</div>
+</body>
+</html>

@@ -29,9 +29,9 @@ public class AssigneeList {
         return assigneeList;
     }
 
-    public void addTask(String taskId, int id){
+    public void addTask(String taskId, String assigneeName){
         for (var assignee : assigneeList){
-            if(assignee.id == id){
+            if(assignee.assignee.equals(assigneeName)){
                 assignee.addTask(taskId);
             }
         }

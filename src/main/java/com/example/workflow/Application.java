@@ -1,14 +1,12 @@
 package com.example.workflow;
 
-import client.CreateAssigneeList;
-import client.CreateTaskList;
-import client.GetVariables;
-import client.PararellOrder;
+import client.*;
 import modeleditor.Assignees;
 import modeleditor.ReplaceNotUserTasks;
 import modeleditor.SetExclusiveGatewayConditions;
 import org.camunda.bpm.model.bpmn.Bpmn;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
+import org.camunda.feel.syntaxtree.In;
 import simdata.AssigneeList;
 import simdata.TaskList;
 import simdata.VariableCollection;
@@ -23,21 +21,25 @@ import java.util.Scanner;
 public class Application {
 
     public static void main(String... args) throws IOException {
-        String modelpath = "C:\\Users\\Filip\\Desktop\\inzynierka\\main\\business process simulation\\business process simulation\\src\\main\\resources\\pararelltest2.bpmn";
+        String modelpath = "C:\\Users\\Filip\\Desktop\\inzynierka\\main\\business process simulation\\modele\\process.bpmn";
 
         // read bpmn model from file
         BpmnModelInstance modelInstance = Bpmn.readModelFromFile(new File(modelpath));
         ReplaceNotUserTasks.ReplaceNotUserTasks(modelInstance);
-        Scanner reader = new Scanner(System.in);
+        InputData inputData = new InputData(modelInstance);
+        inputData.collectDataFromTerminal();
 
-        VariableCollection varCollection = GetVariables.createVariables();
-        AssigneeList assigneeList = CreateAssigneeList.createAssigneeList(varCollection);
-        TaskList taskList = CreateTaskList.createTaskList(modelInstance, varCollection, assigneeList);
+        VariableCollection varCollection = inputData.getVariableCollection();
+        AssigneeList assigneeList = inputData.getAssigneeList();
+        assigneeList.createAssigneeVarValueRecords(varCollection);
+        TaskList taskList = CreateTaskList.createTaskList(modelInstance, assigneeList, inputData.getTaskInput(), inputData.getConditionalVarNames());
         Assignees.addAssignees(modelInstance, assigneeList);
-        SetExclusiveGatewayConditions.setExclusiveGatewayConditions(modelInstance, taskList, varCollection);
+        SetExclusiveGatewayConditions.setExclusiveGatewayConditions(modelInstance, inputData.getGateConds(), inputData.getConditionalVarNames());
         PararellOrderList pararellList = PararellOrder.setPararellOrder(modelInstance, taskList, varCollection);
 //        AddTasksPriority.addPriority(taskList, modelInstance);
+
         Bpmn.validateModel(modelInstance);
+        Scanner reader = new Scanner(System.in);
 
 // write edited model to file
         File file = new File("testmodel.bpmn");
@@ -55,4 +57,5 @@ public class Application {
         ResultsSummary.results(instNumber, writer, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
         writer.close();
     }
+
 }

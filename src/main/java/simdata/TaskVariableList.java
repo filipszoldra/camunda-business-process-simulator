@@ -41,6 +41,7 @@ public class TaskVariableList {
         return null;
     }
 
+
     public Integer getValue(String name){
         return taskVarList.get(findVariableIndex(name)).getValue();
     }

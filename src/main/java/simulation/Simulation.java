@@ -90,6 +90,7 @@ public abstract class Simulation {
             HistoricActivityInstanceQuery activityQuery = historyService.createHistoricActivityInstanceQuery()
                     .processInstanceId(processInstanceId)
                     .finished()
+                    .orderByHistoricActivityInstanceStartTime().asc()
                     .orderByHistoricActivityInstanceEndTime().asc()
                     .orderPartiallyByOccurrence().asc();
             List<HistoricActivityInstance> activityList = activityQuery.unlimitedList();
