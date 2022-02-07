@@ -35,6 +35,7 @@ public abstract class AddConditionalValue {
 
             CamundaInputParameter inputParameter = modelInstance.newInstance(CamundaInputParameter.class);
             inputParameter.setCamundaName(varCondName + "Val");
+            inputParameter.setTextContent("0");
             inputOutputElement.addChildElement(inputParameter);
 
             CamundaOutputParameter outputParameter = modelInstance.newInstance(CamundaOutputParameter.class);

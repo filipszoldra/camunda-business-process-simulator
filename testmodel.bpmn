@@ -29,13 +29,13 @@
         
     <bpmn:sequenceFlow id="Flow_087t9nu" name="Yes" sourceRef="isInternetTurnedOn" targetRef="sendMessage">
             
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${rand &lt;= 66}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${time &gt; 10}</bpmn:conditionExpression>
           
     </bpmn:sequenceFlow>
         
     <bpmn:sequenceFlow id="Flow_1rr9arw" name="No" sourceRef="isInternetTurnedOn" targetRef="tryAgain">
             
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${rand &gt; 34}</bpmn:conditionExpression>
+      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${time &lt;= 10}</bpmn:conditionExpression>
           
     </bpmn:sequenceFlow>
         
@@ -59,15 +59,15 @@
         
     <bpmn:sequenceFlow id="Flow_16636a0" sourceRef="tryAgain" targetRef="gatewayBeforeInternet"/>
         
-    <bpmn:userTask camunda:assignee="Filip" completionQuantity="1" id="turnOnComputer" implementation="##unspecified" isForCompensation="false" name="Turn On Computer" startQuantity="1">
+    <bpmn:userTask camunda:assignee="default" completionQuantity="1" id="turnOnComputer" implementation="##unspecified" isForCompensation="false" name="Turn On Computer" startQuantity="1">
             
       <bpmn:extensionElements>
                 
         <camunda:inputOutput>
-          <camunda:inputParameter name="randVal"/>
+          <camunda:inputParameter name="timeVal">0</camunda:inputParameter>
                     
           <camunda:outputParameter name="computer">TurnedOn</camunda:outputParameter>
-          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+          <camunda:outputParameter name="time">${timeVal}</camunda:outputParameter>
                   
         </camunda:inputOutput>
               
@@ -79,15 +79,15 @@
           
     </bpmn:userTask>
         
-    <bpmn:userTask camunda:assignee="Maciej" completionQuantity="1" id="tryAgain" implementation="##unspecified" isForCompensation="false" name="Try Again" startQuantity="1">
+    <bpmn:userTask camunda:assignee="default" completionQuantity="1" id="tryAgain" implementation="##unspecified" isForCompensation="false" name="Try Again" startQuantity="1">
             
       <bpmn:extensionElements>
                 
         <camunda:inputOutput>
-          <camunda:inputParameter name="randVal"/>
+          <camunda:inputParameter name="timeVal">0</camunda:inputParameter>
                     
           <camunda:outputParameter name="tryAgain">True</camunda:outputParameter>
-          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+          <camunda:outputParameter name="time">${timeVal}</camunda:outputParameter>
                   
         </camunda:inputOutput>
               
@@ -99,17 +99,17 @@
           
     </bpmn:userTask>
         
-    <bpmn:userTask camunda:assignee="Filip" completionQuantity="1" id="turnOnInternet" implementation="##unspecified" isForCompensation="false" name="Turn on Internet" startQuantity="1">
+    <bpmn:userTask camunda:assignee="default" completionQuantity="1" id="turnOnInternet" implementation="##unspecified" isForCompensation="false" name="Turn on Internet" startQuantity="1">
             
       <bpmn:extensionElements>
                 
         <camunda:inputOutput>
                     
           <camunda:inputParameter name="raz"/>
-          <camunda:inputParameter name="randVal"/>
+          <camunda:inputParameter name="timeVal">0</camunda:inputParameter>
                     
           <camunda:outputParameter name="tryAgain">False</camunda:outputParameter>
-          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+          <camunda:outputParameter name="time">${timeVal}</camunda:outputParameter>
                   
         </camunda:inputOutput>
               
@@ -121,15 +121,15 @@
           
     </bpmn:userTask>
         
-    <bpmn:userTask camunda:assignee="Maciej" completionQuantity="1" id="sendMessage" implementation="##unspecified" isForCompensation="false" name="Send Message" startQuantity="1">
+    <bpmn:userTask camunda:assignee="default" completionQuantity="1" id="sendMessage" implementation="##unspecified" isForCompensation="false" name="Send Message" startQuantity="1">
             
       <bpmn:extensionElements>
                 
         <camunda:inputOutput>
-          <camunda:inputParameter name="randVal"/>
+          <camunda:inputParameter name="timeVal">0</camunda:inputParameter>
                     
           <camunda:outputParameter name="messageSend">Message Sended!</camunda:outputParameter>
-          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+          <camunda:outputParameter name="time">${timeVal}</camunda:outputParameter>
                   
         </camunda:inputOutput>
               

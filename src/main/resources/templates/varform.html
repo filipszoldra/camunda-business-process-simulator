@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="varForm">
+    <form action="/setvars" method="post">
+        <p>Podaj nazwy zmiennych oprócz czasu:</p>  <br>
+        <tr th:each="var : ${varcount}">
+            <td>
+                <label th:for="${var}" th:text="'zmienna ' + ${var}"></label><br>
+                <input type="text" th:id="${var}" th:name="varname"/><br>
+            </td>
+        </tr>
+
+        <p>Podaj nazwy pracowników:</p>
+        <tr th:each="assignee : ${assigneecount}">
+            <td>
+                <label th:for="${assignee}" th:text="'pracownik ' + ${assignee}"></label><br>
+                <input type="text" th:id="${assignee}" th:name="assigneename"/><br>
+            </td>
+        </tr>
+        <button type="submit">Potwierdź</button>
+        <br>
+    </form>
+<br>
+    <form action="/gettaskvarform" method="get">
+        <button type="submit">Przejdź dalej</button>
+    </form>
+
+
+</div>
+</body>
+</html>

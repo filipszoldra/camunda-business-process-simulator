@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="varForm">
+  <form action="/setgatetypes" method="post">
+    <tr th:each="gate : ${gates}">
+      <td th:text="${gate.gateName}"></td>
+      <br>
+      <td>
+        <p>Wybierz typ warunku bramki</p>
+          <input type="radio" th:id="${gate.gateId} + '0'" th:name="${gate.gateId}" th:value="0">
+          <label th:for="${gate.gateId} + '0'" >Prawdopodobieństwo losowe</label><br>
+        <input type="radio" th:id="${gate.gateId} + '1'" th:name="${gate.gateId}" th:value="1">
+        <label th:for="${gate.gateId} + '1'" >Warunkowość oparta na zmiennej</label><br>
+      </td>
+    </tr><br>
+
+    <button type="submit">Potwierdź</button><br>
+  </form>
+  <form action="/getgatevarform" method="get">
+    <button type="submit">Przejdź dalej</button>
+  </form>
+
+
+</div>
+</body>
+</html>

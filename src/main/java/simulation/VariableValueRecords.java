@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class VariableValueRecords {
-    private final List<VariableRecord> variableValueRecordList = new ArrayList<>(); {
+    private List<VariableRecord> variableValueRecordList = new ArrayList<>(); {
     }
 
     int instanceNumber;

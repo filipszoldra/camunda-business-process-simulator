@@ -3,6 +3,7 @@ package client;
 public class ExclusiveGateConditionalsInput {
     public String gateId;
     public String gateName;
+    public int gateType = 0;
     public String flow1Name;
     public String flow2Name;
     public String condVarName;

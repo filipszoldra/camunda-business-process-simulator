@@ -59,22 +59,32 @@ public class InputData {
         setGateConds();
     }
 
-    public VariableCollection getVariableCollection(){
+    public VariableCollection getVariableCollection() {
         return variableCollection;
     }
-    public AssigneeList getAssigneeList(){
+
+    public AssigneeList getAssigneeList() {
         return assignees;
     }
-    public List<InputTaskVar> getTaskInput(){
-        return taskVars;
-    }
-    public List<ExclusiveGateConditionalsInput> getGateConds(){
-        return gateConds;
-    }
-    public List<String> getConditionalVarNames(){
-        return conditionalVarNames;
+
+    public void addConditionalVar(String condVar){
+        if(!conditionalVarNames.contains(condVar)){
+            conditionalVarNames.add(condVar);
+        }
+
     }
 
+    public List<InputTaskVar> getTaskInput() {
+        return taskVars;
+    }
+
+    public List<ExclusiveGateConditionalsInput> getGateConds() {
+        return gateConds;
+    }
+
+    public List<String> getConditionalVarNames() {
+        return conditionalVarNames;
+    }
 
 
     public void addVarList(List<String> varList) {
@@ -89,6 +99,11 @@ public class InputData {
 
     }
 
+    public void setAllTaskVarListNames(){
+        for (var task : taskVars)
+            task.setTaskVarListNames();
+    }
+
     public void addAssignees(List<String> assigneeNameList) {
         assignees = new AssigneeList();
         for (var assignee : assigneeNameList) {
@@ -96,6 +111,13 @@ public class InputData {
         }
     }
 
+    public List<String> getAssigneeNames() {
+        List<String> assigneeNames = new ArrayList<>();
+        for (var assignee : assignees.getAssigneeList()) {
+            assigneeNames.add(assignee.assignee);
+        }
+        return assigneeNames;
+    }
 
 
     VariableCollection createVariablesFromTerminal() {
@@ -230,6 +252,8 @@ public class InputData {
                 }
                 int varId = reader.nextInt();
                 String varCondName = variableCollection.getVarNameById(varId);
+                if (!conditionalVarNames.contains(varCondName))
+                    conditionalVarNames.add(varCondName);
                 System.out.println("Wybierz operator dla opcji " + gate.flow1Name);
                 System.out.println("1 >");
                 System.out.println("2 ==");
@@ -247,8 +271,8 @@ public class InputData {
                     gate.sign1 = "==";
                     gate.sign2 = "!=";
                 } else {
-                    gate.sign1 = ">=";
-                    gate.sign2 = "<";
+                    gate.sign1 = "<";
+                    gate.sign2 = ">=";
                 }
 
             }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="varForm">
+  <form action="/setvarsquantity" method="post">
+    <label for="variables">Podaj ilość zmiennych oprócz czasu</label><br>
+    <input name="variables" id="variables" type="number"/><br>
+    <label for="assignees">Podaj ilość pracowników</label><br>
+    <input name="assignees" id="assignees" type="number"/><br>
+
+    <br><p>Wybierz metodę wprowadzania zmiennych:</p>
+    <input type="radio" id="1" name="varmethod" value="1">
+    <label for="1">Wartość wybierana dla każdej zmiennej wartość w każdym zadaniu</label><br>
+    <input type="radio" id="2" name="varmethod" value="2">
+    <label for="2">Wartość wybierana z losowego przedziału podanego dla każdej zmiennej w każdym zadaniu</label><br>
+    <input type="radio" id="3" name="varmethod" value="3">
+    <label for="3">Zawsze taka sama podana wartość</label><br>
+    <input type="radio" id="4" name="varmethod" value="4">
+    <label for="4">Zawsze taki sam podany losowy przedział</label><br>
+    <button type="submit">Potwierdź</button>
+  </form><br>
+
+  <form action="/getvarform" method="get">
+    <button type="submit">Przejdź dalej</button>
+  </form>
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

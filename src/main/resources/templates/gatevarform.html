@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="varForm">
+    <form action="/setgatevars" method="post">
+        <tr th:each="randomgate : ${randomgates}">
+            <td th:text="${randomgate.gateName}"></td>
+            <br>
+            <td>
+                <label th:for="${randomgate.gateId}"
+                       th:text="'Podaj procentowe prawdopodobieństwo (od 0 do 100) na opcję ' + ${randomgate.flow1Name}"></label><br>
+                <input type="number" th:id="${randomgate.gateId}" th:name="${randomgate.gateId} + 'value'"/><br>
+            </td>
+        </tr>
+        <br>
+
+        <tr th:each="vargate : ${vargates}">
+            <td th:text="${vargate.gateName}"></td>
+            <br>
+            <td>
+              <p>"Wybierz zmienną warunkową"</p><br>
+                <p th:each="var : ${variables}">
+                    <input type="radio" th:id="${vargate.gateId} + ${var}" th:name="${vargate.gateId} +'var'"
+                           th:value="${var}">
+                    <label th:for="${vargate.gateId} + ${var}" th:text="${var}"></label><br>
+                </p>
+            </td>
+            <td th:text="'Wybierz znak po zmiennej warunkowej dla opcji ' + ${vargate.flow1Name} "></td><br>
+                <input type="radio" th:id="${vargate.gateId} + '1'" th:name="${vargate.gateId} +'sign'" th:value="1">
+                <label th:for="${vargate.gateId} + '1'" th:text="'>'"></label><br>
+                <input type="radio" th:id="${vargate.gateId} + '2'" th:name="${vargate.gateId} +'sign'" th:value="2">
+                <label th:for="${vargate.gateId} + '2'" th:text="'=='"></label><br>
+                <input type="radio" th:id="${vargate.gateId} + '3'" th:name="${vargate.gateId} +'sign'" th:value="3">
+                <label th:for="${vargate.gateId} + '3'" th:text="'<'"></label><br>
+
+            <td>
+              <p>"Podaj wartość zmiennej warunkowej"</p><br>
+                    <input type="number" th:id="${vargate.gateId}" th:name="${vargate.gateId} + 'value'"/><br>
+
+            </td>
+
+        </tr>
+        <br>
+        <button type="submit">Potwierdź i przejdź dalej</button>
+        <br>
+    </form>
+
+
+</div>
+</body>
+</html>
