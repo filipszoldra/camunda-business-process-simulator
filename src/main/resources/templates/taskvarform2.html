@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="varForm">
+  <form action="/settaskvars2" method="post">
+    <tr th:each="task : ${tasks}">
+      <td th:text="${task.taskName}"></td>
+      <br>
+      <td>
+        <p th:each="var : ${task.taskVarListNames}">
+            <span>
+                <label th:for="${task.taskId} + ',' + ${var}" th:text="'zmienna ' + ${var}"></label><br>
+                <input type="number" th:id="${task.taskId} + ',' + ${var}" th:name="${task.taskId} + ',' + ${var}" value="0"/><br>
+            </span>
+        </p>
+      </td>
+    </tr><br>
+
+    <button type="submit">Potwierdź</button><br>
+  </form>
+  <form action="/getgateform" method="get">
+    <button type="submit">Przejdź dalej</button>
+  </form>
+
+
+</div>
+</body>
+</html>

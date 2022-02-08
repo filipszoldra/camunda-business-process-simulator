@@ -15,7 +15,7 @@ import simdata.VariableCollection;
 import java.util.*;
 
 public class InputData {
-    public VariableCollection variableCollection;
+    public VariableCollection variableCollection = new VariableCollection();
     AssigneeList assignees;
     List<InputTaskVar> taskVars = new ArrayList<>();
     List<ExclusiveGateConditionalsInput> gateConds = new ArrayList<>();

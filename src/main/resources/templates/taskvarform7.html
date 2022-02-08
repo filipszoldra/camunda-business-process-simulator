@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="varForm">
+  <form action="/settaskvars7" method="post">
+    <label for="var" >Podaj wartość zmiennych</label><br>
+    <input type="number" id="var" name="var" value="0"/><br>
+    <tr th:each="task : ${tasks}">
+      <td th:text="${task.taskName}"></td>
+      <br>
+      <td>
+        <p>Przydziel pracownika:</p>
+        <p th:each="assignee : ${assignees}">
+          <input type="radio" th:id="${task.taskId} + ${assignee}" th:name="${task.taskId} +',assignee'" th:value="${assignee}">
+          <label th:for="${task.taskId} + ${assignee}" th:text="${assignee}"></label><br>
+
+        </p>
+      </td>
+    </tr><br>
+
+    <button type="submit">Potwierdź</button><br>
+  </form>
+  <form action="/getgateform" method="get">
+    <button type="submit">Przejdź dalej</button>
+  </form>
+
+
+</div>
+</body>
+</html>

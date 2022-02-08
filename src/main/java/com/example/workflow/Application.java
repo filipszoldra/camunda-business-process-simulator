@@ -21,7 +21,7 @@ import java.util.Scanner;
 public class Application {
 
     public static void main(String... args) throws IOException {
-        String modelpath = "C:\\Users\\Filip\\Desktop\\inzynierka\\main\\business process simulation\\modele\\process.bpmn";
+        String modelpath = "C:\\Users\\Filip\\Desktop\\inzynierka\\main\\business process simulation\\modele\\rekrutacja.bpmn";
 
         // read bpmn model from file
         BpmnModelInstance modelInstance = Bpmn.readModelFromFile(new File(modelpath));

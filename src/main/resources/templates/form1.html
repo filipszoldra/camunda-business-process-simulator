@@ -8,13 +8,13 @@
 <div class="varForm">
   <form action="/setvarsquantity" method="post">
     <label for="variables">Podaj ilość zmiennych oprócz czasu</label><br>
-    <input name="variables" id="variables" type="number"/><br>
+    <input name="variables" id="variables" type="number" value="0"/><br>
     <label for="assignees">Podaj ilość pracowników</label><br>
-    <input name="assignees" id="assignees" type="number"/><br>
+    <input name="assignees" id="assignees" type="number" value="0"/><br>
 
     <br><p>Wybierz metodę wprowadzania zmiennych:</p>
     <input type="radio" id="1" name="varmethod" value="1">
-    <label for="1">Wartość wybierana dla każdej zmiennej wartość w każdym zadaniu</label><br>
+    <label for="1">Wartość wybierana dla każdej zmiennej w każdym zadaniu</label><br>
     <input type="radio" id="2" name="varmethod" value="2">
     <label for="2">Wartość wybierana z losowego przedziału podanego dla każdej zmiennej w każdym zadaniu</label><br>
     <input type="radio" id="3" name="varmethod" value="3">

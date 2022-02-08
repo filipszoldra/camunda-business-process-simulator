@@ -79,8 +79,48 @@ public class CamundaController {
     @GetMapping("/gettaskvarform")
     public String generateTaskVarForm(Model model){
         clientData.inputData.setAllTaskVarListNames();
+        if(clientData.inputData.getAssigneeNames().size()>1){
+            if(varmethod==1){
+                model.addAttribute("tasks", clientData.inputData.getTaskInput());
+                model.addAttribute("assignees", clientData.inputData.getAssigneeNames());
+                return "taskvarform.html";
+            }
+            else if(varmethod == 2){
+                model.addAttribute("tasks", clientData.inputData.getTaskInput());
+                model.addAttribute("assignees", clientData.inputData.getAssigneeNames());
+                return "taskvarform3.html";
+            }
+            else if(varmethod == 3){
+                model.addAttribute("tasks", clientData.inputData.getTaskInput());
+                model.addAttribute("assignees", clientData.inputData.getAssigneeNames());
+                return "taskvarform7.html";
+            }
+            else if(varmethod == 4){
+                model.addAttribute("tasks", clientData.inputData.getTaskInput());
+                model.addAttribute("assignees", clientData.inputData.getAssigneeNames());
+                return "taskvarform5.html";
+            }
+
+        }
+        else{
+            if(varmethod==1){
+                model.addAttribute("tasks", clientData.inputData.getTaskInput());
+                return "taskvarform.html2";
+            }
+            else if(varmethod == 2){
+                model.addAttribute("tasks", clientData.inputData.getTaskInput());
+                return "taskvarform4.html";
+            }
+            else if(varmethod == 3){
+                return "taskvarform8.html";
+            }
+            else if(varmethod == 4){
+                return "taskvarform6.html";
+            }
+        }
         model.addAttribute("tasks", clientData.inputData.getTaskInput());
         model.addAttribute("assignees", clientData.inputData.getAssigneeNames());
+        clientData.inputData.getAssigneeNames().remove("default");
         return "taskvarform.html";
     }
 
@@ -139,11 +179,11 @@ public class CamundaController {
         for(var gate : clientData.inputData.getGateConds()){
             if(gate.gateType == 0){
                 gate.value1 = Integer.valueOf(allParams.get(gate.gateId + "value"));
-                gate.value2 = 100 - gate.value1;
+                gate.value2 = gate.value1;
             }
             else{
                 gate.value1 = Integer.valueOf(allParams.get(gate.gateId + "value"));
-                gate.value2 = Integer.valueOf(allParams.get(gate.gateId + "value"));
+                gate.value2 = gate.value1;
                 int signVal = Integer.valueOf(allParams.get(gate.gateId + "sign"));
                 if(signVal == 1){
                     gate.sign1 = ">";
@@ -172,6 +212,87 @@ public class CamundaController {
         }
         task.setAssignne(allParams.get(task.taskId+",assignee"));
     }
+        return"taskvarform";
+    }
+
+    @PostMapping("/settaskvars2")
+    public String setTaskVars2(@RequestParam Map<String,String> allParams){
+        for(var task : clientData.inputData.getTaskInput()){
+            for(var variable : task.taskVarListNames){
+                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable)));
+            }
+            if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
+                task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
+        }
+        return"taskvarform";
+    }
+
+    @PostMapping("/settaskvars3")
+    public String setTaskVars3(@RequestParam Map<String,String> allParams){
+        for(var task : clientData.inputData.getTaskInput()){
+            for(var variable : task.taskVarListNames){
+                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable+",min")),Integer.valueOf(allParams.get(task.taskId+","+variable+",max")));
+            }
+            task.setAssignne(allParams.get(task.taskId+",assignee"));
+        }
+        return"taskvarform";
+    }
+
+    @PostMapping("/settaskvars4")
+    public String setTaskVars4(@RequestParam Map<String,String> allParams){
+        for(var task : clientData.inputData.getTaskInput()){
+            for(var variable : task.taskVarListNames){
+                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable+",min")),Integer.valueOf(allParams.get(task.taskId+","+variable+",max")));
+            }
+            if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
+                task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
+        }
+        return"taskvarform";
+    }
+
+    @PostMapping("/settaskvars5")
+    public String setTaskVars5(@RequestParam Map<String,String> allParams){
+        for(var task : clientData.inputData.getTaskInput()){
+            for(var variable : task.taskVarListNames){
+                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get("varmin")), Integer.valueOf(allParams.get("varmax")));
+            }
+            task.setAssignne(allParams.get(task.taskId+",assignee"));
+        }
+        return"taskvarform";
+    }
+
+    @PostMapping("/settaskvars6")
+    public String setTaskVars6(@RequestParam("varmin") int varmin, @RequestParam("varmax") int varmax){
+        for(var task : clientData.inputData.getTaskInput()){
+            for(var variable : task.taskVarListNames){
+                task.taskVarList.setValue(variable,varmin, varmax);
+            }
+            if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
+                task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
+        }
+        return"taskvarform";
+    }
+
+    @PostMapping("/settaskvars7")
+    public String setTaskVars7(@RequestParam Map<String,String> allParams){
+        for(var task : clientData.inputData.getTaskInput()){
+            for(var variable : task.taskVarListNames){
+                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get("var")));
+            }
+            task.setAssignne(allParams.get(task.taskId+",assignee"));
+        }
+        return"taskvarform";
+    }
+
+    @PostMapping("/settaskvars8")
+    public String setTaskVars8(@RequestParam ("var")int value){
+        for(var task : clientData.inputData.getTaskInput()){
+            for(var variable : task.taskVarListNames){
+                task.taskVarList.setValue(variable,value);
+            }
+            if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
+                task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
+        }
         return"taskvarform";
     }
 
@@ -214,7 +335,7 @@ public class CamundaController {
     public String startSimulation(@RequestParam("instances") int instances) throws IOException {
         clientData.setInstances(instances);
         clientData.startSimulation();
-        return "simulationstarted.html";
+        return "simulationended.html";
     }
 
 

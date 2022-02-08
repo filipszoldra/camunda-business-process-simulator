@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div class="varForm">
+  <form action="/settaskvars3" method="post">
+    <tr th:each="task : ${tasks}">
+      <td th:text="${task.taskName}"></td>
+      <br>
+      <td>
+        <p th:each="var : ${task.taskVarListNames}">
+            <span>
+                <label th:for="${task.taskId} + ',' + ${var}+',min'" th:text="'zmienna ' + ${var} + ' wartość minimalna'"></label><br>
+                <input type="number" th:id="${task.taskId} + ',' + ${var}+',min'" th:name="${task.taskId} + ',' + ${var}+',min'" value="0"/><br>
+              <label th:for="${task.taskId} + ',' + ${var}+',max'" th:text="'zmienna ' + ${var} + ' wartość maksymalna'"></label><br>
+                <input type="number" th:id="${task.taskId} + ',' + ${var}+',max'" th:name="${task.taskId} + ',' + ${var}+',max'" value="0"/><br>
+            </span>
+        </p>
+      </td>
+      <td>
+        <p>Przydziel pracownika:</p>
+        <p th:each="assignee : ${assignees}">
+          <input type="radio" th:id="${task.taskId} + ${assignee}" th:name="${task.taskId} +',assignee'" th:value="${assignee}">
+          <label th:for="${task.taskId} + ${assignee}" th:text="${assignee}"></label><br>
+
+        </p>
+      </td>
+    </tr><br>
+
+    <button type="submit">Potwierdź</button><br>
+  </form>
+  <form action="/getgateform" method="get">
+    <button type="submit">Przejdź dalej</button>
+  </form>
+
+
+</div>
+</body>
+</html>
