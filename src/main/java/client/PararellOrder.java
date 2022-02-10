@@ -1,10 +1,9 @@
 package client;
 
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
-import org.camunda.bpm.model.bpmn.instance.FlowNode;
-import org.camunda.bpm.model.bpmn.instance.ParallelGateway;
-import org.camunda.bpm.model.bpmn.instance.StartEvent;
-import org.camunda.bpm.model.bpmn.instance.UserTask;
+import org.camunda.bpm.model.bpmn.impl.instance.ProcessImpl;
+import org.camunda.bpm.model.bpmn.instance.*;
+import org.camunda.bpm.model.bpmn.instance.Process;
 import simdata.TaskList;
 import simdata.VariableCollection;
 import simulation.PararellOrderList;
@@ -26,7 +25,7 @@ public abstract class PararellOrder {
         while (size > 0) {
             List<FlowNode> prepareNextNodes = new ArrayList<>();
             for (var node : nodes) {
-                if (node.getElementType() == modelInstance.getModel().getType(ParallelGateway.class) && node.getSucceedingNodes().list().size() > 1) {
+                if (node.getElementType() == modelInstance.getModel().getType(ParallelGateway.class) && getNextElements(node, modelInstance).size() > 1)/*node.getSucceedingNodes().list().size() > 1*/ {
                     gates.add((ParallelGateway) node);
                     pararellIds++;
                     pararellList.addPararellRecord(node.getId());
@@ -37,7 +36,10 @@ public abstract class PararellOrder {
 
                 ids.add(node.getId());
                 boolean isItMarked = false;
-                List<FlowNode> nextNodes = node.getSucceedingNodes().list();
+                List<FlowNode> nextNodes = getNextElements(node, modelInstance);
+
+
+//                List<FlowNode> nextNodes = node.getSucceedingNodes().list();
                 for (var nextnode : nextNodes) {
                     for (var id : ids) {
                         if (nextnode.getId().equals(id)) {
@@ -59,12 +61,13 @@ public abstract class PararellOrder {
             for (int i = 1; i <= pararellIds; i++) {
                 String gateId = pararellList.getStardIdById(i);
                 FlowNode startPararell = modelInstance.getModelElementById(gateId);
-                List<FlowNode> nexts = startPararell.getSucceedingNodes().list();
+//                List<FlowNode> nexts = startPararell.getSucceedingNodes().list();
+                List<FlowNode> nexts = getNextElements(startPararell, modelInstance);
                 List<String> commonNodeIds = new ArrayList<>();
                 List<List<String>> idLists = new ArrayList<>();
                 for (var startPath : nexts) {
-
-                    List<FlowNode> currentNodes = startPath.getSucceedingNodes().list();
+                    List<FlowNode> currentNodes = getNextElements(startPath, modelInstance);
+//                    List<FlowNode> currentNodes = startPath.getSucceedingNodes().list();
                     int currentSize = currentNodes.size();
                     List<String> currentIds = new ArrayList<>();
                     List<String> idsToAdd = new ArrayList<>();
@@ -81,7 +84,8 @@ public abstract class PararellOrder {
                                     idsToAdd.add(node.getId());
                             }
                             boolean isItMarked = false;
-                            List<FlowNode> nextNodes = node.getSucceedingNodes().list();
+                            List<FlowNode> nextNodes = getNextElements(node, modelInstance);
+//                            List<FlowNode> nextNodes = node.getSucceedingNodes().list();
                             for (var nextnode : nextNodes) {
                                 for (var id : currentIds) {
                                     if (nextnode.getId().equals(id)) {
@@ -144,7 +148,27 @@ public abstract class PararellOrder {
         return pararellList;
     }
 
-
+public static List<FlowNode> getNextElements(FlowNode node, BpmnModelInstance modelInstance){
+    List<FlowNode> nextNodes = new ArrayList<>();
+    if(node.getElementType() == modelInstance.getModel().getType(SubProcess.class)){
+        SubProcess subProcess = modelInstance.getModelElementById(node.getAttributeValue("id"));
+        for (var el : subProcess.getFlowElements()){
+            if(el.getElementType()==modelInstance.getModel().getType(StartEvent.class))
+                nextNodes.add((FlowNode) el);
+        }
+    }
+    else if(node.getElementType() == modelInstance.getModel().getType(EndEvent.class)){
+        EndEvent endEvent = modelInstance.getModelElementById(node.getAttributeValue("id"));
+        if(endEvent.getParentElement().getElementType() == modelInstance.getModel().getType(SubProcess.class)) {
+            SubProcess subProcess = (SubProcess) endEvent.getParentElement();
+            nextNodes = subProcess.getSucceedingNodes().list();
+        }
+    }
+    else {
+        nextNodes.addAll(node.getSucceedingNodes().list());
+    }
+    return nextNodes;
+}
 
 }
 

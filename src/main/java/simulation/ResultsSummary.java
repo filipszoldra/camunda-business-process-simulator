@@ -4,6 +4,7 @@ import simdata.AssigneeList;
 import simdata.VariableCollection;
 
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -27,6 +28,12 @@ public abstract class ResultsSummary {
                 writer.println(variable + ": min " + varMinValueRecords.getVarValue(variable) + " average " + varAverageValueRecords.getVarValue(variable) + " max " + varMaxValueRecords.getVarValue(variable));
             }
             writer.println();
+        }
+        writer.println();
+        writer.println();
+        writer.println("Ends");
+        for(var end : pathCollection.getEndList()){
+            writer.println(end.name + " " + end.getProbability());
         }
         writer.println();
         writer.println();
@@ -55,12 +62,37 @@ public abstract class ResultsSummary {
 
         for (var variable : varCollection.getVariableNameList()) {
             int average = variableValueRecords.getVarValue(variable) / instNumber;
+            ArrayList<Integer> medianList = new ArrayList();
+            int medianCounter = 0;
+            List<VariableCountRecord> varCounter = pathCollection.getVarCounter(variable);
+            for(var varCount : varCounter){
+                if(varCount.count>medianCounter){
+                    medianList.clear();
+                    medianList.add(varCount.value);
+                    medianCounter = varCount.count;
+                }
+                else if(varCount.count == medianCounter)
+                    medianList.add(varCount.value);
+            }
+            int median = 0;
+            for(var val:medianList) {
+                median += val;
+            }
+            median /= medianList.size();
+
+            writer.println();
             writer.println();
             writer.println(variable);
             writer.println("sum:" + " " + variableValueRecords.getVarValue(variable));
             writer.println("min:" + " " + varAllMinValueRecords.getVarValue(variable));
+            writer.println("median:" + " " + median);
             writer.println("average:" + " " + average);
             writer.println("max:" + " " + varAllMaxValueRecords.getVarValue(variable));
+            writer.println();
+            writer.println("Variable " + variable + " value distribution:");
+            for(var varCount : varCounter){
+                writer.println(varCount.value + " " + varCount.count);
+            }
         }
 
     }

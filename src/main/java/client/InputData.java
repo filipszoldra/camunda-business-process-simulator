@@ -241,7 +241,7 @@ public class InputData {
                 System.out.println("Podaj procentowe prawdopodobienstwo opcji " + gate.flow1Name + " po bramce " + gate.gateName);
                 int n = reader.nextInt();
                 gate.value1 = n;
-                gate.value2 = 100 - n;
+                gate.value2 = n;
                 gate.sign1 = "<=";
                 gate.sign2 = ">";
                 gate.condVarName = "rand";

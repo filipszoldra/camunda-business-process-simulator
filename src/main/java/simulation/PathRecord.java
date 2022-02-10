@@ -14,6 +14,7 @@ public class PathRecord {
     VariableValueRecords varValueRecords;
     VariableValueRecords varMinValueRecords;
     VariableValueRecords varMaxValueRecords;
+    String endName;
     public PathRecord(List<HistoricActivityInstance> activityList){
         this.activityList = activityList;
         this.counter = 1;
@@ -45,9 +46,14 @@ public class PathRecord {
             }
             else{
                 pathline = pathline.concat(" -----> (" + activity.getActivityType() + " " + activityName + ")");
+                if(activity.getActivityType().equals("noneEndEvent"))
+                    this.endName=activityName;
             }
         }
         return pathline;
+    }
+    public String getEndName(){
+        return endName;
     }
 
     public void setProbability(Integer allCounter){
