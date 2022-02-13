@@ -62,7 +62,27 @@ public class ClientData {
         PrintWriter writer = new PrintWriter("results.txt", StandardCharsets.UTF_8);
         Simulation.startSimulation(instances, writer, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
         this.resultsData = ResultsSummary.getResults(instances, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
-//        ResultsSummary.results(instances, writer, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
+        writer.close();
+
+    }
+
+    public void startSimulationByVar(String varName, int varValue) throws IOException {
+        VariableCollection varCollection = inputData.getVariableCollection();
+        AssigneeList assigneeList = inputData.getAssigneeList();
+        assigneeList.createAssigneeVarValueRecords(varCollection);
+        TaskList taskList = CreateTaskList.createTaskList(modelInstance, assigneeList, inputData.getTaskInput(), inputData.getConditionalVarNames());
+        Assignees.addAssignees(modelInstance, assigneeList);
+        SetExclusiveGatewayConditions.setExclusiveGatewayConditions(modelInstance, inputData.getGateConds(), inputData.getConditionalVarNames());
+        PararellOrderList pararellList = PararellOrder.setPararellOrder(modelInstance, taskList, varCollection);
+        Bpmn.validateModel(modelInstance);
+        File file = new File("testmodel.bpmn");
+        Bpmn.writeModelToFile(file, modelInstance);
+        PathCollection pathCollection = new PathCollection(varCollection);
+        TaskCounter taskCounter = new TaskCounter(taskList);
+        VariableValueRecords variableValueRecords = new VariableValueRecords(varCollection);
+        PrintWriter writer = new PrintWriter("results.txt", StandardCharsets.UTF_8);
+        Simulation.startSimulationByVar(varName, varValue, writer, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
+        this.resultsData = ResultsSummary.getResults(pathCollection.getAllCounter(), pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
         writer.close();
 
     }

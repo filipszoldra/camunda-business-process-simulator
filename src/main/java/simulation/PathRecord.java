@@ -68,11 +68,15 @@ public class PathRecord {
     public String getEndName(){
         return endName;
     }
-
+    public static float round(float f, int places) {
+        float temp = (float)(f*(Math.pow(10, places)));
+        temp = (Math.round(temp));
+        temp = temp/(int)(Math.pow(10, places));
+        return temp;
+    }
     public void setProbability(Integer allCounter){
         float prob = this.counter*100/allCounter;
-//        prob = Math.round(prob);
-        this.probability = String.valueOf(prob).concat("%");
+        this.probability = String.valueOf(round(prob, 2)).concat("%");
     }
 
     public String getProbability(){

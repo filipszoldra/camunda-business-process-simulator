@@ -187,6 +187,6 @@ public abstract class ResultsSummary {
             median /= medianList.size();
             variableResults.add(new VariableResult(variable, variableValueRecords.getVarValue(variable), varAllMinValueRecords.getVarValue(variable), median, average, varAllMaxValueRecords.getVarValue(variable), varCounter));
         }
-        return new ResultsData(pathResults, endResults, assigneeResults, variableResults, taskResults);
+        return new ResultsData(pathResults, endResults, assigneeResults, variableResults, taskResults, instNumber);
     }
 }

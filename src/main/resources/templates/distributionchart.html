@@ -16,10 +16,12 @@
           crossorigin="anonymous"></script>
 </head>
 <body>
-<p class="text-center h1 text-uppercase" th:text="'ROZKŁAD WARTOŚCI ZMIENNEJ ' + ${name}"></p>
+<p class="text-center h1 text-uppercase" style="margin-top: 80px" th:text="'ROZKŁAD WARTOŚCI ZMIENNEJ ' + ${name}"></p>
+<div style="width: 200px; margin: 0 auto">
 <form action="/getresults" method="get">
-  <button class="btn btn-info justify-content-center" type="submit">Wróć do wyników</button><br>
+  <button class="btn btn-info" type="submit">Wróć do wyników</button><br>
 </form><br>
+</div>
 
 <div class="container">
   <div class="row" id="chart"

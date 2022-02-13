@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.*;
 
 @Controller
-public class CamundaController {
+public class SimulationController {
     ClientData clientData;
     int vars;
     int assignees;
@@ -48,18 +48,6 @@ public class CamundaController {
         return "form1.html";
     }
 
-    @GetMapping("/simulating")
-    public static String getSimulation(Model model, int allInstances, int instance){
-        int percent = 0;
-        for(int i = 0; i<=100; i++){
-
-        }
-        String sim = String.valueOf((instance/allInstances*100) + "%");
-        model.addAttribute("simulation", sim);
-        return "simulating.html";
-    }
-
-
 
 
     @GetMapping("/getvarform")
@@ -74,7 +62,23 @@ public class CamundaController {
             assigneeCount.add(j);
         }
         model.addAttribute("assigneecount", assigneeCount);
-        return "varform.html";
+        if(vars == 0 && assignees == 0){
+            List<String> varNames = new ArrayList<>();
+            varNames.add("time");
+            List<String> assigneeNames = new ArrayList<>();
+            assigneeNames.add("default");
+            clientData.inputData.addVarList(varNames);
+            clientData.inputData.addAssignees(assigneeNames);
+            return generateTaskVarForm(model);
+        }
+        else if(vars == 0){
+            return "varform3.html";
+        }
+        else if(assignees == 0){
+            return "varform2.html";
+        }
+        else
+            return "varform.html";
     }
 
     @GetMapping("/gettaskvarform")
@@ -127,9 +131,13 @@ public class CamundaController {
 
     @GetMapping("/getgateform")
     public String generateGateForm(Model model){
-        model.addAttribute("gates", clientData.inputData.getGateConds());
-        model.addAttribute("variables", clientData.inputData.getVariableCollection().getAllVariableNames());
-        return "gateform.html";
+        if(clientData.inputData.getGateConds().size()>0) {
+            model.addAttribute("gates", clientData.inputData.getGateConds());
+            model.addAttribute("variables", clientData.inputData.getVariableCollection().getAllVariableNames());
+            return "gateform.html";
+        }
+        else
+            return "simulation.html";
     }
     @GetMapping("/getgatevarform")
     public String generateGateVarForm(Model model){
@@ -148,17 +156,12 @@ public class CamundaController {
         return "gatevarform.html";
     }
 
-    @GetMapping("/count")
-    public String generateForm(Model model) {
+
+
+    @GetMapping("/getsimbyvar")
+    public String getSimByVar(Model model){
         model.addAttribute("variables", clientData.getVarNames());
-        var listCount = new ArrayList<>();
-        int i=0;
-        for(var name : clientData.getVarNames()) {
-            listCount.add(i);
-            i++;
-        }
-        model.addAttribute("formcount", listCount);
-        return "form2.html";
+        return "simulationbyvar.html";
     }
 
     @GetMapping("/getresults")
@@ -168,6 +171,7 @@ public class CamundaController {
         model.addAttribute("endresults", resultsData.endResults);
         model.addAttribute("assigneeresults", resultsData.assigneeResults);
         model.addAttribute("variableresults", resultsData.variableResults);
+        model.addAttribute("taskresults", resultsData.taskResults);
         Map<String, Integer> assigneeData = new LinkedHashMap<String, Integer>();
         int assigneeTimeMax = 0;
         for(var assignee : resultsData.assigneeResults) {
@@ -178,6 +182,7 @@ public class CamundaController {
         model.addAttribute("assigneeSet", assigneeData.keySet());
         model.addAttribute("assigneeTime", assigneeData.values());
         model.addAttribute("assigneeTimeMax", assigneeTimeMax);
+        model.addAttribute("instnumber", resultsData.instNumber);
         if(resultsData.assigneeResults.size()==1)
             return "resultsform2.html";
         else
@@ -245,8 +250,16 @@ public class CamundaController {
                 gate.value2 = gate.value1;
             }
             else{
+                for(var variable : clientData.inputData.variableCollection.getVariableList()){
+                    if(variable.getName().equals(allParams.get(gate.gateId + "var"))){
+                        String varCondName = clientData.inputData.variableCollection.getVarNameById(variable.getId());
+                        clientData.inputData.addConditionalVar(varCondName);
+                    }
+
+                }
+                clientData.inputData.addConditionalVar(allParams.get(gate.gateId + "var"));
                 gate.value1 = Integer.valueOf(allParams.get(gate.gateId + "value"));
-                gate.value2 = gate.value1;
+                gate.value2 = Integer.valueOf(allParams.get(gate.gateId + "value"));
                 int signVal = Integer.valueOf(allParams.get(gate.gateId + "sign"));
                 if(signVal == 1){
                     gate.sign1 = ">";
@@ -261,7 +274,6 @@ public class CamundaController {
                     gate.sign2 = ">=";
                 }
                 gate.condVarName = allParams.get(gate.gateId + "var");
-                clientData.inputData.addConditionalVar(gate.condVarName);
             }
         }
         return "simulation.html";
@@ -363,7 +375,6 @@ public class CamundaController {
 
 
 
-
     @PostMapping("/setvars")
     public String setVars(@RequestParam(name = "varname", required = false) String[] allVarNames, @RequestParam(name = "assigneename", required = false) String[] allAssigneeNames, Model model){
         List<String> varNames = new ArrayList<>();
@@ -371,7 +382,8 @@ public class CamundaController {
         List<String> assigneeNames = new ArrayList<>();
         if(allVarNames!=null) {
             for (var str : allVarNames) {
-                varNames.add(str);
+                if(!str.equals("time"))
+                    varNames.add(str);
             }
         }
         if(allAssigneeNames!=null) {
@@ -398,6 +410,12 @@ public class CamundaController {
         return generateVarForm(model);
     }
 
+    @PostMapping("/setvarsbyterminal")
+    public String setByTerminal() {
+        clientData.inputData.collectDataFromTerminal();
+        return "simulation.html";
+    }
+
     @PostMapping("/startsimulation")
     public String startSimulation(@RequestParam("instances") int instances, Model model) throws IOException {
         clientData.setInstances(instances);
@@ -405,15 +423,13 @@ public class CamundaController {
         return getResults(model);
     }
 
-
-    @PostMapping("/endpoint1")
-    public String acceptForm(@RequestParam("varNames") String varNames, @RequestParam("assignee") String assignees, Model model) {
-        List<String> seperatedVarNames = Arrays.asList(varNames.split(","));
-        clientData.addVarList(seperatedVarNames);
-        List<String> seperatedAssignees = Arrays.asList(assignees.split(","));
-        clientData.addAssignees(seperatedAssignees);
-        return "formMulti.html";
+    @PostMapping("/startsimulationbyvar")
+    public String startSimulation(@RequestParam("variable") String varName, @RequestParam("value") int varValue, Model model) throws IOException {
+        clientData.startSimulationByVar(varName, varValue);
+        return getResults(model);
     }
+
+
     @PostMapping("/showpath")
     public String showPath(@RequestParam("Zobacz ścieżkę") String pathName, Model model){
         return getPathList(model, pathName);
@@ -423,7 +439,6 @@ public class CamundaController {
     public String showDistriburion(@RequestParam("distribution") String varName, Model model){
         return getDistribution(model, varName);
     }
-
 
 
 }

@@ -16,8 +16,8 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<p class="text-center h1">WYNIKI SYMULACJI</p>
-
+<p class="text-center h1" style="margin-top: 80px">WYNIKI SYMULACJI</p>
+<p class="text-center fs-1" th:text="'Liczba instancji: ' + ${instnumber}"></p>
 
 <div class="container">
     <div class="row" style="margin-top:50px">
@@ -77,14 +77,21 @@
         </ol>
     </div>
     <div class="row" style="margin-top:50px">
+        <p class="fs-2">Lista zadań:</p>
+        <ul class="list-group list-group-numbered fs-4">
+            <li th:each="task : ${taskresults}" class="list-group-item" th:text="${task.taskName} + ' (' + ${task.counter} + ' wykonań)'"></li>
+        </ul>
+    </div>
+    <div class="row" style="margin-top:50px">
         <p class="fs-2">Możliwe ścieżki:</p><br>
         <form action="/showpath" method="post">
             <div th:each="path : ${pathresults}">
 
                 <p class="fs-4"
-                   th:text="${path.pathName} + ' ' + ${path.probability} + ' (' + ${path.counter} + ' wystąpień)'"></p>
-                <!--            <label th:for="${path.pathName}" th:text = "${path.pathName} + ' ' + ${path.probability} + ' (' + ${path.counter} + ' wystąpień)'"></label><br>-->
-                <button type="submit" th:id="${path.pathName}" class="btn btn-info" name="Zobacz ścieżkę"
+                   th:text="${path.pathName}"></p>
+                <p class="fs-5"
+                   th:text="'Prawdopodobieństwo: ' + ${path.probability} + ' (' + ${path.counter} + ' wystąpień)'"></p>
+                    <button type="submit" th:id="${path.pathName}" class="btn btn-info" name="Zobacz ścieżkę"
                         th:value="${path.pathName}">Zobacz ścieżkę
                 </button>
                 <!--            <input type="submit" th:id="${path.pathName}" name="Zobacz ścieżkę" th:value="${path.pathName}"/>-->

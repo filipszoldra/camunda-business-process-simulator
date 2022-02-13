@@ -11,6 +11,11 @@ public class PathCollection {
     List<PathRecord> pathList = new ArrayList<>();
     List<EndEventRecord> endList = new ArrayList<>();
     List<VariableCountRecord> varCounter = new ArrayList<>();
+
+    public Integer getAllCounter() {
+        return allCounter;
+    }
+
     Integer allCounter = 0;
     VariableCollection varCollection;
 
