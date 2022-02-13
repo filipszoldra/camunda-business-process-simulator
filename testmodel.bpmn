@@ -59,7 +59,7 @@
         
     <bpmn:sequenceFlow id="Flow_16636a0" sourceRef="tryAgain" targetRef="gatewayBeforeInternet"/>
         
-    <bpmn:userTask camunda:assignee="Filip" completionQuantity="1" id="turnOnComputer" implementation="##unspecified" isForCompensation="false" name="Turn On Computer" startQuantity="1">
+    <bpmn:userTask completionQuantity="1" id="turnOnComputer" implementation="##unspecified" isForCompensation="false" name="Turn On Computer" startQuantity="1">
             
       <bpmn:extensionElements>
                 
@@ -79,7 +79,7 @@
           
     </bpmn:userTask>
         
-    <bpmn:userTask camunda:assignee="Ola" completionQuantity="1" id="tryAgain" implementation="##unspecified" isForCompensation="false" name="Try Again" startQuantity="1">
+    <bpmn:userTask completionQuantity="1" id="tryAgain" implementation="##unspecified" isForCompensation="false" name="Try Again" startQuantity="1">
             
       <bpmn:extensionElements>
                 
@@ -99,7 +99,7 @@
           
     </bpmn:userTask>
         
-    <bpmn:userTask camunda:assignee="Maciej" completionQuantity="1" id="turnOnInternet" implementation="##unspecified" isForCompensation="false" name="Turn on Internet" startQuantity="1">
+    <bpmn:userTask completionQuantity="1" id="turnOnInternet" implementation="##unspecified" isForCompensation="false" name="Turn on Internet" startQuantity="1">
             
       <bpmn:extensionElements>
                 
@@ -121,7 +121,7 @@
           
     </bpmn:userTask>
         
-    <bpmn:userTask camunda:assignee="Maciej" completionQuantity="1" id="sendMessage" implementation="##unspecified" isForCompensation="false" name="Send Message" startQuantity="1">
+    <bpmn:userTask completionQuantity="1" id="sendMessage" implementation="##unspecified" isForCompensation="false" name="Send Message" startQuantity="1">
             
       <bpmn:extensionElements>
                 

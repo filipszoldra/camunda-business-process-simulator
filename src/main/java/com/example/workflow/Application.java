@@ -52,10 +52,8 @@ public class Application {
         int instanceNumber = reader.nextInt();
         reader.close();
         int instNumber = instanceNumber;
-        PrintWriter writer = new PrintWriter("results.txt", StandardCharsets.UTF_8);
-        Simulation.startSimulation(instanceNumber, writer, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
-        ResultsSummary.results(instNumber, writer, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
-        writer.close();
+        Simulation.startSimulation(instanceNumber, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
+        ResultsSummary.results(instNumber, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
     }
 
 }

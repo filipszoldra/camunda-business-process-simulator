@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public abstract class Simulation {
-    public static void startSimulation(int instanceNumber, PrintWriter writer, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList, PararellOrderList pararellList){
+    public static void startSimulation(int instanceNumber, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList, PararellOrderList pararellList){
 
         int inst = 1;
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
@@ -26,9 +26,7 @@ public abstract class Simulation {
         HistoryService historyService = processEngine.getHistoryService();
 
         while (instanceNumber > 0) {
-            writer.println();
-            writer.println("Instancja " + inst);
-            writer.println();
+
 
             RuntimeService runtimeService = processEngine.getRuntimeService();
             TaskCounter instanceTaskCounter = new TaskCounter(taskList);
@@ -82,12 +80,12 @@ public abstract class Simulation {
             instanceVariableValueRecords.addProcessTime(processTime);
             variableValueRecords.addProcessTime(processTime);
             for (var task : instanceTaskCounter.getTaskCounterList()) {
-                writer.println(task.taskName + " " + task.counter);
+
             }
             instanceNumber--;
             inst++;
 
-            writer.println();
+
             HistoricActivityInstanceQuery activityQuery = historyService.createHistoricActivityInstanceQuery()
                     .processInstanceId(processInstanceId)
                     .finished()

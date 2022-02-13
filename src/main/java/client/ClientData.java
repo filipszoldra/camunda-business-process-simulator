@@ -59,10 +59,10 @@ public class ClientData {
         PathCollection pathCollection = new PathCollection(varCollection);
         TaskCounter taskCounter = new TaskCounter(taskList);
         VariableValueRecords variableValueRecords = new VariableValueRecords(varCollection);
-        PrintWriter writer = new PrintWriter("results.txt", StandardCharsets.UTF_8);
-        Simulation.startSimulation(instances, writer, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
+
+        Simulation.startSimulation(instances, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
         this.resultsData = ResultsSummary.getResults(instances, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
-        writer.close();
+
 
     }
 

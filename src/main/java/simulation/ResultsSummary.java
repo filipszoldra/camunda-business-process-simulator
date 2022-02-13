@@ -4,13 +4,16 @@ import simdata.AssigneeList;
 import simdata.VariableCollection;
 import simulation.results.*;
 
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 public abstract class ResultsSummary {
-    public static void results(int instNumber, PrintWriter writer, PathCollection pathCollection, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, AssigneeList assigneeList){
+    public static void results(int instNumber, PathCollection pathCollection, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, AssigneeList assigneeList) throws IOException {
+        PrintWriter writer = new PrintWriter("results.txt", StandardCharsets.UTF_8);
         writer.println();
         writer.println();
         List<PathRecord> pathList = pathCollection.getPathList();
@@ -95,6 +98,7 @@ public abstract class ResultsSummary {
                 writer.println(varCount.value + " " + varCount.count);
             }
         }
+        writer.close();
 
     }
 
