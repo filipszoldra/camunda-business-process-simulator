@@ -5,6 +5,7 @@ import org.camunda.bpm.engine.history.HistoricActivityInstance;
 import simdata.VariableCollection;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PathRecord {
@@ -30,6 +31,18 @@ public class PathRecord {
 
     public Integer getCounter() {
         return Math.round(this.counter);
+    }
+
+    public List<String> getElements(){
+        List<String> elements = new ArrayList<>();
+        for (var activity : activityList){
+            String activityName = activity.getActivityName();
+            if (activityName == null){
+                activityName = activity.getActivityId();
+            }
+            elements.add(activity.getActivityType() + " " + activityName);
+        }
+        return elements;
     }
 
     public String getPathString(){

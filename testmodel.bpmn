@@ -1,303 +1,516 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" exporter="Camunda Modeler" exporterVersion="4.11.1" expressionLanguage="http://www.w3.org/1999/XPath" id="Definitions_06jo5b1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0" targetNamespace="http://bpmn.io/schema/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" exporter="Camunda Modeler" exporterVersion="4.11.1" expressionLanguage="http://www.w3.org/1999/XPath" id="Definitions_05fo7tf" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0" targetNamespace="http://bpmn.io/schema/bpmn" typeLanguage="http://www.w3.org/2001/XMLSchema">
     
-  <bpmn:process id="sendingMessage" isClosed="false" isExecutable="true" name="SendingMessage" processType="None">
+  <bpmn:process id="Process_1jz2un2" isClosed="false" isExecutable="true" processType="None">
         
-    <bpmn:startEvent id="sendMessageTask" isInterrupting="true" name="Send Message Task" parallelMultiple="false">
+    <bpmn:startEvent id="StartEvent_1" isInterrupting="true" parallelMultiple="false">
             
-      <bpmn:outgoing>Flow_0de1k17</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0i4ml3r</bpmn:outgoing>
           
     </bpmn:startEvent>
         
-    <bpmn:exclusiveGateway gatewayDirection="Unspecified" id="isInternetTurnedOn" name="Is Internet turned on?">
-            
-      <bpmn:incoming>Flow_0rxbn1s</bpmn:incoming>
-            
-      <bpmn:outgoing>Flow_087t9nu</bpmn:outgoing>
-            
-      <bpmn:outgoing>Flow_1rr9arw</bpmn:outgoing>
-          
-    </bpmn:exclusiveGateway>
+    <userTask camunda:assignee="Filip" id="Activity_097rwed" name="" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      <extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
+          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </extensionElements>
+      <incoming>Flow_0i4ml3r</incoming>
+      <outgoing>Flow_1xwyih3</outgoing>
+    </userTask>
         
-    <bpmn:endEvent id="messageIsSender" name="Message is sended">
+    <userTask id="Activity_1gnkr3z" name="" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      <extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
+          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </extensionElements>
+      <incoming>Flow_1mtp3h1</incoming>
+      <outgoing>Flow_0oc21d9</outgoing>
+    </userTask>
+        
+    <userTask camunda:assignee="Maciej" id="Activity_00ht9y9" name="" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      <extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
+          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </extensionElements>
+      <incoming>Flow_0fem4il</incoming>
+      <outgoing>Flow_0eg08gm</outgoing>
+    </userTask>
+        
+    <userTask camunda:assignee="Maciej" id="Activity_0tvyld4" name="" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      <extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
+          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </extensionElements>
+      <incoming>Flow_0bp4og5</incoming>
+      <outgoing>Flow_1vcbe5b</outgoing>
+    </userTask>
+        
+    <userTask camunda:assignee="Filip" id="Activity_1twznl2" name="" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      <extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
+          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </extensionElements>
+      <incoming>Flow_1gc06ip</incoming>
+      <outgoing>Flow_1yur891</outgoing>
+    </userTask>
+        
+    <userTask camunda:assignee="Filip" id="Activity_0nhvyi5" name="" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      <extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
+          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </extensionElements>
+      <incoming>Flow_1wtzgre</incoming>
+      <outgoing>Flow_1m8la7d</outgoing>
+    </userTask>
+        
+    <bpmn:endEvent id="Event_01boe1t">
             
-      <bpmn:incoming>Flow_0qhgyti</bpmn:incoming>
+      <bpmn:incoming>Flow_1m8la7d</bpmn:incoming>
           
     </bpmn:endEvent>
         
-    <bpmn:sequenceFlow id="Flow_0de1k17" sourceRef="sendMessageTask" targetRef="turnOnComputer"/>
+    <bpmn:sequenceFlow id="Flow_0i4ml3r" sourceRef="StartEvent_1" targetRef="Activity_097rwed"/>
         
-    <bpmn:sequenceFlow id="Flow_087t9nu" name="Yes" sourceRef="isInternetTurnedOn" targetRef="sendMessage">
+    <bpmn:sequenceFlow id="Flow_1xwyih3" sourceRef="Activity_097rwed" targetRef="Gateway_0z52b8d"/>
+        
+    <bpmn:parallelGateway gatewayDirection="Unspecified" id="Gateway_0z52b8d">
             
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${rand &lt;= 50}</bpmn:conditionExpression>
+      <bpmn:incoming>Flow_1xwyih3</bpmn:incoming>
+            
+      <bpmn:outgoing>Flow_1mtp3h1</bpmn:outgoing>
+            
+      <bpmn:outgoing>Flow_0fem4il</bpmn:outgoing>
+            
+      <bpmn:outgoing>Flow_0bp4og5</bpmn:outgoing>
           
-    </bpmn:sequenceFlow>
+    </bpmn:parallelGateway>
         
-    <bpmn:sequenceFlow id="Flow_1rr9arw" name="No" sourceRef="isInternetTurnedOn" targetRef="tryAgain">
+    <bpmn:sequenceFlow id="Flow_1mtp3h1" sourceRef="Gateway_0z52b8d" targetRef="Activity_1gnkr3z"/>
+        
+    <bpmn:sequenceFlow id="Flow_0fem4il" sourceRef="Gateway_0z52b8d" targetRef="Activity_00ht9y9"/>
+        
+    <bpmn:sequenceFlow id="Flow_0bp4og5" sourceRef="Gateway_0z52b8d" targetRef="Activity_0tvyld4"/>
+        
+    <bpmn:parallelGateway gatewayDirection="Unspecified" id="Gateway_0et4i8b">
             
-      <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${rand &gt; 50}</bpmn:conditionExpression>
+      <bpmn:incoming>Flow_0eg08gm</bpmn:incoming>
+            
+      <bpmn:incoming>Flow_1vcbe5b</bpmn:incoming>
+            
+      <bpmn:incoming>Flow_02bcisg</bpmn:incoming>
+            
+      <bpmn:outgoing>Flow_1wtzgre</bpmn:outgoing>
           
-    </bpmn:sequenceFlow>
+    </bpmn:parallelGateway>
         
-    <bpmn:sequenceFlow id="Flow_0qhgyti" sourceRef="sendMessage" targetRef="messageIsSender"/>
+    <bpmn:sequenceFlow id="Flow_0eg08gm" sourceRef="Activity_00ht9y9" targetRef="Gateway_0et4i8b"/>
         
-    <bpmn:sequenceFlow id="Flow_0rxbn1s" sourceRef="turnOnInternet" targetRef="isInternetTurnedOn"/>
+    <bpmn:sequenceFlow id="Flow_1vcbe5b" sourceRef="Activity_0tvyld4" targetRef="Gateway_0et4i8b"/>
         
-    <bpmn:sequenceFlow id="Flow_1imd7dt" sourceRef="turnOnComputer" targetRef="gatewayBeforeInternet"/>
+    <bpmn:sequenceFlow id="Flow_1wtzgre" sourceRef="Gateway_0et4i8b" targetRef="Activity_0nhvyi5"/>
         
-    <bpmn:exclusiveGateway gatewayDirection="Unspecified" id="gatewayBeforeInternet" name="Gateway Before Internet">
+    <bpmn:sequenceFlow id="Flow_1m8la7d" sourceRef="Activity_0nhvyi5" targetRef="Event_01boe1t"/>
+        
+    <bpmn:parallelGateway gatewayDirection="Unspecified" id="Gateway_1grvce4">
             
-      <bpmn:incoming>Flow_1imd7dt</bpmn:incoming>
+      <bpmn:incoming>Flow_1rnca5p</bpmn:incoming>
             
-      <bpmn:incoming>Flow_16636a0</bpmn:incoming>
+      <bpmn:outgoing>Flow_00njqws</bpmn:outgoing>
             
-      <bpmn:outgoing>Flow_18ucs9y</bpmn:outgoing>
+      <bpmn:outgoing>Flow_1gc06ip</bpmn:outgoing>
+          
+    </bpmn:parallelGateway>
+        
+    <userTask camunda:assignee="Maciej" id="Activity_0ctiqjv" name="" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      <extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
+          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </extensionElements>
+      <incoming>Flow_00njqws</incoming>
+      <outgoing>Flow_1hetk5i</outgoing>
+    </userTask>
+        
+    <bpmn:sequenceFlow id="Flow_00njqws" sourceRef="Gateway_1grvce4" targetRef="Activity_0ctiqjv"/>
+        
+    <bpmn:sequenceFlow id="Flow_1gc06ip" sourceRef="Gateway_1grvce4" targetRef="Activity_1twznl2"/>
+        
+    <bpmn:parallelGateway gatewayDirection="Unspecified" id="Gateway_050qpip">
+            
+      <bpmn:incoming>Flow_10yly9n</bpmn:incoming>
+            
+      <bpmn:incoming>Flow_1yur891</bpmn:incoming>
+            
+      <bpmn:outgoing>Flow_1ro6iwi</bpmn:outgoing>
+          
+    </bpmn:parallelGateway>
+        
+    <userTask camunda:assignee="Filip" id="Activity_1vfcvxf" name="" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      <extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
+          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </extensionElements>
+      <incoming>Flow_1hetk5i</incoming>
+      <outgoing>Flow_10yly9n</outgoing>
+    </userTask>
+        
+    <bpmn:sequenceFlow id="Flow_1hetk5i" sourceRef="Activity_0ctiqjv" targetRef="Activity_1vfcvxf"/>
+        
+    <bpmn:sequenceFlow id="Flow_10yly9n" sourceRef="Activity_1vfcvxf" targetRef="Gateway_050qpip"/>
+        
+    <userTask camunda:assignee="Maciej" id="Activity_13kjapl" name="" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+      <extensionElements>
+        <camunda:inputOutput>
+          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
+          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
+        </camunda:inputOutput>
+      </extensionElements>
+      <incoming>Flow_14rql8y</incoming>
+      <outgoing>Flow_13t6ac8</outgoing>
+    </userTask>
+        
+    <bpmn:exclusiveGateway gatewayDirection="Unspecified" id="Gateway_0n8bew0">
+            
+      <bpmn:incoming>Flow_0oc21d9</bpmn:incoming>
+            
+      <bpmn:outgoing>Flow_1rnca5p</bpmn:outgoing>
+            
+      <bpmn:outgoing>Flow_14rql8y</bpmn:outgoing>
           
     </bpmn:exclusiveGateway>
         
-    <bpmn:sequenceFlow id="Flow_18ucs9y" sourceRef="gatewayBeforeInternet" targetRef="turnOnInternet"/>
+    <bpmn:sequenceFlow id="Flow_0oc21d9" sourceRef="Activity_1gnkr3z" targetRef="Gateway_0n8bew0"/>
         
-    <bpmn:sequenceFlow id="Flow_16636a0" sourceRef="tryAgain" targetRef="gatewayBeforeInternet"/>
+    <bpmn:sequenceFlow id="Flow_1rnca5p" sourceRef="Gateway_0n8bew0" targetRef="Gateway_1grvce4">
+      <conditionExpression id="conditionExpression_65f46706-b4c0-458c-8a9c-6dd5443d868b" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">${rand &lt;= 66}</conditionExpression>
+    </bpmn:sequenceFlow>
         
-    <bpmn:userTask completionQuantity="1" id="turnOnComputer" implementation="##unspecified" isForCompensation="false" name="Turn On Computer" startQuantity="1">
+    <bpmn:sequenceFlow id="Flow_14rql8y" sourceRef="Gateway_0n8bew0" targetRef="Activity_13kjapl">
+      <conditionExpression id="conditionExpression_5e822647-d945-44be-9e3e-0fc49b997672" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">${rand &gt; 66}</conditionExpression>
+    </bpmn:sequenceFlow>
+        
+    <bpmn:sequenceFlow id="Flow_1yur891" sourceRef="Activity_1twznl2" targetRef="Gateway_050qpip"/>
+        
+    <bpmn:exclusiveGateway gatewayDirection="Unspecified" id="Gateway_1rvefoj">
             
-      <bpmn:extensionElements>
-                
-        <camunda:inputOutput>
-          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
-                    
-          <camunda:outputParameter name="computer">TurnedOn</camunda:outputParameter>
-          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
-                  
-        </camunda:inputOutput>
-              
-      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_13t6ac8</bpmn:incoming>
             
-      <bpmn:incoming>Flow_0de1k17</bpmn:incoming>
+      <bpmn:incoming>Flow_1ro6iwi</bpmn:incoming>
             
-      <bpmn:outgoing>Flow_1imd7dt</bpmn:outgoing>
+      <bpmn:outgoing>Flow_02bcisg</bpmn:outgoing>
           
-    </bpmn:userTask>
+    </bpmn:exclusiveGateway>
         
-    <bpmn:userTask completionQuantity="1" id="tryAgain" implementation="##unspecified" isForCompensation="false" name="Try Again" startQuantity="1">
-            
-      <bpmn:extensionElements>
-                
-        <camunda:inputOutput>
-          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
-                    
-          <camunda:outputParameter name="tryAgain">True</camunda:outputParameter>
-          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
-                  
-        </camunda:inputOutput>
-              
-      </bpmn:extensionElements>
-            
-      <bpmn:incoming>Flow_1rr9arw</bpmn:incoming>
-            
-      <bpmn:outgoing>Flow_16636a0</bpmn:outgoing>
-          
-    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_13t6ac8" sourceRef="Activity_13kjapl" targetRef="Gateway_1rvefoj"/>
         
-    <bpmn:userTask completionQuantity="1" id="turnOnInternet" implementation="##unspecified" isForCompensation="false" name="Turn on Internet" startQuantity="1">
-            
-      <bpmn:extensionElements>
-                
-        <camunda:inputOutput>
-                    
-          <camunda:inputParameter name="raz"/>
-          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
-                    
-          <camunda:outputParameter name="tryAgain">False</camunda:outputParameter>
-          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
-                  
-        </camunda:inputOutput>
-              
-      </bpmn:extensionElements>
-            
-      <bpmn:incoming>Flow_18ucs9y</bpmn:incoming>
-            
-      <bpmn:outgoing>Flow_0rxbn1s</bpmn:outgoing>
-          
-    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_1ro6iwi" sourceRef="Gateway_050qpip" targetRef="Gateway_1rvefoj"/>
         
-    <bpmn:userTask completionQuantity="1" id="sendMessage" implementation="##unspecified" isForCompensation="false" name="Send Message" startQuantity="1">
-            
-      <bpmn:extensionElements>
-                
-        <camunda:inputOutput>
-          <camunda:inputParameter name="randVal">0</camunda:inputParameter>
-                    
-          <camunda:outputParameter name="messageSend">Message Sended!</camunda:outputParameter>
-          <camunda:outputParameter name="rand">${randVal}</camunda:outputParameter>
-                  
-        </camunda:inputOutput>
-              
-      </bpmn:extensionElements>
-            
-      <bpmn:incoming>Flow_087t9nu</bpmn:incoming>
-            
-      <bpmn:outgoing>Flow_0qhgyti</bpmn:outgoing>
-          
-    </bpmn:userTask>
+    <bpmn:sequenceFlow id="Flow_02bcisg" sourceRef="Gateway_1rvefoj" targetRef="Gateway_0et4i8b"/>
       
   </bpmn:process>
     
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
         
-    <bpmndi:BPMNPlane bpmnElement="sendingMessage" id="BPMNPlane_1">
+    <bpmndi:BPMNPlane bpmnElement="Process_1jz2un2" id="BPMNPlane_1">
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_16636a0" id="Flow_16636a0_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_0i4ml3r" id="Flow_0i4ml3r_di">
                 
-        <di:waypoint x="550" y="380"/>
+        <di:waypoint x="215" y="477"/>
                 
-        <di:waypoint x="430" y="380"/>
-                
-        <di:waypoint x="430" y="262"/>
+        <di:waypoint x="350" y="477"/>
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_18ucs9y" id="Flow_18ucs9y_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_1xwyih3" id="Flow_1xwyih3_di">
                 
-        <di:waypoint x="455" y="237"/>
+        <di:waypoint x="450" y="477"/>
                 
-        <di:waypoint x="480" y="237"/>
+        <di:waypoint x="575" y="477"/>
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_1imd7dt" id="Flow_1imd7dt_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_1mtp3h1" id="Flow_1mtp3h1_di">
                 
-        <di:waypoint x="380" y="237"/>
+        <di:waypoint x="600" y="452"/>
                 
-        <di:waypoint x="405" y="237"/>
+        <di:waypoint x="600" y="350"/>
+                
+        <di:waypoint x="650" y="350"/>
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_0rxbn1s" id="Flow_0rxbn1s_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_0fem4il" id="Flow_0fem4il_di">
                 
-        <di:waypoint x="580" y="237"/>
+        <di:waypoint x="625" y="477"/>
                 
-        <di:waypoint x="675" y="237"/>
+        <di:waypoint x="713" y="477"/>
+                
+        <di:waypoint x="713" y="490"/>
+                
+        <di:waypoint x="800" y="490"/>
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_0qhgyti" id="Flow_0qhgyti_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_0bp4og5" id="Flow_0bp4og5_di">
                 
-        <di:waypoint x="910" y="120"/>
+        <di:waypoint x="600" y="502"/>
                 
-        <di:waypoint x="992" y="120"/>
+        <di:waypoint x="600" y="670"/>
+                
+        <di:waypoint x="800" y="670"/>
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_1rr9arw" id="Flow_1rr9arw_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_0eg08gm" id="Flow_0eg08gm_di">
                 
-        <di:waypoint x="700" y="262"/>
+        <di:waypoint x="900" y="490"/>
                 
-        <di:waypoint x="700" y="380"/>
-                
-        <di:waypoint x="650" y="380"/>
-                
-        <bpmndi:BPMNLabel>
-                    
-          <dc:Bounds height="14" width="15" x="708" y="318"/>
-                  
-        </bpmndi:BPMNLabel>
+        <di:waypoint x="1175" y="490"/>
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_087t9nu" id="Flow_087t9nu_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_1vcbe5b" id="Flow_1vcbe5b_di">
                 
-        <di:waypoint x="700" y="212"/>
+        <di:waypoint x="900" y="640"/>
                 
-        <di:waypoint x="700" y="120"/>
+        <di:waypoint x="1200" y="640"/>
                 
-        <di:waypoint x="810" y="120"/>
-                
-        <bpmndi:BPMNLabel>
-                    
-          <dc:Bounds height="14" width="18" x="706" y="163"/>
-                  
-        </bpmndi:BPMNLabel>
+        <di:waypoint x="1200" y="515"/>
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNEdge bpmnElement="Flow_0de1k17" id="Flow_0de1k17_di">
+      <bpmndi:BPMNEdge bpmnElement="Flow_1wtzgre" id="Flow_1wtzgre_di">
                 
-        <di:waypoint x="188" y="237"/>
+        <di:waypoint x="1225" y="490"/>
                 
-        <di:waypoint x="280" y="237"/>
+        <di:waypoint x="1350" y="490"/>
               
       </bpmndi:BPMNEdge>
             
-      <bpmndi:BPMNShape bpmnElement="sendMessageTask" id="_BPMNShape_StartEvent_2">
+      <bpmndi:BPMNEdge bpmnElement="Flow_1m8la7d" id="Flow_1m8la7d_di">
                 
-        <dc:Bounds height="36" width="36" x="152" y="219"/>
+        <di:waypoint x="1450" y="490"/>
                 
-        <bpmndi:BPMNLabel>
-                    
-          <dc:Bounds height="27" width="74" x="133" y="262"/>
-                  
-        </bpmndi:BPMNLabel>
+        <di:waypoint x="1582" y="490"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_00njqws" id="Flow_00njqws_di">
+                
+        <di:waypoint x="880" y="235"/>
+                
+        <di:waypoint x="880" y="120"/>
+                
+        <di:waypoint x="920" y="120"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1gc06ip" id="Flow_1gc06ip_di">
+                
+        <di:waypoint x="905" y="260"/>
+                
+        <di:waypoint x="980" y="260"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1hetk5i" id="Flow_1hetk5i_di">
+                
+        <di:waypoint x="1020" y="120"/>
+                
+        <di:waypoint x="1110" y="120"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_10yly9n" id="Flow_10yly9n_di">
+                
+        <di:waypoint x="1209" y="154"/>
+                
+        <di:waypoint x="1260" y="190"/>
+                
+        <di:waypoint x="1260" y="235"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_0oc21d9" id="Flow_0oc21d9_di">
+                
+        <di:waypoint x="750" y="350"/>
+                
+        <di:waypoint x="855" y="350"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1rnca5p" id="Flow_1rnca5p_di">
+                
+        <di:waypoint x="880" y="325"/>
+                
+        <di:waypoint x="880" y="285"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_14rql8y" id="Flow_14rql8y_di">
+                
+        <di:waypoint x="905" y="350"/>
+                
+        <di:waypoint x="943" y="350"/>
+                
+        <di:waypoint x="943" y="380"/>
+                
+        <di:waypoint x="980" y="380"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1yur891" id="Flow_1yur891_di">
+                
+        <di:waypoint x="1080" y="240"/>
+                
+        <di:waypoint x="1158" y="240"/>
+                
+        <di:waypoint x="1158" y="260"/>
+                
+        <di:waypoint x="1235" y="260"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_13t6ac8" id="Flow_13t6ac8_di">
+                
+        <di:waypoint x="1080" y="380"/>
+                
+        <di:waypoint x="1175" y="380"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_1ro6iwi" id="Flow_1ro6iwi_di">
+                
+        <di:waypoint x="1260" y="285"/>
+                
+        <di:waypoint x="1260" y="380"/>
+                
+        <di:waypoint x="1225" y="380"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNEdge bpmnElement="Flow_02bcisg" id="Flow_02bcisg_di">
+                
+        <di:waypoint x="1200" y="405"/>
+                
+        <di:waypoint x="1200" y="465"/>
+              
+      </bpmndi:BPMNEdge>
+            
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="_BPMNShape_StartEvent_2">
+                
+        <dc:Bounds height="36" width="36" x="179" y="459"/>
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="isInternetTurnedOn" id="Gateway_1fq1vfo_di" isMarkerVisible="true">
+      <bpmndi:BPMNShape bpmnElement="Activity_097rwed" id="Activity_097rwed_di">
                 
-        <dc:Bounds height="50" width="50" x="675" y="212"/>
-                
-        <bpmndi:BPMNLabel>
-                    
-          <dc:Bounds height="27" width="84" x="739" y="227"/>
-                  
-        </bpmndi:BPMNLabel>
+        <dc:Bounds height="80" width="100" x="350" y="437"/>
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="messageIsSender" id="Event_1ogayv6_di">
+      <bpmndi:BPMNShape bpmnElement="Activity_00ht9y9" id="Activity_00ht9y9_di">
                 
-        <dc:Bounds height="36" width="36" x="992" y="102"/>
-                
-        <bpmndi:BPMNLabel>
-                    
-          <dc:Bounds height="27" width="57" x="983" y="145"/>
-                  
-        </bpmndi:BPMNLabel>
+        <dc:Bounds height="80" width="100" x="800" y="450"/>
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="gatewayBeforeInternet" id="Gateway_043v2xy_di" isMarkerVisible="true">
+      <bpmndi:BPMNShape bpmnElement="Activity_0tvyld4" id="Activity_0tvyld4_di">
                 
-        <dc:Bounds height="50" width="50" x="405" y="212"/>
-                
-        <bpmndi:BPMNLabel>
-                    
-          <dc:Bounds height="27" width="79" x="391" y="182"/>
-                  
-        </bpmndi:BPMNLabel>
+        <dc:Bounds height="80" width="100" x="800" y="600"/>
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="turnOnComputer" id="Activity_0ue9mcl_di">
+      <bpmndi:BPMNShape bpmnElement="Activity_0nhvyi5" id="Activity_0nhvyi5_di">
                 
-        <dc:Bounds height="80" width="100" x="280" y="197"/>
+        <dc:Bounds height="80" width="100" x="1350" y="450"/>
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="tryAgain" id="Activity_1h9xtg1_di">
+      <bpmndi:BPMNShape bpmnElement="Event_01boe1t" id="Event_01boe1t_di">
                 
-        <dc:Bounds height="80" width="100" x="550" y="340"/>
+        <dc:Bounds height="36" width="36" x="1582" y="472"/>
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="turnOnInternet" id="Activity_01s9kj8_di">
+      <bpmndi:BPMNShape bpmnElement="Gateway_0z52b8d" id="Gateway_0us4n5j_di">
                 
-        <dc:Bounds height="80" width="100" x="480" y="197"/>
+        <dc:Bounds height="50" width="50" x="575" y="452"/>
               
       </bpmndi:BPMNShape>
             
-      <bpmndi:BPMNShape bpmnElement="sendMessage" id="Activity_0ktgo0z_di">
+      <bpmndi:BPMNShape bpmnElement="Gateway_0et4i8b" id="Gateway_19lwxct_di">
                 
-        <dc:Bounds height="80" width="100" x="810" y="80"/>
+        <dc:Bounds height="50" width="50" x="1175" y="465"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Gateway_1grvce4" id="Gateway_1pv65zs_di">
+                
+        <dc:Bounds height="50" width="50" x="855" y="235"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_1twznl2" id="Activity_1twznl2_di">
+                
+        <dc:Bounds height="80" width="100" x="980" y="200"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_0ctiqjv" id="Activity_0ctiqjv_di">
+                
+        <dc:Bounds height="80" width="100" x="920" y="80"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_1vfcvxf" id="Activity_1vfcvxf_di">
+                
+        <dc:Bounds height="80" width="100" x="1110" y="80"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_13kjapl" id="Activity_13kjapl_di">
+                
+        <dc:Bounds height="80" width="100" x="980" y="340"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Activity_1gnkr3z" id="Activity_1gnkr3z_di">
+                
+        <dc:Bounds height="80" width="100" x="650" y="310"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Gateway_0n8bew0" id="Gateway_0n8bew0_di" isMarkerVisible="true">
+                
+        <dc:Bounds height="50" width="50" x="855" y="325"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Gateway_050qpip" id="Gateway_0b2w956_di">
+                
+        <dc:Bounds height="50" width="50" x="1235" y="235"/>
+              
+      </bpmndi:BPMNShape>
+            
+      <bpmndi:BPMNShape bpmnElement="Gateway_1rvefoj" id="Gateway_1rvefoj_di" isMarkerVisible="true">
+                
+        <dc:Bounds height="50" width="50" x="1175" y="355"/>
               
       </bpmndi:BPMNShape>
           

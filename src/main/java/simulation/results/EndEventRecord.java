@@ -1,4 +1,4 @@
-package simulation;
+package simulation.results;
 
 import org.camunda.bpm.engine.history.HistoricActivityInstance;
 

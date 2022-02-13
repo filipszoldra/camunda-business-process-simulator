@@ -1,5 +1,7 @@
 package simulation;
 
+import com.example.workflow.controller.CamundaController;
+import org.apache.el.stream.Optional;
 import org.camunda.bpm.engine.*;
 import org.camunda.bpm.engine.history.HistoricActivityInstance;
 import org.camunda.bpm.engine.history.HistoricActivityInstanceQuery;
@@ -7,6 +9,10 @@ import org.camunda.bpm.engine.repository.DeploymentBuilder;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.task.Task;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import simdata.*;
 
 import java.io.PrintWriter;
@@ -86,6 +92,7 @@ public abstract class Simulation {
             }
             instanceNumber--;
             inst++;
+
             writer.println();
             HistoricActivityInstanceQuery activityQuery = historyService.createHistoricActivityInstanceQuery()
                     .processInstanceId(processInstanceId)
@@ -97,4 +104,5 @@ public abstract class Simulation {
             pathCollection.addPath(activityList, instanceVariableValueRecords);
         }
     }
+
 }

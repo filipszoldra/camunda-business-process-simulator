@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyniki</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<p class="text-center h1">WYNIKI SYMULACJI</p>
+
+
+<div class="container">
+    <div class="row" style="margin-top:50px">
+        <p class="fs-2">Zmienne:</p>
+        <table class="table table-light table-striped table-sm">
+            <tr>
+                <th scope="col">Nazwa zmiennej</th>
+                <th scope="col">Suma</th>
+                <th scope="col">Minimalna wartość</th>
+                <th scope="col">Mediana</th>
+                <th scope="col">Średnia wartość</th>
+                <th scope="col">Maksymalna wartość</th>
+                <th scope="col">Rozkład wartości</th>
+            </tr>
+            <tr th:each="var : ${variableresults}">
+                <th scope="row" th:text="${var.name}"></th>
+                <td th:text="${var.sum}"></td>
+                <td th:text="${var.min}"></td>
+                <td th:text="${var.median}"></td>
+                <td th:text="${var.average}"></td>
+                <td th:text="${var.max}"></td>
+                <td>
+                    <form action="/showdistribution" method="post">
+                    <button type="submit" th:id="${var.name}" class="btn btn-info" name="distribution" style="width:200px"
+                            th:value="${var.name}" th:text="'Zobacz rozkład wartości zmiennej ' + ${var.name}">
+                    </button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div class="row" style="margin-top:50px">
+        <p class="fs-2">Pracownicy:</p>
+        <div class="col" style = "float: left">
+            <table class="table table-light table-striped table-sm">
+                <tr>
+                    <th scope="col">Nazwa pracownika</th>
+                    <th scope="col">Suma czasu pracy</th>
+                    <th scope="col">Średni czas pracy na instancję</th>
+                </tr>
+                <tr th:each="assignee : ${assigneeresults}">
+                    <th scope="row" th:text="${assignee.name}"></th>
+                    <td th:text="${assignee.time}"></td>
+                    <td th:text="${assignee.averagetime}"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="chart1" class="col"
+             style="width: 50%; height: 400px;"></div>
+    </div>
+    <div class="row" style="margin-top:50px">
+        <p class="fs-2">Możliwe wydarzenia końcowe:</p>
+        <ol class="list-group list-group-numbered fs-4">
+            <li th:each="end : ${endresults}" class="list-group-item" th:text="${end.name} + ' ' + ${end.probability}"></li>
+        </ol>
+    </div>
+    <div class="row" style="margin-top:50px">
+        <p class="fs-2">Możliwe ścieżki:</p><br>
+        <form action="/showpath" method="post">
+            <div th:each="path : ${pathresults}">
+
+                <p class="fs-4"
+                   th:text="${path.pathName} + ' ' + ${path.probability} + ' (' + ${path.counter} + ' wystąpień)'"></p>
+                <!--            <label th:for="${path.pathName}" th:text = "${path.pathName} + ' ' + ${path.probability} + ' (' + ${path.counter} + ' wystąpień)'"></label><br>-->
+                <button type="submit" th:id="${path.pathName}" class="btn btn-info" name="Zobacz ścieżkę"
+                        th:value="${path.pathName}">Zobacz ścieżkę
+                </button>
+                <!--            <input type="submit" th:id="${path.pathName}" name="Zobacz ścieżkę" th:value="${path.pathName}"/>-->
+                <br>
+                <table class="table table-light table-striped table-sm" style = "margin-bottom: 40px">
+                    <tr>
+                        <th scope="col">Nazwa zmiennej</th>
+                        <th scope="col">Wartość minimalna</th>
+                        <th scope="col">Wartość średnia</th>
+                        <th scope="col">Wartość maksymalna</th>
+                    </tr>
+                    <tr th:each="variable : ${path.variables}">
+                        <th scope="row" th:text="${variable.name}"></th>
+                        <td th:text="${variable.min}"></td>
+                        <td th:text="${variable.average}"></td>
+                        <td th:text="${variable.max}"></td>
+                    </tr>
+                </table>
+
+            </div>
+        </form>
+
+    </div>
+    <div class="row" style="margin-top:50px; margin-bottom: 100px">
+        <div class="col">
+            <form action="/" method="get">
+                <button class="btn btn-primary" type="submit">Przeprowadź kolejną symulację na innym modelu</button>
+            </form>
+        </div>
+        <div class="col">
+            <form action="/newsim" method="post">
+                <button class="btn btn-dark" type="submit">Przeprowadź kolejną symulację na tym samym modelu</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script th:inline="javascript">
+    $(function () {
+        Highcharts.chart('chart1', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Czas pracy pracowników na instancję'
+            },
+            xAxis: {
+                categories: [[${assigneeSet}]],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                max: [[${assigneeTimeMax}]],
+                title: {
+                    text: 'Czas pracy'
+                }
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} K</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Średni czas pracy na instancję',
+                data: [[${assigneeTime}]]
+            }]
+        });
+    });
+</script>
+
+
+
+
+
+</body>
+</html>

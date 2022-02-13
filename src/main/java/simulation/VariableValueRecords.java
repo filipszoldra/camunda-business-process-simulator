@@ -101,13 +101,7 @@ public class VariableValueRecords {
 
     }
 
-//    public VariableValueRecords getVariableAverageValueRecordList(VariableValueRecords allVariableValueRecords, int counter){
-//        VariableValueRecords averageValueRecordList = allVariableValueRecords;
-//        for(var variable : averageValueRecordList.getVariableValueRecordList()){
-//            averageValueRecordList.setValue(variable.variableName, allVariableValueRecords.getVarValue(variable.variableName)/counter);
-//        }
-//        return averageValueRecordList;
-//    }
+
 
 
 }

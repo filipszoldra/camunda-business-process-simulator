@@ -9,19 +9,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import simulation.results.ResultsData;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 public class CamundaController {
-    ClientData clientData = new ClientData();
-    int vars=0;
-    int assignees=0;
-    int varmethod=0;
+    ClientData clientData;
+    int vars;
+    int assignees;
+    int varmethod;
+    BpmnModelInstance clearModel;
     @GetMapping("/")
     public String index() {
         return "index.html";
@@ -30,35 +29,37 @@ public class CamundaController {
     @PostMapping("/upload")
     public String uploadBpmn(@RequestParam("file")MultipartFile file2) throws IOException {
         BpmnModelInstance modelInstance = Bpmn.readModelFromStream(file2.getInputStream());
+        clearModel = modelInstance.clone();
+        clientData = new ClientData();
         clientData.getModel(modelInstance);
-//        ReplaceNotUserTasks.ReplaceNotUserTasks(modelInstance);
-//        Scanner reader = new Scanner(System.in);
-//
-//        VariableCollection varCollection = GetVariables.createVariables();
-//        AssigneeList assigneeList = CreateAssigneeList.createAssigneeList(varCollection);
-//        TaskList taskList = CreateTaskList.createTaskList(modelInstance, varCollection, assigneeList);
-//        Assignees.addAssignees(modelInstance, assigneeList);
-//        SetExclusiveGatewayConditions.setExclusiveGatewayConditions(modelInstance, taskList, varCollection);
-//        PararellOrderList pararellList = PararellOrder.setPararellOrder(modelInstance, taskList, varCollection);
-//        Bpmn.validateModel(modelInstance);
-//
-//        File file = new File("testmodel.bpmn");
-//        Bpmn.writeModelToFile(file, modelInstance);
-//
-//        PathCollection pathCollection = new PathCollection(varCollection);
-//        TaskCounter taskCounter = new TaskCounter(taskList);
-//        VariableValueRecords variableValueRecords = new VariableValueRecords(varCollection);
-//        System.out.println("Podaj liczbę instancji");
-//        int instanceNumber = reader.nextInt();
-//        reader.close();
-//        int instNumber = instanceNumber;
-//        PrintWriter writer = new PrintWriter("results.txt", StandardCharsets.UTF_8);
-//        Simulation.startSimulation(instanceNumber, writer, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
-//        ResultsSummary.results(instNumber, writer, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
-//        writer.close();
-
+        vars=0;
+        assignees=0;
+        varmethod=0;
         return "form1.html";
     }
+
+    @PostMapping("/newsim")
+    public String newSimulation() {
+        clientData = new ClientData();
+        clientData.getModel(clearModel.clone());
+        vars=0;
+        assignees=0;
+        varmethod=0;
+        return "form1.html";
+    }
+
+    @GetMapping("/simulating")
+    public static String getSimulation(Model model, int allInstances, int instance){
+        int percent = 0;
+        for(int i = 0; i<=100; i++){
+
+        }
+        String sim = String.valueOf((instance/allInstances*100) + "%");
+        model.addAttribute("simulation", sim);
+        return "simulating.html";
+    }
+
+
 
 
     @GetMapping("/getvarform")
@@ -160,8 +161,70 @@ public class CamundaController {
         return "form2.html";
     }
 
+    @GetMapping("/getresults")
+    public String getResults(Model model){
+        ResultsData resultsData = clientData.resultsData;
+        model.addAttribute("pathresults", resultsData.pathResults);
+        model.addAttribute("endresults", resultsData.endResults);
+        model.addAttribute("assigneeresults", resultsData.assigneeResults);
+        model.addAttribute("variableresults", resultsData.variableResults);
+        Map<String, Integer> assigneeData = new LinkedHashMap<String, Integer>();
+        int assigneeTimeMax = 0;
+        for(var assignee : resultsData.assigneeResults) {
+            assigneeData.put(assignee.name, assignee.averagetime);
+            if(assigneeTimeMax<assignee.averagetime)
+                assigneeTimeMax = assignee.averagetime;
+        }
+        model.addAttribute("assigneeSet", assigneeData.keySet());
+        model.addAttribute("assigneeTime", assigneeData.values());
+        model.addAttribute("assigneeTimeMax", assigneeTimeMax);
+        if(resultsData.assigneeResults.size()==1)
+            return "resultsform2.html";
+        else
+            return "resultsform.html";
+    }
+
+    @GetMapping("/getpathlist")
+    public String getPathList(Model model, String pathName){
+        List<String> pathList = new ArrayList<>();
+        for(var path : clientData.resultsData.pathResults){
+            if(path.pathName.equals(pathName)){
+                pathList = path.elements;
+            }
+        }
+        model.addAttribute("pathlist", pathList);
+        return "showpath.html";
+    }
+
+    @GetMapping("/getdistribution")
+    public String getDistribution(Model model, String varName){
+        Map<Integer, Integer> varVals = new LinkedHashMap<Integer, Integer>();
+        List<Integer> pureVals = new ArrayList<>();
+        int max = 0;
+        for(var variable : clientData.resultsData.variableResults) {
+            if(variable.name.equals(varName)){
+                max = variable.distribution.get(0).count;
+                for(var record : variable.distribution){
+                    varVals.put(record.value, record.count);
+                    for(int i=0;i< record.count;i++)
+                        pureVals.add(record.value);
+                    if(record.count>max)
+                        max = record.count;
+                }
+            }
+        }
+        model.addAttribute("varSet", varVals.keySet());
+        model.addAttribute("varCount", varVals.values());
+        model.addAttribute("max", max);
+        model.addAttribute("name", varName);
+        model.addAttribute("purevals", pureVals);
+        return "distributionchart.html";
+    }
+
+
+
     @PostMapping("/setgatetypes")
-    public String setGateTypes(@RequestParam Map<String,String> allParams) {
+    public String setGateTypes(@RequestParam Map<String,String> allParams, Model model) {
         for(var gate : clientData.inputData.getGateConds()){
             gate.gateType=Integer.valueOf(allParams.get(gate.gateId));
             if(gate.gateType == 0){
@@ -171,11 +234,11 @@ public class CamundaController {
                 clientData.inputData.addConditionalVar("rand");
             }
         }
-        return "gateform.html";
+        return generateGateVarForm(model);
     }
 
     @PostMapping("/setgatevars")
-    public String setGateVars(@RequestParam Map<String,String> allParams) {
+    public String setGateVars(@RequestParam Map<String,String> allParams, Model model) {
         for(var gate : clientData.inputData.getGateConds()){
             if(gate.gateType == 0){
                 gate.value1 = Integer.valueOf(allParams.get(gate.gateId + "value"));
@@ -205,18 +268,18 @@ public class CamundaController {
     }
 
     @PostMapping("/settaskvars")
-    public String setTaskVars(@RequestParam Map<String,String> allParams){
+    public String setTaskVars(@RequestParam Map<String,String> allParams, Model model){
     for(var task : clientData.inputData.getTaskInput()){
         for(var variable : task.taskVarListNames){
             task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable)));
         }
         task.setAssignne(allParams.get(task.taskId+",assignee"));
     }
-        return"taskvarform";
+        return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars2")
-    public String setTaskVars2(@RequestParam Map<String,String> allParams){
+    public String setTaskVars2(@RequestParam Map<String,String> allParams, Model model){
         for(var task : clientData.inputData.getTaskInput()){
             for(var variable : task.taskVarListNames){
                 task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable)));
@@ -224,22 +287,22 @@ public class CamundaController {
             if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
                 task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
         }
-        return"taskvarform";
+        return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars3")
-    public String setTaskVars3(@RequestParam Map<String,String> allParams){
+    public String setTaskVars3(@RequestParam Map<String,String> allParams, Model model){
         for(var task : clientData.inputData.getTaskInput()){
             for(var variable : task.taskVarListNames){
                 task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable+",min")),Integer.valueOf(allParams.get(task.taskId+","+variable+",max")));
             }
             task.setAssignne(allParams.get(task.taskId+",assignee"));
         }
-        return"taskvarform";
+        return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars4")
-    public String setTaskVars4(@RequestParam Map<String,String> allParams){
+    public String setTaskVars4(@RequestParam Map<String,String> allParams, Model model){
         for(var task : clientData.inputData.getTaskInput()){
             for(var variable : task.taskVarListNames){
                 task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable+",min")),Integer.valueOf(allParams.get(task.taskId+","+variable+",max")));
@@ -247,22 +310,22 @@ public class CamundaController {
             if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
                 task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
         }
-        return"taskvarform";
+        return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars5")
-    public String setTaskVars5(@RequestParam Map<String,String> allParams){
+    public String setTaskVars5(@RequestParam Map<String,String> allParams, Model model){
         for(var task : clientData.inputData.getTaskInput()){
             for(var variable : task.taskVarListNames){
                 task.taskVarList.setValue(variable,Integer.valueOf(allParams.get("varmin")), Integer.valueOf(allParams.get("varmax")));
             }
             task.setAssignne(allParams.get(task.taskId+",assignee"));
         }
-        return"taskvarform";
+        return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars6")
-    public String setTaskVars6(@RequestParam("varmin") int varmin, @RequestParam("varmax") int varmax){
+    public String setTaskVars6(@RequestParam("varmin") int varmin, @RequestParam("varmax") int varmax, Model model){
         for(var task : clientData.inputData.getTaskInput()){
             for(var variable : task.taskVarListNames){
                 task.taskVarList.setValue(variable,varmin, varmax);
@@ -270,22 +333,22 @@ public class CamundaController {
             if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
                 task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
         }
-        return"taskvarform";
+        return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars7")
-    public String setTaskVars7(@RequestParam Map<String,String> allParams){
+    public String setTaskVars7(@RequestParam Map<String,String> allParams, Model model){
         for(var task : clientData.inputData.getTaskInput()){
             for(var variable : task.taskVarListNames){
                 task.taskVarList.setValue(variable,Integer.valueOf(allParams.get("var")));
             }
             task.setAssignne(allParams.get(task.taskId+",assignee"));
         }
-        return"taskvarform";
+        return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars8")
-    public String setTaskVars8(@RequestParam ("var")int value){
+    public String setTaskVars8(@RequestParam ("var")int value, Model model){
         for(var task : clientData.inputData.getTaskInput()){
             for(var variable : task.taskVarListNames){
                 task.taskVarList.setValue(variable,value);
@@ -293,14 +356,16 @@ public class CamundaController {
             if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
                 task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
         }
-        return"taskvarform";
+        return generateGateForm(model);
     }
 
 
 
 
+
+
     @PostMapping("/setvars")
-    public String setVars(@RequestParam(name = "varname", required = false) String[] allVarNames, @RequestParam(name = "assigneename", required = false) String[] allAssigneeNames){
+    public String setVars(@RequestParam(name = "varname", required = false) String[] allVarNames, @RequestParam(name = "assigneename", required = false) String[] allAssigneeNames, Model model){
         List<String> varNames = new ArrayList<>();
         varNames.add("time");
         List<String> assigneeNames = new ArrayList<>();
@@ -319,33 +384,44 @@ public class CamundaController {
             assigneeNames.add("default");
         }
         clientData.inputData.addAssignees(assigneeNames);
-        return"varform";
+        return generateTaskVarForm(model);
     }
+
+
 
 
     @PostMapping("/setvarsquantity")
-    public String setInitials(@RequestParam("variables") int vars, @RequestParam("assignees") int assignees, @RequestParam("varmethod") int varmethod) {
+    public String setInitials(@RequestParam("variables") int vars, @RequestParam("assignees") int assignees, @RequestParam("varmethod") int varmethod, Model model) {
         this.vars = vars;
         this.assignees = assignees;
         this.varmethod = varmethod;
-        return "form1.html";
+        return generateVarForm(model);
     }
 
     @PostMapping("/startsimulation")
-    public String startSimulation(@RequestParam("instances") int instances) throws IOException {
+    public String startSimulation(@RequestParam("instances") int instances, Model model) throws IOException {
         clientData.setInstances(instances);
         clientData.startSimulation();
-        return "simulationended.html";
+        return getResults(model);
     }
 
 
     @PostMapping("/endpoint1")
-    public String acceptForm(@RequestParam("varNames") String varNames, @RequestParam("assignee") String assignees) {
+    public String acceptForm(@RequestParam("varNames") String varNames, @RequestParam("assignee") String assignees, Model model) {
         List<String> seperatedVarNames = Arrays.asList(varNames.split(","));
         clientData.addVarList(seperatedVarNames);
         List<String> seperatedAssignees = Arrays.asList(assignees.split(","));
         clientData.addAssignees(seperatedAssignees);
         return "formMulti.html";
+    }
+    @PostMapping("/showpath")
+    public String showPath(@RequestParam("Zobacz ścieżkę") String pathName, Model model){
+        return getPathList(model, pathName);
+    }
+
+    @PostMapping("/showdistribution")
+    public String showDistriburion(@RequestParam("distribution") String varName, Model model){
+        return getDistribution(model, varName);
     }
 
 

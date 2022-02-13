@@ -2,10 +2,9 @@ package simulation;
 
 import org.camunda.bpm.engine.history.HistoricActivityInstance;
 import simdata.VariableCollection;
+import simulation.results.EndEventRecord;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 public class PathCollection {
