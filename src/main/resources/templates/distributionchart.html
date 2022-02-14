@@ -27,7 +27,7 @@
   <div class="row" id="chart"
        style="width: 1000px; height: 600px; margin: 0 auto"></div>
   <div class="row" id="chart2"
-       style="width: 1000px; height: 600px; margin: 0 auto"></div>
+       style="width: 1000px; height: 600px; margin: 50px auto"></div>
 </div>
 
 
@@ -119,25 +119,25 @@
     //     }
     //   }]
     // });
-
+    var numItems = [[${purevals}]].length;
     Highcharts.chart('chart2', {
       title: {
         text: 'Histogram'
       },
 
       xAxis: [{
-        title: { text: 'Wystąpienia wartości' },
+        title: { text: 'Wystąpienie wartości' },
         alignTicks: false
       }, {
-        title: { text: 'Histogram' },
+        title: { text: 'Histogram - wartości' },
         alignTicks: false,
         opposite: true
       }],
 
       yAxis: [{
-        title: { text: 'Wystąpienia wartości' }
+        title: { text: 'Wartość' }
       }, {
-        title: { text: 'Histogram' },
+        title: { text: 'Histogram - wystąpienia wartości' },
         opposite: true
       }],
 
@@ -152,12 +152,18 @@
       },
 
       series: [{
-        name: 'Histogram',
+        name: 'Histogram - wystąpienia wartości',
         type: 'histogram',
         xAxis: 1,
         yAxis: 1,
         baseSeries: 's1',
-        zIndex: -1
+        binsNumber: 10,
+        zIndex: -1,
+        tooltip: {
+          pointFormatter: function() {
+            return 'Wystąpienia wartości od ' + this.x + ' do ' + this.x2 + ': <b>' + this.y + '</b><br/>Procent wystąpień <b>' + ((this.y / numItems) * 100).toFixed(2) + ' %</b>';
+          }
+        },
       }, {
         name: 'Wystąpienia wartości',
         type: 'scatter',
@@ -168,6 +174,7 @@
         }
       }]
     });
+
 
   });
 </script>
