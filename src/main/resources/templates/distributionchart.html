@@ -74,51 +74,101 @@
 
     });
 
-    Highcharts.chart('chart2', {
+    // Highcharts.chart('chart2', {
+    //
+    //   title: {
+    //     text: 'Rozkład wartości'
+    //   },
+    //
+    //   xAxis: [{
+    //     title: {
+    //       text: 'Wystąpienia wartości'
+    //     },
+    //     alignTicks: false
+    //   }, {
+    //     title: {
+    //       text: 'Rozkład normalny'
+    //     },
+    //     alignTicks: false,
+    //     opposite: true
+    //   }],
+    //
+    //   yAxis: [{
+    //     title: { text: 'Wartości' }
+    //   }, {
+    //     title: { text: 'Rozkład normalny' },
+    //     opposite: true
+    //   }],
+    //
+    //   series: [{
+    //     name: 'Rozkład normalny',
+    //     type: 'bellcurve',
+    //     xAxis: 1,
+    //     yAxis: 1,
+    //     baseSeries: 1,
+    //     zIndex: -1
+    //   }, {
+    //     name: 'Wystąpienia wartości',
+    //     type: 'scatter',
+    //     data: [[${purevals}]],
+    //     accessibility: {
+    //       exposeAsGroupOnly: true
+    //     },
+    //     marker: {
+    //       radius: 1.5
+    //     }
+    //   }]
+    // });
 
+    Highcharts.chart('chart2', {
       title: {
-        text: 'Rozkład wartości'
+        text: 'Histogram'
       },
 
       xAxis: [{
-        title: {
-          text: 'Wystąpienia wartości'
-        },
+        title: { text: 'Wystąpienia wartości' },
         alignTicks: false
       }, {
-        title: {
-          text: 'Rozkład normalny'
-        },
+        title: { text: 'Histogram' },
         alignTicks: false,
         opposite: true
       }],
 
       yAxis: [{
-        title: { text: 'Wartości' }
+        title: { text: 'Wystąpienia wartości' }
       }, {
-        title: { text: 'Rozkład normalny' },
+        title: { text: 'Histogram' },
         opposite: true
       }],
 
+      plotOptions: {
+        histogram: {
+          accessibility: {
+            point: {
+              valueDescriptionFormat: '{index}. {point.x:.3f} to {point.x2:.3f}, {point.y}.'
+            }
+          }
+        }
+      },
+
       series: [{
-        name: 'Rozkład normalny',
-        type: 'bellcurve',
+        name: 'Histogram',
+        type: 'histogram',
         xAxis: 1,
         yAxis: 1,
-        baseSeries: 1,
+        baseSeries: 's1',
         zIndex: -1
       }, {
         name: 'Wystąpienia wartości',
         type: 'scatter',
         data: [[${purevals}]],
-        accessibility: {
-          exposeAsGroupOnly: true
-        },
+        id: 's1',
         marker: {
           radius: 1.5
         }
       }]
     });
+
   });
 </script>
 
