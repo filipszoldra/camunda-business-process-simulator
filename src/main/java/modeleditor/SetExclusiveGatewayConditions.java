@@ -11,7 +11,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public abstract class SetExclusiveGatewayConditions {
-    public static void setExclusiveGatewayConditions(BpmnModelInstance modelInstance, List<ExclusiveGateConditionalsInput> gateInputs, List<String> condVarNames) {
+    public static void setExclusiveGatewayConditions(BpmnModelInstance modelInstance,
+                                                     List<ExclusiveGateConditionalsInput> gateInputs, List<String> condVarNames) {
 
         for (var condVar : condVarNames) {
             AddConditionalValue.AddConditionalValue(modelInstance, condVar);
