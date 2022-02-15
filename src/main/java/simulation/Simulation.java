@@ -14,11 +14,12 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public abstract class Simulation {
-    public static ResultsData startSimulation(int instanceNumber, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList, PararellOrderList pararellList) {
+    public static ResultsData startSimulation(int instanceNumber, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection,
+                                              TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection,
+                                              AssigneeList assigneeList, PararellOrderList pararellList) {
 
         int inst = 1;
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
-
         RepositoryService repositoryService = processEngine.getRepositoryService();
         String processId = modelInstance.getModelElementsByType(org.camunda.bpm.model.bpmn.instance.Process.class).iterator().next().getId();
         DeploymentBuilder deploymentBuilder = repositoryService.createDeployment().name(processId);
@@ -27,22 +28,16 @@ public abstract class Simulation {
         HistoryService historyService = processEngine.getHistoryService();
 
         while (instanceNumber > 0) {
-
-
             RuntimeService runtimeService = processEngine.getRuntimeService();
             TaskCounter instanceTaskCounter = new TaskCounter(taskList);
             VariableValueRecords instanceVariableValueRecords = new VariableValueRecords(varCollection);
             ProcessTimer processTimer = new ProcessTimer(pararellList, taskList);
-
             ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(processId);
             String processInstanceId = processInstance.getId();
             TaskService taskService = processEngine.getTaskService();
-
-
             org.camunda.bpm.engine.task.TaskQuery taskQuery = taskService.createTaskQuery()
                     .active();
             List<Task> activeTasks = taskQuery.unlimitedList();
-
 
             while (activeTasks.size() > 0) {
                 org.camunda.bpm.engine.task.Task actualTask = activeTasks.get(0);
@@ -80,12 +75,8 @@ public abstract class Simulation {
             int processTime = processTimer.getProcessTime();
             instanceVariableValueRecords.addProcessTime(processTime);
             variableValueRecords.addProcessTime(processTime);
-            for (var task : instanceTaskCounter.getTaskCounterList()) {
-
-            }
             instanceNumber--;
             inst++;
-
 
             HistoricActivityInstanceQuery activityQuery = historyService.createHistoricActivityInstanceQuery()
                     .processInstanceId(processInstanceId)
@@ -96,10 +87,9 @@ public abstract class Simulation {
             List<HistoricActivityInstance> activityList = activityQuery.unlimitedList();
             pathCollection.addPath(activityList, instanceVariableValueRecords);
         }
-
-//        ResultsData resultsData = ResultsSummary.getResults(inst, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
         return ResultsSummary.getResults(inst, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
     }
+
 
     public static ResultsData startSimulationByVar(String varName, int varValue, PrintWriter writer, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList, PararellOrderList pararellList) {
 
