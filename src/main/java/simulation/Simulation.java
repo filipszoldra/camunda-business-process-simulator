@@ -22,7 +22,8 @@ public abstract class Simulation {
         int inst = 1;
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
-        String processId = modelInstance.getModelElementsByType(org.camunda.bpm.model.bpmn.instance.Process.class).iterator().next().getId();
+        String processId = modelInstance.getModelElementsByType(org.camunda.bpm.model.bpmn.instance.Process.class)
+                .iterator().next().getId();
         DeploymentBuilder deploymentBuilder = repositoryService.createDeployment().name(processId);
         deploymentBuilder.addModelInstance(processId + ".bpmn", modelInstance);
         deploymentBuilder.deploy();
