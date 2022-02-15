@@ -89,7 +89,6 @@
         <p class="fs-2">Możliwe ścieżki:</p><br>
         <form action="/showpath" method="post">
             <div th:each="path : ${pathresults}">
-
                 <p class="fs-4"
                    th:text="${path.pathName}"></p>
                 <p class="fs-5"
@@ -97,7 +96,6 @@
                 <button class="btn btn-info" name="Zobacz ścieżkę" th:id="${path.pathName}" th:value="${path.pathName}"
                         type="submit">Zobacz ścieżkę
                 </button>
-                <!--            <input type="submit" th:id="${path.pathName}" name="Zobacz ścieżkę" th:value="${path.pathName}"/>-->
                 <br>
                 <table class="table table-light table-striped table-sm" style="margin-bottom: 40px">
                     <tr>
@@ -113,10 +111,8 @@
                         <td th:text="${variable.max}"></td>
                     </tr>
                 </table>
-
             </div>
         </form>
-
     </div>
     <div class="row" style="margin-top:50px; margin-bottom: 100px">
         <div class="col">
