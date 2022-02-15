@@ -14,8 +14,9 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public abstract class Simulation {
-    public static ResultsData startSimulation(int instanceNumber, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection,
-                                              TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection,
+    public static ResultsData startSimulation(int instanceNumber, BpmnModelInstance modelInstance, TaskList taskList,
+                                              VariableCollection varCollection, TaskCounter taskCounter,
+                                              VariableValueRecords variableValueRecords, PathCollection pathCollection,
                                               AssigneeList assigneeList, PararellOrderList pararellList) {
 
         int inst = 1;
