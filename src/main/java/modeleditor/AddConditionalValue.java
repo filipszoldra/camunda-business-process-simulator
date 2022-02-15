@@ -8,7 +8,6 @@ import org.camunda.bpm.model.bpmn.instance.camunda.CamundaInputParameter;
 import org.camunda.bpm.model.bpmn.instance.camunda.CamundaOutputParameter;
 import org.camunda.bpm.model.xml.instance.ModelElementInstance;
 import org.camunda.bpm.model.xml.type.ModelElementType;
-import simdata.GetRandomValue;
 
 import java.util.Collection;
 

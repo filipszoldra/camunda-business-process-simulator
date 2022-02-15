@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Wyniki</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+    <script crossorigin="anonymous"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
             integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <p class="text-center h1" style="margin-top: 80px">WYNIKI SYMULACJI</p>
@@ -41,9 +41,10 @@
                 <td th:text="${var.max}"></td>
                 <td>
                     <form action="/showdistribution" method="post">
-                    <button type="submit" th:id="${var.name}" class="btn btn-info" name="distribution" style="width:200px"
-                            th:value="${var.name}" th:text="'Zobacz rozkład wartości zmiennej ' + ${var.name}">
-                    </button>
+                        <button class="btn btn-info" name="distribution" style="width:200px" th:id="${var.name}"
+                                th:text="'Zobacz rozkład wartości zmiennej ' + ${var.name}"
+                                th:value="${var.name}" type="submit">
+                        </button>
                     </form>
                 </td>
             </tr>
@@ -52,7 +53,7 @@
     <br>
     <div class="row" style="margin-top:50px">
         <p class="fs-2">Pracownicy:</p>
-        <div class="col" style = "float: left">
+        <div class="col" style="float: left">
             <table class="table table-light table-striped table-sm">
                 <tr>
                     <th scope="col">Nazwa pracownika</th>
@@ -67,19 +68,21 @@
             </table>
         </div>
 
-        <div id="chart1" class="col"
+        <div class="col" id="chart1"
              style="width: 50%; height: 400px;"></div>
     </div>
     <div class="row" style="margin-top:50px">
         <p class="fs-2">Możliwe wydarzenia końcowe:</p>
         <ol class="list-group list-group-numbered fs-4">
-            <li th:each="end : ${endresults}" class="list-group-item" th:text="${end.name} + ' ' + ${end.probability}"></li>
+            <li class="list-group-item" th:each="end : ${endresults}"
+                th:text="${end.name} + ' ' + ${end.probability}"></li>
         </ol>
     </div>
     <div class="row" style="margin-top:50px">
         <p class="fs-2">Lista zadań:</p>
         <ul class="list-group list-group-numbered fs-4">
-            <li th:each="task : ${taskresults}" class="list-group-item" th:text="${task.taskName} + ' (' + ${task.counter} + ' wykonań)'"></li>
+            <li class="list-group-item" th:each="task : ${taskresults}"
+                th:text="${task.taskName} + ' (' + ${task.counter} + ' wykonań)'"></li>
         </ul>
     </div>
     <div class="row" style="margin-top:50px">
@@ -91,12 +94,12 @@
                    th:text="${path.pathName}"></p>
                 <p class="fs-5"
                    th:text="'Prawdopodobieństwo: ' + ${path.probability} + ' (' + ${path.counter} + ' wystąpień)'"></p>
-                    <button type="submit" th:id="${path.pathName}" class="btn btn-info" name="Zobacz ścieżkę"
-                        th:value="${path.pathName}">Zobacz ścieżkę
+                <button class="btn btn-info" name="Zobacz ścieżkę" th:id="${path.pathName}" th:value="${path.pathName}"
+                        type="submit">Zobacz ścieżkę
                 </button>
                 <!--            <input type="submit" th:id="${path.pathName}" name="Zobacz ścieżkę" th:value="${path.pathName}"/>-->
                 <br>
-                <table class="table table-light table-striped table-sm" style = "margin-bottom: 40px">
+                <table class="table table-light table-striped table-sm" style="margin-bottom: 40px">
                     <tr>
                         <th scope="col">Nazwa zmiennej</th>
                         <th scope="col">Wartość minimalna</th>
@@ -173,9 +176,6 @@
         });
     });
 </script>
-
-
-
 
 
 </body>

@@ -1,9 +1,7 @@
 package client;
 
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
-import org.camunda.bpm.model.bpmn.impl.instance.ProcessImpl;
 import org.camunda.bpm.model.bpmn.instance.*;
-import org.camunda.bpm.model.bpmn.instance.Process;
 import simdata.TaskList;
 import simdata.VariableCollection;
 import simulation.PararellOrderList;
@@ -148,27 +146,25 @@ public abstract class PararellOrder {
         return pararellList;
     }
 
-public static List<FlowNode> getNextElements(FlowNode node, BpmnModelInstance modelInstance){
-    List<FlowNode> nextNodes = new ArrayList<>();
-    if(node.getElementType() == modelInstance.getModel().getType(SubProcess.class)){
-        SubProcess subProcess = modelInstance.getModelElementById(node.getAttributeValue("id"));
-        for (var el : subProcess.getFlowElements()){
-            if(el.getElementType()==modelInstance.getModel().getType(StartEvent.class))
-                nextNodes.add((FlowNode) el);
+    public static List<FlowNode> getNextElements(FlowNode node, BpmnModelInstance modelInstance) {
+        List<FlowNode> nextNodes = new ArrayList<>();
+        if (node.getElementType() == modelInstance.getModel().getType(SubProcess.class)) {
+            SubProcess subProcess = modelInstance.getModelElementById(node.getAttributeValue("id"));
+            for (var el : subProcess.getFlowElements()) {
+                if (el.getElementType() == modelInstance.getModel().getType(StartEvent.class))
+                    nextNodes.add((FlowNode) el);
+            }
+        } else if (node.getElementType() == modelInstance.getModel().getType(EndEvent.class)) {
+            EndEvent endEvent = modelInstance.getModelElementById(node.getAttributeValue("id"));
+            if (endEvent.getParentElement().getElementType() == modelInstance.getModel().getType(SubProcess.class)) {
+                SubProcess subProcess = (SubProcess) endEvent.getParentElement();
+                nextNodes = subProcess.getSucceedingNodes().list();
+            }
+        } else {
+            nextNodes.addAll(node.getSucceedingNodes().list());
         }
+        return nextNodes;
     }
-    else if(node.getElementType() == modelInstance.getModel().getType(EndEvent.class)){
-        EndEvent endEvent = modelInstance.getModelElementById(node.getAttributeValue("id"));
-        if(endEvent.getParentElement().getElementType() == modelInstance.getModel().getType(SubProcess.class)) {
-            SubProcess subProcess = (SubProcess) endEvent.getParentElement();
-            nextNodes = subProcess.getSucceedingNodes().list();
-        }
-    }
-    else {
-        nextNodes.addAll(node.getSucceedingNodes().list());
-    }
-    return nextNodes;
-}
 
 }
 

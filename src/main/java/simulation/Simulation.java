@@ -8,12 +8,13 @@ import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.task.Task;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
 import simdata.*;
+import simulation.results.ResultsData;
 
 import java.io.PrintWriter;
 import java.util.List;
 
 public abstract class Simulation {
-    public static void startSimulation(int instanceNumber, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList, PararellOrderList pararellList){
+    public static ResultsData startSimulation(int instanceNumber, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList, PararellOrderList pararellList) {
 
         int inst = 1;
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
@@ -57,7 +58,7 @@ public abstract class Simulation {
                     instanceVariableValueRecords.varAddValue(taskVar.getName(), value);
                     assigneeList.addVarValue(taskAssignee, taskVar.getName(), value);
                     variableValueRecords.varAddValue(taskVar.getName(), value);
-                    if(taskVar.getName().equals("time"))
+                    if (taskVar.getName().equals("time"))
                         processTimer.addTaskTimeRecord(taskKey, value);
                 }
                 for (var condVar : taskList.getConditionalVars()) {
@@ -95,9 +96,12 @@ public abstract class Simulation {
             List<HistoricActivityInstance> activityList = activityQuery.unlimitedList();
             pathCollection.addPath(activityList, instanceVariableValueRecords);
         }
+
+//        ResultsData resultsData = ResultsSummary.getResults(inst, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
+        return ResultsSummary.getResults(inst, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
     }
 
-    public static void startSimulationByVar(String varName, int varValue, PrintWriter writer, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList, PararellOrderList pararellList){
+    public static ResultsData startSimulationByVar(String varName, int varValue, PrintWriter writer, BpmnModelInstance modelInstance, TaskList taskList, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, PathCollection pathCollection, AssigneeList assigneeList, PararellOrderList pararellList) {
 
         int inst = 1;
         int mainValue = 0;
@@ -142,17 +146,24 @@ public abstract class Simulation {
                     if (taskVar.getName().equals(varName)) {
                         int value = taskVar.getValue();
                         mainValue += value;
-                        if (mainValue <= varValue) {
+//                        if (mainValue <= varValue) {
+//                            instanceVariableValueRecords.varAddValue(taskVar.getName(), value);
+//                            assigneeList.addVarValue(taskAssignee, taskVar.getName(), value);
+//                            variableValueRecords.varAddValue(taskVar.getName(), value);
+//                            if (taskVar.getName().equals("time"))
+//                                processTimer.addTaskTimeRecord(taskKey, value);
+//                        }
+
                             instanceVariableValueRecords.varAddValue(taskVar.getName(), value);
                             assigneeList.addVarValue(taskAssignee, taskVar.getName(), value);
                             variableValueRecords.varAddValue(taskVar.getName(), value);
                             if (taskVar.getName().equals("time"))
                                 processTimer.addTaskTimeRecord(taskKey, value);
-                        }
+
                     }
                 }
-                if(mainValue>varValue)
-                    break;
+//                if (mainValue > varValue)
+//                    break;
                 for (var taskVar : taskVarList) {
                     if (!taskVar.getName().equals(varName)) {
                         int value = taskVar.getValue();
@@ -163,24 +174,24 @@ public abstract class Simulation {
                             processTimer.addTaskTimeRecord(taskKey, value);
                     }
                 }
-                    for (var condVar : taskList.getConditionalVars()) {
-                        String condVarVal = condVar.concat("Val");
-                        if (condVarVal.equals("randVal")) {
-                            taskService.setVariable(actualTask.getId(), condVarVal, GetRandomValue.GetRandomValue());
-                        } else {
-                            taskService.setVariable(actualTask.getId(), condVarVal, instanceVariableValueRecords.getVarValue(condVar));
-                        }
+                for (var condVar : taskList.getConditionalVars()) {
+                    String condVarVal = condVar.concat("Val");
+                    if (condVarVal.equals("randVal")) {
+                        taskService.setVariable(actualTask.getId(), condVarVal, GetRandomValue.GetRandomValue());
+                    } else {
+                        taskService.setVariable(actualTask.getId(), condVarVal, instanceVariableValueRecords.getVarValue(condVar));
                     }
-                    taskService.complete(actualTask.getId());
-                    taskQuery = taskService.createTaskQuery()
-
-                            .active();
-                    activeTasks = taskQuery.unlimitedList();
-
                 }
+                taskService.complete(actualTask.getId());
+                taskQuery = taskService.createTaskQuery()
 
-            if(mainValue>varValue)
-                break;
+                        .active();
+                activeTasks = taskQuery.unlimitedList();
+
+            }
+
+//            if (mainValue > varValue)
+//                break;
             processTimer.setProcessTime();
             int processTime = processTimer.getProcessTime();
             instanceVariableValueRecords.addProcessTime(processTime);
@@ -199,7 +210,12 @@ public abstract class Simulation {
                     .orderPartiallyByOccurrence().asc();
             List<HistoricActivityInstance> activityList = activityQuery.unlimitedList();
             pathCollection.addPath(activityList, instanceVariableValueRecords);
+
+
+
         }
+//        ResultsData resultsData = ResultsSummary.getResults(inst, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
+        return ResultsSummary.getResults(inst, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
     }
 
 }

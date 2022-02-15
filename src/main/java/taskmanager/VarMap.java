@@ -9,7 +9,8 @@ import java.util.Map;
 
 public class VarMap {
     Map<String, Object> varMap;
-    public VarMap (TaskList tasklist, VariableValueRecords variableValueRecords){
+
+    public VarMap(TaskList tasklist, VariableValueRecords variableValueRecords) {
         List<String> varNames = tasklist.getConditionalVars();
         for (var varName : varNames) {
 
@@ -20,15 +21,15 @@ public class VarMap {
                 value = variableValueRecords.getVarValue(varName);
             }
             String varNameVal = varName.concat("Val");
-            if (varMap == null){
+            if (varMap == null) {
                 varMap = Map.of(varNameVal, value);
-            }
-            else{
+            } else {
                 varMap.put(varNameVal, value);
             }
         }
     }
-    public Map<String, Object> getVarMap (){
+
+    public Map<String, Object> getVarMap() {
         return varMap;
     }
 }

@@ -1,10 +1,8 @@
 package simulation;
 
-import camundajar.impl.scala.Boolean;
 import org.camunda.bpm.engine.history.HistoricActivityInstance;
 import simdata.VariableCollection;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,12 +14,20 @@ public class PathRecord {
     VariableValueRecords varMinValueRecords;
     VariableValueRecords varMaxValueRecords;
     String endName;
-    public PathRecord(List<HistoricActivityInstance> activityList){
+
+    public PathRecord(List<HistoricActivityInstance> activityList) {
         this.activityList = activityList;
         this.counter = 1;
     }
 
-    public void increment(){
+    public static float round(float f, int places) {
+        float temp = (float) (f * (Math.pow(10, places)));
+        temp = (Math.round(temp));
+        temp = temp / (int) (Math.pow(10, places));
+        return temp;
+    }
+
+    public void increment() {
         counter++;
     }
 
@@ -33,11 +39,11 @@ public class PathRecord {
         return Math.round(this.counter);
     }
 
-    public List<String> getElements(){
+    public List<String> getElements() {
         List<String> elements = new ArrayList<>();
-        for (var activity : activityList){
+        for (var activity : activityList) {
             String activityName = activity.getActivityName();
-            if (activityName == null){
+            if (activityName == null) {
                 activityName = activity.getActivityId();
             }
             elements.add(activity.getActivityType() + " " + activityName);
@@ -45,86 +51,83 @@ public class PathRecord {
         return elements;
     }
 
-    public String getPathString(){
+    public String getPathString() {
         String pathline = "";
         boolean isStarted = false;
-        for (var activity : activityList){
+        for (var activity : activityList) {
             String activityName = activity.getActivityName();
-            if (activityName == null){
+            if (activityName == null) {
                 activityName = activity.getActivityId();
             }
-            if(isStarted == false){
+            if (isStarted == false) {
                 pathline = pathline.concat("(" + activity.getActivityType() + " " + activityName + ")");
                 isStarted = true;
-            }
-            else{
+            } else {
                 pathline = pathline.concat(" -----> (" + activity.getActivityType() + " " + activityName + ")");
-                if(activity.getActivityType().equals("noneEndEvent"))
-                    this.endName=activityName;
+                if (activity.getActivityType().equals("noneEndEvent"))
+                    this.endName = activityName;
             }
         }
         return pathline;
     }
-    public String getEndName(){
+
+    public String getEndName() {
         return endName;
     }
-    public static float round(float f, int places) {
-        float temp = (float)(f*(Math.pow(10, places)));
-        temp = (Math.round(temp));
-        temp = temp/(int)(Math.pow(10, places));
-        return temp;
+
+    public String getProbability() {
+        return probability;
     }
-    public void setProbability(Integer allCounter){
-        float prob = this.counter*100/allCounter;
+
+    public void setProbability(Integer allCounter) {
+        float prob = this.counter * 100 / allCounter;
         this.probability = String.valueOf(round(prob, 2)).concat("%");
     }
 
-    public String getProbability(){
-        return probability;
-    }
-    public void addVariableValues(){
+    public void addVariableValues() {
 
     }
 
-    public void createVarValueRecords(VariableCollection varCollection){
+    public void createVarValueRecords(VariableCollection varCollection) {
         varValueRecords = new VariableValueRecords(varCollection);
         varMinValueRecords = new VariableValueRecords(varCollection);
         varMaxValueRecords = new VariableValueRecords(varCollection);
     }
 
-    public VariableValueRecords getVarValueRecords(){
+    public VariableValueRecords getVarValueRecords() {
         return varValueRecords;
     }
-    public VariableValueRecords getMinVarValueRecords(){
+
+    public VariableValueRecords getMinVarValueRecords() {
         return varMinValueRecords;
     }
-    public VariableValueRecords getMaxVarValueRecords(){
+
+    public VariableValueRecords getMaxVarValueRecords() {
         return varMaxValueRecords;
     }
-    public VariableValueRecords getAverageVarValueRecords(){
+
+    public VariableValueRecords getAverageVarValueRecords() {
         VariableValueRecords averageVarValueRecords = varValueRecords;
-        for (var varRecord : varValueRecords.getVariableValueRecordList()){
-            averageVarValueRecords.setValue(varRecord.variableName, Math.round(varRecord.value/counter));
+        for (var varRecord : varValueRecords.getVariableValueRecordList()) {
+            averageVarValueRecords.setValue(varRecord.variableName, Math.round(varRecord.value / counter));
         }
         return averageVarValueRecords;
     }
 
-    public void addVarValueRecords(List<VariableRecord> varValueList){
-        for(var varRecord : varValueList){
+    public void addVarValueRecords(List<VariableRecord> varValueList) {
+        for (var varRecord : varValueList) {
             varValueRecords.varAddValue(varRecord.variableName, varRecord.value);
-            if(varMinValueRecords.isStarted(varRecord.variableName) == false){
+            if (varMinValueRecords.isStarted(varRecord.variableName) == false) {
                 varMinValueRecords.setValue(varRecord.variableName, varRecord.value);
                 varMinValueRecords.markStarted(varRecord.variableName);
-            }
-            else if(varRecord.value < varMinValueRecords.getVarValue(varRecord.variableName)){
+            } else if (varRecord.value < varMinValueRecords.getVarValue(varRecord.variableName)) {
                 varMinValueRecords.setValue(varRecord.variableName, varRecord.value);
             }
 
-            if(varMaxValueRecords.isStarted(varRecord.variableName) == false){
+            if (varMaxValueRecords.isStarted(varRecord.variableName) == false) {
                 varMaxValueRecords.setValue(varRecord.variableName, varRecord.value);
                 varMaxValueRecords.markStarted(varRecord.variableName);
-            }
-            else if(varRecord.value > varMaxValueRecords.getVarValue(varRecord.variableName)){
+            } else if (varRecord.value > varMaxValueRecords.getVarValue(varRecord.variableName)) {
                 varMaxValueRecords.setValue(varRecord.variableName, varRecord.value);
             }
         }

@@ -5,7 +5,8 @@ public class PathVariableResult {
     public int min;
     public int average;
     public int max;
-    public PathVariableResult(String name, int min, int average, int max){
+
+    public PathVariableResult(String name, int min, int average, int max) {
         this.name = name;
         this.min = min;
         this.average = average;

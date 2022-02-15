@@ -5,7 +5,6 @@ import modeleditor.ReplaceNotUserTasks;
 import modeleditor.SetExclusiveGatewayConditions;
 import org.camunda.bpm.model.bpmn.Bpmn;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
-import org.springframework.ui.Model;
 import simdata.AssigneeList;
 import simdata.TaskList;
 import simdata.VariableCollection;
@@ -19,28 +18,30 @@ import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 public class ClientData {
-    BpmnModelInstance modelInstance;
     public InputData inputData;
-    int instances;
     public ResultsData resultsData;
-    public void getModel(BpmnModelInstance modelInstance){
+    BpmnModelInstance modelInstance;
+    int instances;
+
+    public void getModel(BpmnModelInstance modelInstance) {
         this.modelInstance = modelInstance;
         ReplaceNotUserTasks.ReplaceNotUserTasks(this.modelInstance);
         inputData = new InputData(modelInstance);
     }
 
-    public void addVarList(List<String> varNames){
+    public void addVarList(List<String> varNames) {
         inputData.addVarList(varNames);
     }
 
-    public void addAssignees(List<String> assigneeNames){
+    public void addAssignees(List<String> assigneeNames) {
         inputData.addAssignees(assigneeNames);
     }
 
-    public List<String> getVarNames(){
+    public List<String> getVarNames() {
         return inputData.variableCollection.getAllVariableNames();
     }
-    public void setInstances(int instances){
+
+    public void setInstances(int instances) {
         this.instances = instances;
     }
 
@@ -61,7 +62,8 @@ public class ClientData {
         VariableValueRecords variableValueRecords = new VariableValueRecords(varCollection);
 
         Simulation.startSimulation(instances, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
-        this.resultsData = ResultsSummary.getResults(instances, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
+//        this.resultsData = ResultsSummary.getResults(instances, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
+        this.resultsData=Simulation.startSimulation(instances, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
 
 
     }
@@ -86,7 +88,6 @@ public class ClientData {
         writer.close();
 
     }
-
 
 
 }

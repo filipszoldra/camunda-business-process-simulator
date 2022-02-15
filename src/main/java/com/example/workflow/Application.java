@@ -1,12 +1,13 @@
 package com.example.workflow;
 
-import client.*;
+import client.CreateTaskList;
+import client.InputData;
+import client.PararellOrder;
 import modeleditor.Assignees;
 import modeleditor.ReplaceNotUserTasks;
 import modeleditor.SetExclusiveGatewayConditions;
 import org.camunda.bpm.model.bpmn.Bpmn;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
-import org.camunda.feel.syntaxtree.In;
 import simdata.AssigneeList;
 import simdata.TaskList;
 import simdata.VariableCollection;
@@ -14,8 +15,6 @@ import simulation.*;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class Application {

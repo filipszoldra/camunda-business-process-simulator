@@ -12,7 +12,8 @@ public class VariableResult {
     public int average;
     public int max;
     public List<VariableCountRecord> distribution;
-    public VariableResult(String name, int sum, int min, int median, int average, int max, List<VariableCountRecord> distribution){
+
+    public VariableResult(String name, int sum, int min, int median, int average, int max, List<VariableCountRecord> distribution) {
         this.name = name;
         this.sum = sum;
         this.min = min;

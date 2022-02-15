@@ -1,6 +1,7 @@
 package com.example.workflow.controller;
 
-import client.*;
+import client.ClientData;
+import client.ExclusiveGateConditionalsInput;
 import org.camunda.bpm.model.bpmn.Bpmn;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,10 @@ import org.springframework.web.multipart.MultipartFile;
 import simulation.results.ResultsData;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 public class SimulationController {
@@ -21,20 +25,21 @@ public class SimulationController {
     int assignees;
     int varmethod;
     BpmnModelInstance clearModel;
+
     @GetMapping("/")
     public String index() {
         return "index.html";
     }
 
     @PostMapping("/upload")
-    public String uploadBpmn(@RequestParam("file")MultipartFile file2) throws IOException {
+    public String uploadBpmn(@RequestParam("file") MultipartFile file2) throws IOException {
         BpmnModelInstance modelInstance = Bpmn.readModelFromStream(file2.getInputStream());
         clearModel = modelInstance.clone();
         clientData = new ClientData();
         clientData.getModel(modelInstance);
-        vars=0;
-        assignees=0;
-        varmethod=0;
+        vars = 0;
+        assignees = 0;
+        varmethod = 0;
         return "form1.html";
     }
 
@@ -42,27 +47,26 @@ public class SimulationController {
     public String newSimulation() {
         clientData = new ClientData();
         clientData.getModel(clearModel.clone());
-        vars=0;
-        assignees=0;
-        varmethod=0;
+        vars = 0;
+        assignees = 0;
+        varmethod = 0;
         return "form1.html";
     }
-
 
 
     @GetMapping("/getvarform")
     public String generateVarForm(Model model) {
         var varCount = new ArrayList<>();
-        for(int i= 1; i<=vars; i++) {
+        for (int i = 1; i <= vars; i++) {
             varCount.add(i);
         }
         model.addAttribute("varcount", varCount);
         var assigneeCount = new ArrayList<>();
-        for(int j= 1; j<=assignees; j++) {
+        for (int j = 1; j <= assignees; j++) {
             assigneeCount.add(j);
         }
         model.addAttribute("assigneecount", assigneeCount);
-        if(vars == 0 && assignees == 0){
+        if (vars == 0 && assignees == 0) {
             List<String> varNames = new ArrayList<>();
             varNames.add("time");
             List<String> assigneeNames = new ArrayList<>();
@@ -70,56 +74,46 @@ public class SimulationController {
             clientData.inputData.addVarList(varNames);
             clientData.inputData.addAssignees(assigneeNames);
             return generateTaskVarForm(model);
-        }
-        else if(vars == 0){
+        } else if (vars == 0) {
             return "varform3.html";
-        }
-        else if(assignees == 0){
+        } else if (assignees == 0) {
             return "varform2.html";
-        }
-        else
+        } else
             return "varform.html";
     }
 
     @GetMapping("/gettaskvarform")
-    public String generateTaskVarForm(Model model){
+    public String generateTaskVarForm(Model model) {
         clientData.inputData.setAllTaskVarListNames();
-        if(clientData.inputData.getAssigneeNames().size()>1){
-            if(varmethod==1){
+        if (clientData.inputData.getAssigneeNames().size() > 1) {
+            if (varmethod == 1) {
                 model.addAttribute("tasks", clientData.inputData.getTaskInput());
                 model.addAttribute("assignees", clientData.inputData.getAssigneeNames());
                 return "taskvarform.html";
-            }
-            else if(varmethod == 2){
+            } else if (varmethod == 2) {
                 model.addAttribute("tasks", clientData.inputData.getTaskInput());
                 model.addAttribute("assignees", clientData.inputData.getAssigneeNames());
                 return "taskvarform3.html";
-            }
-            else if(varmethod == 3){
+            } else if (varmethod == 3) {
                 model.addAttribute("tasks", clientData.inputData.getTaskInput());
                 model.addAttribute("assignees", clientData.inputData.getAssigneeNames());
                 return "taskvarform7.html";
-            }
-            else if(varmethod == 4){
+            } else if (varmethod == 4) {
                 model.addAttribute("tasks", clientData.inputData.getTaskInput());
                 model.addAttribute("assignees", clientData.inputData.getAssigneeNames());
                 return "taskvarform5.html";
             }
 
-        }
-        else{
-            if(varmethod==1){
+        } else {
+            if (varmethod == 1) {
                 model.addAttribute("tasks", clientData.inputData.getTaskInput());
                 return "taskvarform.html2";
-            }
-            else if(varmethod == 2){
+            } else if (varmethod == 2) {
                 model.addAttribute("tasks", clientData.inputData.getTaskInput());
                 return "taskvarform4.html";
-            }
-            else if(varmethod == 3){
+            } else if (varmethod == 3) {
                 return "taskvarform8.html";
-            }
-            else if(varmethod == 4){
+            } else if (varmethod == 4) {
                 return "taskvarform6.html";
             }
         }
@@ -130,24 +124,23 @@ public class SimulationController {
     }
 
     @GetMapping("/getgateform")
-    public String generateGateForm(Model model){
-        if(clientData.inputData.getGateConds().size()>0) {
+    public String generateGateForm(Model model) {
+        if (clientData.inputData.getGateConds().size() > 0) {
             model.addAttribute("gates", clientData.inputData.getGateConds());
             model.addAttribute("variables", clientData.inputData.getVariableCollection().getAllVariableNames());
             return "gateform.html";
-        }
-        else
+        } else
             return "simulation.html";
     }
+
     @GetMapping("/getgatevarform")
-    public String generateGateVarForm(Model model){
+    public String generateGateVarForm(Model model) {
         List<ExclusiveGateConditionalsInput> randomGates = new ArrayList<>();
         List<ExclusiveGateConditionalsInput> varGates = new ArrayList<>();
-        for(var gate : clientData.inputData.getGateConds()){
-            if(gate.gateType == 0){
+        for (var gate : clientData.inputData.getGateConds()) {
+            if (gate.gateType == 0) {
                 randomGates.add(gate);
-            }
-            else
+            } else
                 varGates.add(gate);
         }
         model.addAttribute("randomgates", randomGates);
@@ -157,43 +150,42 @@ public class SimulationController {
     }
 
 
-
     @GetMapping("/getsimbyvar")
-    public String getSimByVar(Model model){
+    public String getSimByVar(Model model) {
         model.addAttribute("variables", clientData.getVarNames());
         return "simulationbyvar.html";
     }
 
     @GetMapping("/getresults")
-    public String getResults(Model model){
-        ResultsData resultsData = clientData.resultsData;
-        model.addAttribute("pathresults", resultsData.pathResults);
-        model.addAttribute("endresults", resultsData.endResults);
-        model.addAttribute("assigneeresults", resultsData.assigneeResults);
-        model.addAttribute("variableresults", resultsData.variableResults);
-        model.addAttribute("taskresults", resultsData.taskResults);
+    public String getResults(Model model) {
+//        ResultsData resultsData = clientData.resultsData;
+        model.addAttribute("pathresults", clientData.resultsData.pathResults);
+        model.addAttribute("endresults", clientData.resultsData.endResults);
+        model.addAttribute("assigneeresults", clientData.resultsData.assigneeResults);
+        model.addAttribute("variableresults", clientData.resultsData.variableResults);
+        model.addAttribute("taskresults", clientData.resultsData.taskResults);
         Map<String, Integer> assigneeData = new LinkedHashMap<String, Integer>();
         int assigneeTimeMax = 0;
-        for(var assignee : resultsData.assigneeResults) {
+        for (var assignee : clientData.resultsData.assigneeResults) {
             assigneeData.put(assignee.name, assignee.averagetime);
-            if(assigneeTimeMax<assignee.averagetime)
+            if (assigneeTimeMax < assignee.averagetime)
                 assigneeTimeMax = assignee.averagetime;
         }
         model.addAttribute("assigneeSet", assigneeData.keySet());
         model.addAttribute("assigneeTime", assigneeData.values());
         model.addAttribute("assigneeTimeMax", assigneeTimeMax);
-        model.addAttribute("instnumber", resultsData.instNumber);
-        if(resultsData.assigneeResults.size()==1)
+        model.addAttribute("instnumber", clientData.resultsData.instNumber);
+        if (clientData.resultsData.assigneeResults.size() == 1)
             return "resultsform2.html";
         else
             return "resultsform.html";
     }
 
     @GetMapping("/getpathlist")
-    public String getPathList(Model model, String pathName){
+    public String getPathList(Model model, String pathName) {
         List<String> pathList = new ArrayList<>();
-        for(var path : clientData.resultsData.pathResults){
-            if(path.pathName.equals(pathName)){
+        for (var path : clientData.resultsData.pathResults) {
+            if (path.pathName.equals(pathName)) {
                 pathList = path.elements;
             }
         }
@@ -202,18 +194,18 @@ public class SimulationController {
     }
 
     @GetMapping("/getdistribution")
-    public String getDistribution(Model model, String varName){
+    public String getDistribution(Model model, String varName) {
         Map<Integer, Integer> varVals = new LinkedHashMap<Integer, Integer>();
         List<Integer> pureVals = new ArrayList<>();
         int max = 0;
-        for(var variable : clientData.resultsData.variableResults) {
-            if(variable.name.equals(varName)){
+        for (var variable : clientData.resultsData.variableResults) {
+            if (variable.name.equals(varName)) {
                 max = variable.distribution.get(0).count;
-                for(var record : variable.distribution){
+                for (var record : variable.distribution) {
                     varVals.put(record.value, record.count);
-                    for(int i=0;i< record.count;i++)
+                    for (int i = 0; i < record.count; i++)
                         pureVals.add(record.value);
-                    if(record.count>max)
+                    if (record.count > max)
                         max = record.count;
                 }
             }
@@ -227,15 +219,14 @@ public class SimulationController {
     }
 
 
-
     @PostMapping("/setgatetypes")
-    public String setGateTypes(@RequestParam Map<String,String> allParams, Model model) {
-        for(var gate : clientData.inputData.getGateConds()){
-            gate.gateType=Integer.valueOf(allParams.get(gate.gateId));
-            if(gate.gateType == 0){
-                gate.sign1="<=";
-                gate.sign2=">";
-                gate.condVarName="rand";
+    public String setGateTypes(@RequestParam Map<String, String> allParams, Model model) {
+        for (var gate : clientData.inputData.getGateConds()) {
+            gate.gateType = Integer.valueOf(allParams.get(gate.gateId));
+            if (gate.gateType == 0) {
+                gate.sign1 = "<=";
+                gate.sign2 = ">";
+                gate.condVarName = "rand";
                 clientData.inputData.addConditionalVar("rand");
             }
         }
@@ -243,15 +234,14 @@ public class SimulationController {
     }
 
     @PostMapping("/setgatevars")
-    public String setGateVars(@RequestParam Map<String,String> allParams, Model model) {
-        for(var gate : clientData.inputData.getGateConds()){
-            if(gate.gateType == 0){
+    public String setGateVars(@RequestParam Map<String, String> allParams, Model model) {
+        for (var gate : clientData.inputData.getGateConds()) {
+            if (gate.gateType == 0) {
                 gate.value1 = Integer.valueOf(allParams.get(gate.gateId + "value"));
                 gate.value2 = gate.value1;
-            }
-            else{
-                for(var variable : clientData.inputData.variableCollection.getVariableList()){
-                    if(variable.getName().equals(allParams.get(gate.gateId + "var"))){
+            } else {
+                for (var variable : clientData.inputData.variableCollection.getVariableList()) {
+                    if (variable.getName().equals(allParams.get(gate.gateId + "var"))) {
                         String varCondName = clientData.inputData.variableCollection.getVarNameById(variable.getId());
                         clientData.inputData.addConditionalVar(varCondName);
                     }
@@ -261,15 +251,13 @@ public class SimulationController {
                 gate.value1 = Integer.valueOf(allParams.get(gate.gateId + "value"));
                 gate.value2 = Integer.valueOf(allParams.get(gate.gateId + "value"));
                 int signVal = Integer.valueOf(allParams.get(gate.gateId + "sign"));
-                if(signVal == 1){
+                if (signVal == 1) {
                     gate.sign1 = ">";
                     gate.sign2 = "<=";
-                }
-                else if(signVal == 2){
+                } else if (signVal == 2) {
                     gate.sign1 = "==";
                     gate.sign2 = "!=";
-                }
-                else{
+                } else {
                     gate.sign1 = "<";
                     gate.sign2 = ">=";
                 }
@@ -280,126 +268,121 @@ public class SimulationController {
     }
 
     @PostMapping("/settaskvars")
-    public String setTaskVars(@RequestParam Map<String,String> allParams, Model model){
-    for(var task : clientData.inputData.getTaskInput()){
-        for(var variable : task.taskVarListNames){
-            task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable)));
+    public String setTaskVars(@RequestParam Map<String, String> allParams, Model model) {
+        for (var task : clientData.inputData.getTaskInput()) {
+            for (var variable : task.taskVarListNames) {
+                task.taskVarList.setValue(variable, Integer.valueOf(allParams.get(task.taskId + "," + variable)));
+            }
+            task.setAssignne(allParams.get(task.taskId + ",assignee"));
         }
-        task.setAssignne(allParams.get(task.taskId+",assignee"));
-    }
         return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars2")
-    public String setTaskVars2(@RequestParam Map<String,String> allParams, Model model){
-        for(var task : clientData.inputData.getTaskInput()){
-            for(var variable : task.taskVarListNames){
-                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable)));
+    public String setTaskVars2(@RequestParam Map<String, String> allParams, Model model) {
+        for (var task : clientData.inputData.getTaskInput()) {
+            for (var variable : task.taskVarListNames) {
+                task.taskVarList.setValue(variable, Integer.valueOf(allParams.get(task.taskId + "," + variable)));
             }
-            if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
+            if (!clientData.inputData.getAssigneeNames().get(0).equals("default"))
                 task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
         }
         return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars3")
-    public String setTaskVars3(@RequestParam Map<String,String> allParams, Model model){
-        for(var task : clientData.inputData.getTaskInput()){
-            for(var variable : task.taskVarListNames){
-                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable+",min")),Integer.valueOf(allParams.get(task.taskId+","+variable+",max")));
+    public String setTaskVars3(@RequestParam Map<String, String> allParams, Model model) {
+        for (var task : clientData.inputData.getTaskInput()) {
+            for (var variable : task.taskVarListNames) {
+                task.taskVarList.setValue(variable, Integer.valueOf(allParams.get(task.taskId + "," + variable + ",min")), Integer.valueOf(allParams.get(task.taskId + "," + variable + ",max")));
             }
-            task.setAssignne(allParams.get(task.taskId+",assignee"));
+            task.setAssignne(allParams.get(task.taskId + ",assignee"));
         }
         return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars4")
-    public String setTaskVars4(@RequestParam Map<String,String> allParams, Model model){
-        for(var task : clientData.inputData.getTaskInput()){
-            for(var variable : task.taskVarListNames){
-                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get(task.taskId+","+variable+",min")),Integer.valueOf(allParams.get(task.taskId+","+variable+",max")));
+    public String setTaskVars4(@RequestParam Map<String, String> allParams, Model model) {
+        for (var task : clientData.inputData.getTaskInput()) {
+            for (var variable : task.taskVarListNames) {
+                task.taskVarList.setValue(variable, Integer.valueOf(allParams.get(task.taskId + "," + variable + ",min")), Integer.valueOf(allParams.get(task.taskId + "," + variable + ",max")));
             }
-            if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
+            if (!clientData.inputData.getAssigneeNames().get(0).equals("default"))
                 task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
         }
         return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars5")
-    public String setTaskVars5(@RequestParam Map<String,String> allParams, Model model){
-        for(var task : clientData.inputData.getTaskInput()){
-            for(var variable : task.taskVarListNames){
-                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get("varmin")), Integer.valueOf(allParams.get("varmax")));
+    public String setTaskVars5(@RequestParam Map<String, String> allParams, Model model) {
+        for (var task : clientData.inputData.getTaskInput()) {
+            for (var variable : task.taskVarListNames) {
+                task.taskVarList.setValue(variable, Integer.valueOf(allParams.get("varmin")), Integer.valueOf(allParams.get("varmax")));
             }
-            task.setAssignne(allParams.get(task.taskId+",assignee"));
+            task.setAssignne(allParams.get(task.taskId + ",assignee"));
         }
         return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars6")
-    public String setTaskVars6(@RequestParam("varmin") int varmin, @RequestParam("varmax") int varmax, Model model){
-        for(var task : clientData.inputData.getTaskInput()){
-            for(var variable : task.taskVarListNames){
-                task.taskVarList.setValue(variable,varmin, varmax);
+    public String setTaskVars6(@RequestParam("varmin") int varmin, @RequestParam("varmax") int varmax, Model model) {
+        for (var task : clientData.inputData.getTaskInput()) {
+            for (var variable : task.taskVarListNames) {
+                task.taskVarList.setValue(variable, varmin, varmax);
             }
-            if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
+            if (!clientData.inputData.getAssigneeNames().get(0).equals("default"))
                 task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
         }
         return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars7")
-    public String setTaskVars7(@RequestParam Map<String,String> allParams, Model model){
-        for(var task : clientData.inputData.getTaskInput()){
-            for(var variable : task.taskVarListNames){
-                task.taskVarList.setValue(variable,Integer.valueOf(allParams.get("var")));
+    public String setTaskVars7(@RequestParam Map<String, String> allParams, Model model) {
+        for (var task : clientData.inputData.getTaskInput()) {
+            for (var variable : task.taskVarListNames) {
+                task.taskVarList.setValue(variable, Integer.valueOf(allParams.get("var")));
             }
-            task.setAssignne(allParams.get(task.taskId+",assignee"));
+            task.setAssignne(allParams.get(task.taskId + ",assignee"));
         }
         return generateGateForm(model);
     }
 
     @PostMapping("/settaskvars8")
-    public String setTaskVars8(@RequestParam ("var")int value, Model model){
-        for(var task : clientData.inputData.getTaskInput()){
-            for(var variable : task.taskVarListNames){
-                task.taskVarList.setValue(variable,value);
+    public String setTaskVars8(@RequestParam("var") int value, Model model) {
+        for (var task : clientData.inputData.getTaskInput()) {
+            for (var variable : task.taskVarListNames) {
+                task.taskVarList.setValue(variable, value);
             }
-            if(!clientData.inputData.getAssigneeNames().get(0).equals("default"))
+            if (!clientData.inputData.getAssigneeNames().get(0).equals("default"))
                 task.setAssignne(clientData.inputData.getAssigneeNames().get(0));
         }
         return generateGateForm(model);
     }
 
 
-
-
-
     @PostMapping("/setvars")
-    public String setVars(@RequestParam(name = "varname", required = false) String[] allVarNames, @RequestParam(name = "assigneename", required = false) String[] allAssigneeNames, Model model){
+    public String setVars(@RequestParam(name = "varname", required = false) String[] allVarNames, @RequestParam(name = "assigneename", required = false) String[] allAssigneeNames, Model model) {
         List<String> varNames = new ArrayList<>();
         varNames.add("time");
         List<String> assigneeNames = new ArrayList<>();
-        if(allVarNames!=null) {
+        if (allVarNames != null) {
             for (var str : allVarNames) {
-                if(!str.equals("time"))
+                if (!str.equals("time"))
                     varNames.add(str);
             }
         }
-        if(allAssigneeNames!=null) {
+        if (allAssigneeNames != null) {
             for (var str : allAssigneeNames) {
                 assigneeNames.add(str);
             }
         }
         clientData.inputData.addVarList(varNames);
-        if(assigneeNames.size() == 0){
+        if (assigneeNames.size() == 0) {
             assigneeNames.add("default");
         }
         clientData.inputData.addAssignees(assigneeNames);
         return generateTaskVarForm(model);
     }
-
-
 
 
     @PostMapping("/setvarsquantity")
@@ -431,12 +414,12 @@ public class SimulationController {
 
 
     @PostMapping("/showpath")
-    public String showPath(@RequestParam("Zobacz ścieżkę") String pathName, Model model){
+    public String showPath(@RequestParam("Zobacz ścieżkę") String pathName, Model model) {
         return getPathList(model, pathName);
     }
 
     @PostMapping("/showdistribution")
-    public String showDistriburion(@RequestParam("distribution") String varName, Model model){
+    public String showDistriburion(@RequestParam("distribution") String varName, Model model) {
         return getDistribution(model, varName);
     }
 

@@ -67,8 +67,8 @@ public class InputData {
         return assignees;
     }
 
-    public void addConditionalVar(String condVar){
-        if(!conditionalVarNames.contains(condVar)){
+    public void addConditionalVar(String condVar) {
+        if (!conditionalVarNames.contains(condVar)) {
             conditionalVarNames.add(condVar);
         }
 
@@ -99,7 +99,7 @@ public class InputData {
 
     }
 
-    public void setAllTaskVarListNames(){
+    public void setAllTaskVarListNames() {
         for (var task : taskVars)
             task.setTaskVarListNames();
     }

@@ -11,7 +11,8 @@ public class ResultsData {
     public List<VariableResult> variableResults;
     public List<TaskCountRecord> taskResults;
     public int instNumber;
-    public ResultsData(List<PathResult> pathResults, List<EndEventRecord> endResults, List<AsigneeResult> assigneeResults, List<VariableResult> variableResults, List<TaskCountRecord> taskResults, int instNumber){
+
+    public ResultsData(List<PathResult> pathResults, List<EndEventRecord> endResults, List<AsigneeResult> assigneeResults, List<VariableResult> variableResults, List<TaskCountRecord> taskResults, int instNumber) {
         this.pathResults = pathResults;
         this.endResults = endResults;
         this.taskResults = taskResults;

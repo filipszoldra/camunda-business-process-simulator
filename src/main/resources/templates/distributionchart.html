@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Wykres wystąpień wartości zmiennej</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-          crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-          crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-          crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Wykres wystąpień wartości zmiennej</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+    <script crossorigin="anonymous"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <p class="text-center h1 text-uppercase" style="margin-top: 80px" th:text="'ROZKŁAD WARTOŚCI ZMIENNEJ ' + ${name}"></p>
 <div style="width: 200px; margin: 0 auto">
-<form action="/getresults" method="get">
-  <button class="btn btn-info" type="submit">Wróć do wyników</button><br>
-</form><br>
+    <form action="/getresults" method="get">
+        <button class="btn btn-info" type="submit">Wróć do wyników</button>
+        <br>
+    </form>
+    <br>
 </div>
 
 <div class="container">
-  <div class="row" id="chart"
-       style="width: 1000px; height: 600px; margin: 0 auto"></div>
-  <div class="row" id="chart2"
-       style="width: 1000px; height: 600px; margin: 50px auto"></div>
+    <div class="row" id="chart"
+         style="width: 1000px; height: 600px; margin: 0 auto"></div>
+    <div class="row" id="chart2"
+         style="width: 1000px; height: 600px; margin: 50px auto"></div>
 </div>
 
 
@@ -37,150 +39,147 @@
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 <script th:inline="javascript">
-  $(function () {
-    Highcharts.chart('chart', {
-      chart: {
-        type: 'scatter',
-      },
-      title: {
-        text: 'Ilość wystąpień wartości zmiennej w instancjach'
-      },
-      xAxis: {
-        categories: [[${varSet}]],
-        crosshair: true
-      },
-      yAxis: {
-        // min: 0,
-        // max: [[${max}]],
-        title: {
-          text: 'Wystąpienia wartości'
-        }
-      },
+    $(function () {
+        Highcharts.chart('chart', {
+            chart: {
+                type: 'scatter',
+            },
+            title: {
+                text: 'Ilość wystąpień wartości zmiennej w instancjach'
+            },
+            xAxis: {
+                categories: [[${varSet}]],
+                crosshair: true
+            },
+            yAxis: {
+                // min: 0,
+                // max: [[${max}]],
+                title: {
+                    text: 'Wystąpienia wartości'
+                }
+            },
 
 
-      tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f} K</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-      },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} K</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
 
-      series: [{
-        name: 'Ilość wystąpień wartości w instancjach',
-        data: [[${varCount}]]
-      }]
+            series: [{
+                name: 'Ilość wystąpień wartości w instancjach',
+                data: [[${varCount}]]
+            }]
+
+        });
+
+        // Highcharts.chart('chart2', {
+        //
+        //   title: {
+        //     text: 'Rozkład wartości'
+        //   },
+        //
+        //   xAxis: [{
+        //     title: {
+        //       text: 'Wystąpienia wartości'
+        //     },
+        //     alignTicks: false
+        //   }, {
+        //     title: {
+        //       text: 'Rozkład normalny'
+        //     },
+        //     alignTicks: false,
+        //     opposite: true
+        //   }],
+        //
+        //   yAxis: [{
+        //     title: { text: 'Wartości' }
+        //   }, {
+        //     title: { text: 'Rozkład normalny' },
+        //     opposite: true
+        //   }],
+        //
+        //   series: [{
+        //     name: 'Rozkład normalny',
+        //     type: 'bellcurve',
+        //     xAxis: 1,
+        //     yAxis: 1,
+        //     baseSeries: 1,
+        //     zIndex: -1
+        //   }, {
+        //     name: 'Wystąpienia wartości',
+        //     type: 'scatter',
+        //     data: [[${purevals}]],
+        //     accessibility: {
+        //       exposeAsGroupOnly: true
+        //     },
+        //     marker: {
+        //       radius: 1.5
+        //     }
+        //   }]
+        // });
+        var numItems = [[${purevals}]].length;
+        Highcharts.chart('chart2', {
+            title: {
+                text: 'Histogram'
+            },
+
+            xAxis: [{
+                title: {text: 'Wystąpienie wartości'},
+                alignTicks: false
+            }, {
+                title: {text: 'Histogram - wartości'},
+                alignTicks: false,
+                opposite: true
+            }],
+
+            yAxis: [{
+                title: {text: 'Wartość'}
+            }, {
+                title: {text: 'Histogram - wystąpienia wartości'},
+                opposite: true
+            }],
+
+            plotOptions: {
+                histogram: {
+                    accessibility: {
+                        point: {
+                            valueDescriptionFormat: '{index}. {point.x:.3f} to {point.x2:.3f}, {point.y}.'
+                        }
+                    }
+                }
+            },
+
+            series: [{
+                name: 'Histogram - wystąpienia wartości',
+                type: 'histogram',
+                xAxis: 1,
+                yAxis: 1,
+                baseSeries: 's1',
+                binsNumber: 10,
+                zIndex: -1,
+                tooltip: {
+                    pointFormatter: function () {
+                        return 'Wystąpienia wartości od ' + this.x + ' do ' + this.x2 + ': <b>' + this.y + '</b><br/>Procent wystąpień <b>' + ((this.y / numItems) * 100).toFixed(2) + ' %</b>';
+                    }
+                },
+            }, {
+                name: 'Wystąpienia wartości',
+                type: 'scatter',
+                data: [[${purevals}]],
+                id: 's1',
+                marker: {
+                    radius: 1.5
+                }
+            }]
+        });
+
 
     });
-
-    // Highcharts.chart('chart2', {
-    //
-    //   title: {
-    //     text: 'Rozkład wartości'
-    //   },
-    //
-    //   xAxis: [{
-    //     title: {
-    //       text: 'Wystąpienia wartości'
-    //     },
-    //     alignTicks: false
-    //   }, {
-    //     title: {
-    //       text: 'Rozkład normalny'
-    //     },
-    //     alignTicks: false,
-    //     opposite: true
-    //   }],
-    //
-    //   yAxis: [{
-    //     title: { text: 'Wartości' }
-    //   }, {
-    //     title: { text: 'Rozkład normalny' },
-    //     opposite: true
-    //   }],
-    //
-    //   series: [{
-    //     name: 'Rozkład normalny',
-    //     type: 'bellcurve',
-    //     xAxis: 1,
-    //     yAxis: 1,
-    //     baseSeries: 1,
-    //     zIndex: -1
-    //   }, {
-    //     name: 'Wystąpienia wartości',
-    //     type: 'scatter',
-    //     data: [[${purevals}]],
-    //     accessibility: {
-    //       exposeAsGroupOnly: true
-    //     },
-    //     marker: {
-    //       radius: 1.5
-    //     }
-    //   }]
-    // });
-    var numItems = [[${purevals}]].length;
-    Highcharts.chart('chart2', {
-      title: {
-        text: 'Histogram'
-      },
-
-      xAxis: [{
-        title: { text: 'Wystąpienie wartości' },
-        alignTicks: false
-      }, {
-        title: { text: 'Histogram - wartości' },
-        alignTicks: false,
-        opposite: true
-      }],
-
-      yAxis: [{
-        title: { text: 'Wartość' }
-      }, {
-        title: { text: 'Histogram - wystąpienia wartości' },
-        opposite: true
-      }],
-
-      plotOptions: {
-        histogram: {
-          accessibility: {
-            point: {
-              valueDescriptionFormat: '{index}. {point.x:.3f} to {point.x2:.3f}, {point.y}.'
-            }
-          }
-        }
-      },
-
-      series: [{
-        name: 'Histogram - wystąpienia wartości',
-        type: 'histogram',
-        xAxis: 1,
-        yAxis: 1,
-        baseSeries: 's1',
-        binsNumber: 10,
-        zIndex: -1,
-        tooltip: {
-          pointFormatter: function() {
-            return 'Wystąpienia wartości od ' + this.x + ' do ' + this.x2 + ': <b>' + this.y + '</b><br/>Procent wystąpień <b>' + ((this.y / numItems) * 100).toFixed(2) + ' %</b>';
-          }
-        },
-      }, {
-        name: 'Wystąpienia wartości',
-        type: 'scatter',
-        data: [[${purevals}]],
-        id: 's1',
-        marker: {
-          radius: 1.5
-        }
-      }]
-    });
-
-
-  });
 </script>
-
-
-
 
 
 </body>

@@ -9,16 +9,16 @@ public class PathResult {
     public int counter;
     public String probability;
     public List<PathVariableResult> variables;
-    public PathResult(String path, int counter, String probability, List<PathVariableResult> variables, int id, List<String> elements){
+
+    public PathResult(String path, int counter, String probability, List<PathVariableResult> variables, int id, List<String> elements) {
         this.path = path;
         this.counter = counter;
         this.probability = probability;
         this.variables = variables;
         this.elements = elements;
-        if(id<=10){
+        if (id <= 10) {
             this.pathName = String.valueOf("Scieżka " + id);
-        }
-        else {
+        } else {
             this.pathName = "Pozostałe";
         }
     }

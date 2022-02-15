@@ -12,12 +12,11 @@ public class ExclusiveGateConditionalsInput {
     public String sign1;
     public String sign2;
 
-    public ExclusiveGateConditionalsInput(String gateId, String gateName, String flow1Name, String flow2Name){
+    public ExclusiveGateConditionalsInput(String gateId, String gateName, String flow1Name, String flow2Name) {
         this.gateId = gateId;
-        if(gateName == null){
+        if (gateName == null) {
             this.gateName = gateId;
-        }
-        else
+        } else
             this.gateName = gateName;
         this.flow1Name = flow1Name;
         this.flow2Name = flow2Name;

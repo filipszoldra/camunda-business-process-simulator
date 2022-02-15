@@ -6,34 +6,39 @@ import java.util.List;
 public class TaskVariableList {
     List<TaskVariable> taskVarList = new ArrayList<>();
 
-    public void addSimVariable(TaskVariable taskVar){
+    public void addSimVariable(TaskVariable taskVar) {
         taskVarList.add(taskVar);
     }
-    public List<String> getAllVariableNames(){
+
+    public List<String> getAllVariableNames() {
         List<String> namesList = new ArrayList<>();
-        for(var variable : taskVarList){
+        for (var variable : taskVarList) {
             namesList.add(variable.getName());
         }
         return namesList;
     }
-    public Integer countVariables(){
+
+    public Integer countVariables() {
         return taskVarList.size();
     }
-    private Integer findVariableIndex(String name){
-        for(var variable : taskVarList) {
+
+    private Integer findVariableIndex(String name) {
+        for (var variable : taskVarList) {
             if (variable.getName() == name) {
                 return taskVarList.indexOf(variable);
             }
         }
         return null;
     }
-    public void addDefaultVariables(VariableCollection varCollection){
-        for(var variable: varCollection.variablesList){
+
+    public void addDefaultVariables(VariableCollection varCollection) {
+        for (var variable : varCollection.variablesList) {
             taskVarList.add(new TaskVariable(variable));
         }
     }
-    public TaskVariable getTaskVariable(String name){
-        for(var variable : taskVarList) {
+
+    public TaskVariable getTaskVariable(String name) {
+        for (var variable : taskVarList) {
             if (variable.getName() == name) {
                 return variable;
             }
@@ -42,13 +47,15 @@ public class TaskVariableList {
     }
 
 
-    public Integer getValue(String name){
+    public Integer getValue(String name) {
         return taskVarList.get(findVariableIndex(name)).getValue();
     }
-    public void setValue(String name, Integer value){
+
+    public void setValue(String name, Integer value) {
         taskVarList.get(findVariableIndex(name)).setValue(value);
     }
-    public void setValue(String name, Integer value, Integer value2){
+
+    public void setValue(String name, Integer value, Integer value2) {
         taskVarList.get(findVariableIndex(name)).setValue(value, value2);
     }
 

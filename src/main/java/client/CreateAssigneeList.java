@@ -3,8 +3,6 @@ package client;
 import simdata.AssigneeList;
 import simdata.VariableCollection;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public abstract class CreateAssigneeList {
@@ -13,7 +11,7 @@ public abstract class CreateAssigneeList {
         AssigneeList assigneeList = new AssigneeList();
         System.out.println("Ilu pracowników ma być przydzielonych do zadań w procesie?");
         int assignees = reader.nextInt();
-        for(int i = 1; i <= assignees; i++){
+        for (int i = 1; i <= assignees; i++) {
             System.out.println("Podaj nazwę pracownika " + i);
             String assigneeName = reader.next();
             assigneeList.addAssignne(assigneeName);

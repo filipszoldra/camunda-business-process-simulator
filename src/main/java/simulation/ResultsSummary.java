@@ -36,7 +36,7 @@ public abstract class ResultsSummary {
         writer.println();
         writer.println();
         writer.println("Ends");
-        for(var end : pathCollection.getEndList()){
+        for (var end : pathCollection.getEndList()) {
             writer.println(end.name + " " + end.getProbability());
         }
         writer.println();
@@ -48,7 +48,7 @@ public abstract class ResultsSummary {
         }
         writer.println();
         writer.println();
-        if(assigneeList.getAssigneeList().size()>0) {
+        if (assigneeList.getAssigneeList().size() > 0) {
             writer.println("Assignees");
             writer.println();
             for (var assignee : assigneeList.getAssigneeList()) {
@@ -69,17 +69,16 @@ public abstract class ResultsSummary {
             ArrayList<Integer> medianList = new ArrayList();
             int medianCounter = 0;
             List<VariableCountRecord> varCounter = pathCollection.getVarCounter(variable);
-            for(var varCount : varCounter){
-                if(varCount.count>medianCounter){
+            for (var varCount : varCounter) {
+                if (varCount.count > medianCounter) {
                     medianList.clear();
                     medianList.add(varCount.value);
                     medianCounter = varCount.count;
-                }
-                else if(varCount.count == medianCounter)
+                } else if (varCount.count == medianCounter)
                     medianList.add(varCount.value);
             }
             int median = 0;
-            for(var val:medianList) {
+            for (var val : medianList) {
                 median += val;
             }
             median /= medianList.size();
@@ -94,7 +93,7 @@ public abstract class ResultsSummary {
             writer.println("max:" + " " + varAllMaxValueRecords.getVarValue(variable));
             writer.println();
             writer.println("Variable " + variable + " value distribution:");
-            for(var varCount : varCounter){
+            for (var varCount : varCounter) {
                 writer.println(varCount.value + " " + varCount.count);
             }
         }
@@ -102,7 +101,7 @@ public abstract class ResultsSummary {
 
     }
 
-    public static ResultsData getResults(int instNumber, PathCollection pathCollection, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, AssigneeList assigneeList){
+    public static ResultsData getResults(int instNumber, PathCollection pathCollection, VariableCollection varCollection, TaskCounter taskCounter, VariableValueRecords variableValueRecords, AssigneeList assigneeList) {
         List<PathResult> pathResults = new ArrayList<>();
         List<EndEventRecord> endResults = new ArrayList<>();
         List<AsigneeResult> assigneeResults = new ArrayList<>();
@@ -148,13 +147,13 @@ public abstract class ResultsSummary {
                 pathId++;
             }
         }
-        if(pathId>11) {
+        if (pathId > 11) {
             for (var variable : otherVarAverageValueRecords.getVariableValueRecordList()) {
                 variable.value /= (pathId - 11);
             }
-            float otherProb = otherCounter*100/instNumber;
+            float otherProb = otherCounter * 100 / instNumber;
             List<PathVariableResult> otherPathVars = new ArrayList<>();
-            for (var variable : varCollection.getVariableNameList()){
+            for (var variable : varCollection.getVariableNameList()) {
                 otherPathVars.add(new PathVariableResult(variable, otherVarMinValueRecords.getVarValue(variable), otherVarAverageValueRecords.getVarValue(variable), otherVarMaxValueRecords.getVarValue(variable)));
             }
             List<String> other = new ArrayList<>();
@@ -163,9 +162,9 @@ public abstract class ResultsSummary {
 
         endResults.addAll(pathCollection.getEndList());
         taskResults.addAll(taskCounter.getTaskCounterList());
-        if(assigneeList.getAssigneeList().size()>0) {
+        if (assigneeList.getAssigneeList().size() > 0) {
             for (var assignee : assigneeList.getAssigneeList()) {
-                assigneeResults.add(new AsigneeResult(assignee.assignee, assignee.getVarValueRecords().getVarValue("time"), (assignee.getVarValueRecords().getVarValue("time")/instNumber)));
+                assigneeResults.add(new AsigneeResult(assignee.assignee, assignee.getVarValueRecords().getVarValue("time"), (assignee.getVarValueRecords().getVarValue("time") / instNumber)));
             }
         }
         VariableValueRecords varAllMinValueRecords = pathCollection.getAllMinVarValueRecords();
@@ -175,17 +174,16 @@ public abstract class ResultsSummary {
             ArrayList<Integer> medianList = new ArrayList();
             int medianCounter = 0;
             List<VariableCountRecord> varCounter = pathCollection.getVarCounter(variable);
-            for(var varCount : varCounter){
-                if(varCount.count>medianCounter){
+            for (var varCount : varCounter) {
+                if (varCount.count > medianCounter) {
                     medianList.clear();
                     medianList.add(varCount.value);
                     medianCounter = varCount.count;
-                }
-                else if(varCount.count == medianCounter)
+                } else if (varCount.count == medianCounter)
                     medianList.add(varCount.value);
             }
             int median = 0;
-            for(var val:medianList) {
+            for (var val : medianList) {
                 median += val;
             }
             median /= medianList.size();
