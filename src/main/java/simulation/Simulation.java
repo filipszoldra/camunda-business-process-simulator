@@ -44,7 +44,6 @@ public abstract class Simulation {
             while (activeTasks.size() > 0) {
                 org.camunda.bpm.engine.task.Task actualTask = activeTasks.get(0);
                 activeTasks.remove(0);
-                String parent = actualTask.getParentTaskId();
                 String taskKey = actualTask.getTaskDefinitionKey();
                 taskCounter.taskIncrement(taskKey);
                 instanceTaskCounter.taskIncrement(taskKey);
@@ -89,7 +88,7 @@ public abstract class Simulation {
             List<HistoricActivityInstance> activityList = activityQuery.unlimitedList();
             pathCollection.addPath(activityList, instanceVariableValueRecords);
         }
-        return ResultsSummary.getResults(inst, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
+        return ResultsSummary.getResults(inst - 1, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
     }
 
 
@@ -207,7 +206,7 @@ public abstract class Simulation {
 
         }
 //        ResultsData resultsData = ResultsSummary.getResults(inst, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
-        return ResultsSummary.getResults(inst, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
+        return ResultsSummary.getResults(inst - 1, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
     }
 
 }

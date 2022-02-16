@@ -61,7 +61,7 @@ public class ClientData {
         TaskCounter taskCounter = new TaskCounter(taskList);
         VariableValueRecords variableValueRecords = new VariableValueRecords(varCollection);
 
-        Simulation.startSimulation(instances, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
+ //       Simulation.startSimulation(instances, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
 //        this.resultsData = ResultsSummary.getResults(instances, pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
         this.resultsData=Simulation.startSimulation(instances, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
 
@@ -83,8 +83,10 @@ public class ClientData {
         TaskCounter taskCounter = new TaskCounter(taskList);
         VariableValueRecords variableValueRecords = new VariableValueRecords(varCollection);
         PrintWriter writer = new PrintWriter("results.txt", StandardCharsets.UTF_8);
-        Simulation.startSimulationByVar(varName, varValue, writer, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
-        this.resultsData = ResultsSummary.getResults(pathCollection.getAllCounter(), pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
+
+        //this.resultsData = ResultsSummary.getResults(pathCollection.getAllCounter(), pathCollection, varCollection, taskCounter, variableValueRecords, assigneeList);
+
+        this.resultsData = Simulation.startSimulationByVar(varName, varValue, writer, modelInstance, taskList, varCollection, taskCounter, variableValueRecords, pathCollection, assigneeList, pararellList);
         writer.close();
 
     }
