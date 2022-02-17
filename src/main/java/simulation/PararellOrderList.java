@@ -89,6 +89,8 @@ public class PararellOrderList {
                                 inPath = false;
                             }
                         }
+                        if(listj.isEmpty())
+                            inPath = false;
                     }
                     if (inPath) {
                         List<String> pathVal = new ArrayList<>();

@@ -15,6 +15,7 @@ public abstract class PararellOrder {
         PararellOrderList pararellList = new PararellOrderList();
         StartEvent startEvent = modelInstance.getModelElementsByType(StartEvent.class).iterator().next();
         List<FlowNode> nodes = startEvent.getSucceedingNodes().list();
+        List<String> gatesNames = new ArrayList<>();
         List<ParallelGateway> gates = new ArrayList<>();
         int pararellIds = 0;
         List<String> ids = new ArrayList<>();
@@ -24,15 +25,20 @@ public abstract class PararellOrder {
             List<FlowNode> prepareNextNodes = new ArrayList<>();
             for (var node : nodes) {
                 if (node.getElementType() == modelInstance.getModel().getType(ParallelGateway.class) && getNextElements(node, modelInstance).size() > 1)/*node.getSucceedingNodes().list().size() > 1*/ {
-                    gates.add((ParallelGateway) node);
-                    pararellIds++;
-                    pararellList.addPararellRecord(node.getId());
+                    if(!gatesNames.contains(node.getId())) {
+                        gates.add((ParallelGateway) node);
+                        pararellIds++;
+                        pararellList.addPararellRecord(node.getId());
+                        gatesNames.add(node.getId());
+                    }
                 }
                 if (node.getElementType() == modelInstance.getModel().getType(UserTask.class)) {
-                    taskIdList.add(node.getId());
+                    if(!taskIdList.contains(node.getId())) {
+                        taskIdList.add(node.getId());
+                    }
                 }
-
-                ids.add(node.getId());
+                if(!ids.contains(node.getId()))
+                    ids.add(node.getId());
                 boolean isItMarked = false;
                 List<FlowNode> nextNodes = getNextElements(node, modelInstance);
 
@@ -63,35 +69,45 @@ public abstract class PararellOrder {
                 List<FlowNode> nexts = getNextElements(startPararell, modelInstance);
                 List<String> commonNodeIds = new ArrayList<>();
                 List<List<String>> idLists = new ArrayList<>();
+                List<String> markedNames = new ArrayList<>();
                 for (var startPath : nexts) {
                     List<FlowNode> currentNodes = getNextElements(startPath, modelInstance);
 //                    List<FlowNode> currentNodes = startPath.getSucceedingNodes().list();
                     int currentSize = currentNodes.size();
                     List<String> currentIds = new ArrayList<>();
                     List<String> idsToAdd = new ArrayList<>();
+                    idsToAdd.clear();
                     currentIds.add(startPath.getId());
                     if (startPath.getElementType() == modelInstance.getModel().getType(UserTask.class)) {
-                        idsToAdd.add(startPath.getId());
+                        if (!idsToAdd.contains(startPath.getId())) {
+                            idsToAdd.add(startPath.getId());
+                            markedNames.add(startPath.getId());
+                        }
                     }
                     while (currentSize > 0) {
                         List<FlowNode> prepareNodes = new ArrayList<>();
                         for (var node : currentNodes) {
                             currentIds.add(node.getId());
                             if (node.getElementType() == modelInstance.getModel().getType(UserTask.class)) {
-                                if (!idsToAdd.contains(node.getId()))
+                                if (!idsToAdd.contains(node.getId())) {
                                     idsToAdd.add(node.getId());
+                                    markedNames.add(node.getId());
+                                }
                             }
                             boolean isItMarked = false;
-                            List<FlowNode> nextNodes = getNextElements(node, modelInstance);
+                            if(!node.getId().equals(gateId)) {
+                                List<FlowNode> nextNodes = getNextElements(node, modelInstance);
+
 //                            List<FlowNode> nextNodes = node.getSucceedingNodes().list();
-                            for (var nextnode : nextNodes) {
-                                for (var id : currentIds) {
-                                    if (nextnode.getId().equals(id)) {
-                                        isItMarked = true;
+                                for (var nextnode : nextNodes) {
+                                    for (var id : currentIds) {
+                                        if (nextnode.getId().equals(id)) {
+                                            isItMarked = true;
+                                        }
                                     }
-                                }
-                                if (isItMarked == false) {
-                                    prepareNodes.add(nextnode);
+                                    if (isItMarked == false) {
+                                        prepareNodes.add(nextnode);
+                                    }
                                 }
                             }
                         }
@@ -99,23 +115,30 @@ public abstract class PararellOrder {
                         currentSize = currentNodes.size();
                     }
                     idLists.add(idsToAdd);
+//                    idsToAdd.clear();
                 }
-                List<String> firstList = idLists.get(0);
-                for (var id : firstList) {
-                    boolean isCommon = true;
-                    for (var compareList : idLists) {
-                        boolean checkId = false;
-                        for (var compareId : compareList) {
-                            if (id.equals(compareId)) {
-                                checkId = true;
+//                List<String> firstList = idLists.get(0);
+                for(var firstList : idLists) {
+                    for (var id : firstList) {
+                        boolean isCommon = true;
+                        for (var compareList : idLists) {
+                            if (!compareList.equals(firstList)) {
+                                boolean checkId = false;
+                                for (var compareId : compareList) {
+                                    if (id.equals(compareId)) {
+                                        checkId = true;
+                                    }
+                                }
+                                if (checkId == false) {
+                                    isCommon = false;
+                                }
+                            }
+                            else
+                                isCommon = false;
+                            if (isCommon == true) {
+                                commonNodeIds.add(id);
                             }
                         }
-                        if (checkId == false) {
-                            isCommon = false;
-                        }
-                    }
-                    if (isCommon == true) {
-                        commonNodeIds.add(id);
                     }
                 }
                 for (var list : idLists) {
@@ -161,7 +184,8 @@ public abstract class PararellOrder {
                 nextNodes = subProcess.getSucceedingNodes().list();
             }
         } else {
-            nextNodes.addAll(node.getSucceedingNodes().list());
+            nextNodes = node.getSucceedingNodes().list();
+//            nextNodes.addAll(node.getSucceedingNodes().list());
         }
         return nextNodes;
     }
